@@ -9,15 +9,18 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using Word;
+using ModelLib;
+using System.Configuration;
 namespace 质监局证书管理系统
 {
     public partial class LicenseControl : UserControl
     {
-        #region 控件成员变量 
+        #region 控件成员变量
         bool a_isOpen = false;
         bool b_isOpen = false;
         bool c_isOpen = false;
         bool Validated = true;
+        DBManager manager;
         #endregion
 
         public LicenseControl()
@@ -26,10 +29,20 @@ namespace 质监局证书管理系统
             InitAutoComplete();
             //InitializeEmptyGrid();
             superTabControl1.Visible = true;
-            
+            tb_type.Focus();
+            if (ConfigurationManager.AppSettings["DBType"].ToString() == "offline")
+            {
+                manager = new DBManager("offline", ConfigurationManager.AppSettings["mdbFilePath"].ToString());
+            }
+            else
+            {
+            }
         }
         public void InitAutoComplete()
         {
+            dt_expire.Value = dt_date.Value.AddYears(1);
+            
+            //器具名称下拉框初始化，
             string sql = "select i_name from instList order by ID DESC";
             AccessDbClass access = new AccessDbClass(System.Windows.Forms.Application.StartupPath + "/DATA/license.mdb");
             DataTable table = access.SelectToDataTable(sql);
@@ -39,10 +52,84 @@ namespace 质监局证书管理系统
                 instNameList[i] = table.Rows[i]["i_name"].ToString();
                 tbd_instName.Items.Add(instNameList[i]);
             }
-            
+
             tbd_instName.AutoCompleteCustomSource = new AutoCompleteStringCollection();
             tbd_instName.AutoCompleteCustomSource.AddRange(instNameList);
             tbd_instName.SelectedIndex = 0;
+
+
+
+
+            //制造厂
+            sql = "select f_name from madeList order by ID DESC";
+            table = access.SelectToDataTable(sql);
+            string[] madeNameList = new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                madeNameList[i] = table.Rows[i]["f_name"].ToString();
+                tbd_madeBy.Items.Add(madeNameList[i]);
+            }
+
+            tbd_madeBy.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            tbd_madeBy.AutoCompleteCustomSource.AddRange(madeNameList);
+            tbd_madeBy.SelectedIndex = 0;
+
+
+            //检定依据
+            if (!string.IsNullOrEmpty(tb_type.Text))
+            {
+                sql = "select a_name from accordingList where a_type='" + tb_type.Text.Trim() + "'";
+            }
+            else
+            {
+                sql = "select a_name from accordingList order by ID desc";
+            }
+            table = access.SelectToDataTable(sql);
+            string[] accordingNameList = new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                accordingNameList[i] = table.Rows[i]["a_name"].ToString();
+                tb_accordingTo.Items.Add(accordingNameList[i]);
+            }
+
+            tb_accordingTo.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            tb_accordingTo.AutoCompleteCustomSource.AddRange(accordingNameList);
+            tb_accordingTo.SelectedIndex = 0;
+
+            //专用证书
+            sql = "select l_name from licenseList order by ID DESC";
+
+            table = access.SelectToDataTable(sql);
+            string[] licenseList = new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                licenseList[i] = table.Rows[i]["l_name"].ToString();
+                tb_license.Items.Add(licenseList[i]);
+            }
+
+            tb_license.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            tb_license.AutoCompleteCustomSource.AddRange(licenseList);
+            tb_license.SelectedIndex = 0;
+            
+            
+            //常用标准器具
+            sql = "select benchSet_name from benchSet order by ID Desc";
+            table = access.SelectToDataTable(sql);
+            string[] benchList = new string[table.Rows.Count];
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                benchList[i] = table.Rows[i]["benchSet_name"].ToString();
+                comb_benchSet1.Items.Add(benchList[i]);
+                comb_benchSet2.Items.Add(benchList[i]);
+                comb_benchSet3.Items.Add(benchList[i]);
+            }
+
+            comb_benchSet1.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            comb_benchSet1.AutoCompleteCustomSource.AddRange(benchList);
+            comb_benchSet2.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            comb_benchSet2.AutoCompleteCustomSource.AddRange(benchList);
+            comb_benchSet3.AutoCompleteCustomSource = new AutoCompleteStringCollection();
+            comb_benchSet3.AutoCompleteCustomSource.AddRange(benchList);
 
         }
         #region Command 设置
@@ -233,9 +320,9 @@ namespace 质监局证书管理系统
         }
         #endregion
 
-      
-       
-        
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -317,8 +404,8 @@ namespace 质监局证书管理系统
 
             }
         }
-#endregion
-        
+        #endregion
+
         #region 打开结果末班ABC
         private void btn_OpenA_Click(object sender, EventArgs e)
         {
@@ -330,7 +417,7 @@ namespace 质监局证书管理系统
                 tbd_filename1.Text = openFileDialog1.FileName;
                 string sFilePath = openFileDialog1.FileName;
 
-                if (SysUtil.GetFileExt(sFilePath) == ".doc")
+                if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".doc")
                 {
                     WordHelp helper = new WordHelp();
                     helper.Open(sFilePath);
@@ -354,7 +441,7 @@ namespace 质监局证书管理系统
 
                     webBrowser1.Navigate(this.getEditorHTML(html));
                 }
-                else if (SysUtil.GetFileExt(sFilePath) == ".html")
+                else if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".html")
                 {
                     webBrowser1.Navigate(sFilePath);
                 }
@@ -372,7 +459,7 @@ namespace 质监局证书管理系统
                 webBrowser2.Navigate("about:blank");
                 tbd_filename2.Text = openFileDialog1.FileName;
                 string sFilePath = openFileDialog1.FileName;
-                if (SysUtil.GetFileExt(sFilePath) == ".doc")
+                if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".doc")
                 {
                     WordHelp helper = new WordHelp();
                     helper.Open(sFilePath);
@@ -391,7 +478,7 @@ namespace 质监局证书管理系统
                     html = html.Substring(html.IndexOf("punctuation'>"), html.Length - html.IndexOf("punctuation'>"));
                     html = html.Substring(13, html.IndexOf("</body>") - 12);
 
-                    
+
                     reader.Close();
                     webBrowser2.Navigate(this.getEditorHTML(html));
 
@@ -423,7 +510,7 @@ namespace 质监局证书管理系统
                 {
                     WordHelp helper = new WordHelp();
                     helper.Open(sFilePath);
-                    string htmlFilePath = System.Windows.Forms.Application.StartupPath + "/TEMP/temp_"+DateTime.Now.Ticks+".html";
+                    string htmlFilePath = System.Windows.Forms.Application.StartupPath + "/TEMP/temp_" + DateTime.Now.Ticks + ".html";
                     helper.SaveAsHtml(htmlFilePath);
 
                     helper.Quit();
@@ -438,7 +525,7 @@ namespace 质监局证书管理系统
                     html = html.Substring(html.IndexOf("punctuation'>"), html.Length - html.IndexOf("punctuation'>"));
                     html = html.Substring(13, html.IndexOf("</body>") - 12);
 
-        
+
                     webBrowser3.Navigate(this.getEditorHTML(html));
                     reader.Close();
                 }
@@ -473,24 +560,84 @@ namespace 质监局证书管理系统
             c_isOpen = false;
         }
 
-#endregion
+        #endregion
 
         private void btn_cancel_Click(object sender, EventArgs e)
         {
-            
-            
-            
+
+
+
         }
         private void btn_save_dummy_Click(object sender, EventArgs e)
         {
-            if (this.Validate(false))
+            if (this.Validated)
                 btn_save.PerformClick();
 
         }
 
         private void btn_save_Click(object sender, EventArgs e)
         {
+            LicenseClass license = new LicenseClass();
+            license.According = tb_accordingTo.Text;
+            license.ApprovedBy = tb_approver.Text;
+            license.Benchexpire1 = dt_benchExpire1.Value;
+            license.BenchName1 = tb_benchname1.Text;
+            license.BenchRange1 = tb_benchRange1.Text;
+            license.BenchSerial1 = tb_benchserial1.Text;
+            license.BenchSn1 = tb_benchSn1.Text;
+            license.Notsure1 = tb_notsure1.Text;
 
+            license.Benchexpire2 = dt_benchExpire2.Value;
+            license.BenchName2 = tb_benchName2.Text;
+            license.BenchRange2 = tb_benchRange2.Text;
+            license.BenchSerial2 = tb_benchSerial2.Text;
+            license.BenchSn2 = tb_benchSn2.Text;
+            license.Notsure2 = tb_notSure2.Text;
+
+            license.Benchexpire3 = dt_benchExpire3.Value;
+            license.BenchName3 = tb_benchName3.Text;
+            license.BenchRange3 = tb_benchRange3.Text;
+            license.BenchSerial3 = tb_benchSerial3.Text;
+            license.BenchSn3 = tb_benchSn3.Text;
+            license.Notsure3 = tb_notSure3.Text;
+            license.CheckedBy = tb_check.Text;
+            license.Comment = tb_comment.Text;
+            license.Date = dt_date.Value;
+            license.Expire = dt_expire.Value;
+            license.Humidity =(float) di_humidity.Value;
+            license.InstructionName = tbd_instName.Text;
+            license.LicenseNotsure = tb_licenseNotsure.Text;
+            license.Location = comb_location.Text;
+            license.Madeby = tbd_madeBy.Text;
+            license.Manufact_no = tb_instSerial.Text;
+            license.Module = tb_module.Text;
+            license.Presure = (float)di_presure.Value;
+            license.Result = tb_result.Text;
+            license.ResultHTML = GetResultAGrid();
+
+            license.ResultHTML2 = (a_isOpen ? webBrowser1.Document.GetElementById("htmlText").ToString() : "");
+            license.ResultHTML3 = (b_isOpen ? webBrowser2.Document.GetElementById("htmlText").ToString() : "");
+            license.ResultHTML4 = (c_isOpen ? webBrowser3.Document.GetElementById("htmlText").ToString() : "");
+
+            license.Serial = tb_licenseNo.Text;
+            license.Telephone = tb_authToTel.Text;
+            license.Temperature =(float) di_temperatue.Value;
+            license.Type = tb_type.Text;
+            license.UnitName = tb_authTo.Text;
+            license.UseLimit = tb_limit.Text;
+            license.VerifiedBy = tb_recorder.Text;
+            license.UseLicense = tb_license.Text;
+            if (license.AddLicense())
+            {
+                MessageBox.Show("添加成功");
+            }
+            else
+            {
+                MessageBox.Show("添加成功");
+            }
+            
+
+                
         }
         #region 控件数据验证
         /// <summary>
@@ -500,49 +647,68 @@ namespace 质监局证书管理系统
         /// <param name="e"></param>
         private void tb_licenseNo_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(tb_licenseNo.Text.Trim()))
-            {
-                errorProvider1.SetError(tb_licenseNo, "证书编号不能为空");
-                highlighter1.SetHighlightColor(tb_licenseNo, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
-                //highlighter1.GetHighlightOnFocus(tb_licenseNo);
-                //e.Cancel = true;
-                this.Validated = false;
-                return;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            this.SetErrorEmpty(tb_licenseNo, "证书编号不能为空");
         }
 
         private void tb_type_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(tb_type.Text.Trim()))
-            {
-                errorProvider1.SetError(tb_type, "计量类别不能为空");
-                highlighter1.SetHighlightColor(tb_type, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
-                //highlighter1.GetHighlightOnFocus(tb_licenseNo);
-                //e.Cancel = true;
-                this.Validated = false;
-                return;
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            this.SetErrorEmpty(tb_type, "计量类别不能为空");
+        }
+        private void tbd_instName_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tbd_instName, "计量器具名称不能为空");
         }
 
+        private void tb_instSerial_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tb_instSerial, "器具编号不能为空");
+        }
+        private void tb_authTo_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tb_authTo, "受检单位名称不能为空");
+        }
+        private void tb_accordingTo_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tb_accordingTo, "检定依据不能为空");
+        }
+
+        private void tb_license_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tb_license, "专用证书不能为空");
+        }
+        private void tb_result_Validating(object sender, CancelEventArgs e)
+        {
+            this.SetErrorEmpty(tb_result, "检定结论不能为空");
+        }
 
         #endregion
 
 
 
         #region 窗口方法
+        private void SetErrorEmpty(Control c, string errMsg)
+        {
+            if (string.IsNullOrEmpty(c.Text))
+            {
+                errorProvider1.SetError(c, errMsg);
+                highlighter1.SetHighlightColor(c, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
+                //highlighter1.GetHighlightOnFocus(tb_licenseNo);
+                //e.Cancel = true;
+                this.Validated = false;
+                return;
+            }
+            else
+            {
+                errorProvider1.Clear();
+                highlighter1.SetHighlightColor(c, DevComponents.DotNetBar.Validator.eHighlightColor.None);
+                this.Validated = true;
+            }
+        }
 
         /// <summary>
         /// 初始化空白表格
         /// </summary>
-        public void InitializeEmptyGrid()
+        private void InitializeEmptyGrid()
         {
             int rowCount = int_row.Value;
             int colCount = int_col.Value;
@@ -563,7 +729,7 @@ namespace 质监局证书管理系统
             }
             superGridControl1.PrimaryGrid.DataSource = table;
         }
-      
+
         /// <summary>
         /// 用WORD转换的html文件替换，生成模板html文件
         /// </summary>
@@ -582,10 +748,10 @@ namespace 质监局证书管理系统
             html += "document.getElementById('htmlText').innerText=editor.getData();";
             html += "}";
             html += "CKEDITOR.on( 'instanceReady', function( ev ) {";
-            html+="var editor = CKEDITOR.instances.editor1;";
-	        html+="var command = editor.getCommand( 'maximize' );";
+            html += "var editor = CKEDITOR.instances.editor1;";
+            html += "var command = editor.getCommand( 'maximize' );";
             html += "command.exec();});";
-	      
+
             html += "</script>";
             html += "</head><body>";
             html += "<div id=htmlText style='display:none'></div>";
@@ -606,7 +772,7 @@ namespace 质监局证书管理系统
             html += "</script>";
             html += "</body>";
             html += "</html>";
-            string randFilename =System.Windows.Forms.Application.StartupPath + "/temp/temp_" + DateTime.Now.Ticks+".html";
+            string randFilename = System.Windows.Forms.Application.StartupPath + "/temp/temp_" + DateTime.Now.Ticks + ".html";
             FileStream fs = new FileStream(randFilename, FileMode.Create);
             byte[] htmldata = new UTF8Encoding().GetBytes(html);
             fs.Write(htmldata, 0, htmldata.Length);
@@ -616,7 +782,7 @@ namespace 质监局证书管理系统
         }
         private string GetResultAGrid()
         {
-            string html = "<table>";
+            string html = "<table border=1>";
             int roucount = superGridControl1.PrimaryGrid.Rows.Count;
             int colcount = superGridControl1.PrimaryGrid.Columns.Count;
             for (int i = 0; i < roucount; i++)
@@ -625,12 +791,13 @@ namespace 质监局证书管理系统
                 DevComponents.DotNetBar.SuperGrid.GridRow row = (DevComponents.DotNetBar.SuperGrid.GridRow)superGridControl1.PrimaryGrid.Rows[i];
                 for (int j = 0; j < colcount; j++)
                 {
-                   
-                    if(row.Cells[j].Value==null)
+
+                    if (row.Cells[j].Value == null)
                     {
-                          html += "<td></td>";
+                        html += "<td></td>";
                     }
-                    else{
+                    else
+                    {
                         html += "<td>" + row.Cells[j].Value.ToString() + "</td>";
                     }
                 }
@@ -641,10 +808,32 @@ namespace 质监局证书管理系统
         }
         #endregion
 
-     
-
        
- 
+        private void comb_benchSet1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            BenchSetClass bench = manager.GetBenchSet(comb_benchSet1.SelectedItem.ToString());
+            tb_benchname1.Text = bench.BenchName;
+            tb_benchRange1.Text = bench.BenchRange;
+            tb_benchserial1.Text = bench.BenchSerial;
+            dt_benchExpire1.Value = bench.Expire;
+            tb_benchSn1.Text = bench.BenchSn;
+            tb_notsure1.Text = bench.Notsure;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }

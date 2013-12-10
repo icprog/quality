@@ -6,10 +6,11 @@ using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms;
 
-namespace 质监局证书管理系统
+namespace ModelLib
 {
     public class LicenseClass
     {
+        #region 成员变量
         private int _id;
 
         public int Id
@@ -329,14 +330,21 @@ namespace 质监局证书管理系统
             get { return _benchSerial3; }
             set { _benchSerial3 = value; }
         }
-       
+        private string _useLicense;
+
+        public string UseLicense
+        {
+            get { return _useLicense; }
+            set { _useLicense = value; }
+        }
+#endregion
 
         public LicenseClass()
         { }
         public LicenseClass(int id)
         {
             
-            AccessDbClass accClass = new AccessDbClass(Application.StartupPath + "/DATA/license.mdb");
+            AccessDbClass accClass = new AccessDbClass(System.Windows.Forms.Application.StartupPath + "/DATA/license.mdb");
             DataTable dt = new DataTable();
             dt = accClass.SelectToDataTable(@"select * from license where ID="+id);
             DataRow dr =dt.Rows[0];
@@ -408,6 +416,7 @@ namespace 质监局证书管理系统
             _comment = dr["备注"].ToString();
             _presure = true == string.IsNullOrEmpty(dr["气压"].ToString()) ? 929.4f : float.Parse(dr["气压"].ToString());
             _telephone = dr["联系方式"].ToString();
+            _useLicense = dr["专用证书"].ToString();
         }
         public string getHtml(){
             string html = "<head><title></title><style type='text/css'>.tb_front td{ width: 200px;}</style></head>";
@@ -477,7 +486,7 @@ namespace 质监局证书管理系统
             sql += string.Format("[{0}],[{1}],[{2}],[{3}],[{4}],[{5}],", "标准器具名称3", "器具编号3", "测量范围3", "不确定度3", "标准证书编号3", "标准证书有效期3");
             sql += string.Format("[{0}],[{1}],[{2}],[{3}],", "检定地点", "温度", "气压", "湿度");
             sql += string.Format("[{0}],[{1}],[{2}],[{3}],", "检定结果1", "检定结果2", "检定结果3", "检定结果4");
-            sql += string.Format("[{0}],[{1}],[{2}],[{3}]", "检定结果不确定度", "限制使用条件", "备注", "联系方式");
+            sql += string.Format("[{0}],[{1}],[{2}],[{3}],[{4}]", "检定结果不确定度", "限制使用条件", "备注", "联系方式","专用证书");
             sql += ") values(";
             sql += string.Format("'{0}','{1}',#{2}#,'{3}','{4}','{5}',", _serial, _unitName, _date, _instructionName, _module, _manufact_no);
             sql += string.Format("'{0}','{1}','{2}','{3}','{4}','{5}',", _madeby, _according, _result, _approvedBy, _checkedBy, _verifiedBy);
@@ -486,7 +495,7 @@ namespace 质监局证书管理系统
             sql += string.Format("'{0}','{1}','{2}','{3}','{4}',#{5}#,", _benchName3, _benchSerial3, _benchRange3, _notsure3, _benchSn3, _benchexpire3);
             sql += string.Format("'{0}','{1}','{2}','{3}',", _location, _temperature, _presure, _humidity);
             sql += string.Format("'{0}','{1}','{2}','{3}',", _resultHTML, _resultHTML2, _resultHTML3, _resultHTML4);
-            sql += string.Format("'{0}','{1}','{2}','{3}'", _licenseNotsure, _useLimit, _comment,_telephone);
+            sql += string.Format("'{0}','{1}','{2}','{3}','{4}'", _licenseNotsure, _useLimit, _comment,_telephone,_useLicense);
             sql += ");";
             return accClass.ExecuteSQLNonquery(sql);
 
@@ -501,5 +510,89 @@ namespace 质监局证书管理系统
             : base(message, inner)
         {
         }
+    }
+    public class BenchSetClass
+    {
+        #region 成员变量
+        private string _id;
+
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+        private string _setName;
+
+        public string SetName
+        {
+            get { return _setName; }
+            set { _setName = value; }
+        }
+        private string _notsure;
+
+        public string Notsure
+        {
+            get { return _notsure; }
+            set { _notsure = value; }
+        }
+        private string _benchName;
+
+        public string BenchName
+        {
+            get { return _benchName; }
+            set { _benchName = value; }
+        }
+        private DateTime _expire;
+
+        public DateTime Expire
+        {
+            get { return _expire; }
+            set { _expire = value; }
+        }
+        private string _benchSerial;
+
+        public string BenchSerial
+        {
+            get { return _benchSerial; }
+            set { _benchSerial = value; }
+        }
+        private string _benchSn;
+
+        public string BenchSn
+        {
+            get { return _benchSn; }
+            set { _benchSn = value; }
+        }
+        private string _benchRange;
+
+        public string BenchRange
+        {
+            get { return _benchRange; }
+            set { _benchRange = value; }
+        }
+#endregion
+        public BenchSetClass(string id, string name, string bench_sn,string benchName,string notsure,string serial,string range,    DateTime expire)
+        {
+            _id = id;
+            _setName = name;
+            _benchRange = range;
+            _benchSerial = serial;
+            _benchSn = bench_sn;
+            _notsure = notsure;
+            _benchName = benchName;
+            _expire = expire;
+        }
+        public BenchSetClass( string name, string range, string serial, string bench_sn, string notsure, string benchName, DateTime expire)
+        {
+            _setName = name;
+            _benchRange = range;
+            _benchSerial = serial;
+            _benchSn = bench_sn;
+            _notsure = notsure;
+            _benchName = benchName;
+            _expire = expire;
+        }
+
+        
     }
 }

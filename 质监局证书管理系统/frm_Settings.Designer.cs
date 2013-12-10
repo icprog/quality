@@ -102,6 +102,7 @@
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_apply = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
             this.superTabControlPanel4.SuspendLayout();
@@ -159,10 +160,10 @@
             // 
             this.superTabControlPanel4.Controls.Add(this.groupBox1);
             this.superTabControlPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel4.Location = new System.Drawing.Point(70, 0);
+            this.superTabControlPanel4.Location = new System.Drawing.Point(65, 0);
             this.superTabControlPanel4.Name = "superTabControlPanel4";
             this.superTabControlPanel4.Padding = new System.Windows.Forms.Padding(10);
-            this.superTabControlPanel4.Size = new System.Drawing.Size(556, 319);
+            this.superTabControlPanel4.Size = new System.Drawing.Size(561, 319);
             this.superTabControlPanel4.TabIndex = 0;
             this.superTabControlPanel4.TabItem = this.superTabItem4;
             // 
@@ -190,12 +191,13 @@
             // 
             this.btn_testConn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_testConn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_testConn.Location = new System.Drawing.Point(326, 99);
+            this.btn_testConn.Location = new System.Drawing.Point(326, 98);
             this.btn_testConn.Name = "btn_testConn";
             this.btn_testConn.Size = new System.Drawing.Size(75, 23);
             this.btn_testConn.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_testConn.TabIndex = 11;
             this.btn_testConn.Text = "测试连接";
+            this.btn_testConn.Click += new System.EventHandler(this.btn_testConn_Click);
             // 
             // rb_online
             // 
@@ -299,6 +301,7 @@
             this.btn_loadMDB.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_loadMDB.TabIndex = 2;
             this.btn_loadMDB.Text = "浏览";
+            this.btn_loadMDB.Click += new System.EventHandler(this.btn_loadMDB_Click);
             // 
             // tb_mdbfilename
             // 
@@ -340,10 +343,10 @@
             this.superTabControlPanel3.Controls.Add(this.di_humidity);
             this.superTabControlPanel3.Controls.Add(this.di_temper);
             this.superTabControlPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel3.Location = new System.Drawing.Point(70, 0);
+            this.superTabControlPanel3.Location = new System.Drawing.Point(65, 0);
             this.superTabControlPanel3.Name = "superTabControlPanel3";
             this.superTabControlPanel3.Padding = new System.Windows.Forms.Padding(10);
-            this.superTabControlPanel3.Size = new System.Drawing.Size(556, 319);
+            this.superTabControlPanel3.Size = new System.Drawing.Size(561, 319);
             this.superTabControlPanel3.TabIndex = 0;
             this.superTabControlPanel3.TabItem = this.superTabItem3;
             // 
@@ -716,6 +719,7 @@
             this.di_temper.Size = new System.Drawing.Size(53, 22);
             this.di_temper.TabIndex = 13;
             this.di_temper.Value = 25D;
+            this.di_temper.ValueChanged += new System.EventHandler(this.di_temper_ValueChanged);
             // 
             // superTabItem3
             // 
@@ -749,10 +753,10 @@
             this.superTabControlPanel1.Controls.Add(this.tb_auth);
             this.superTabControlPanel1.Controls.Add(this.tb_standard1);
             this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(70, 0);
+            this.superTabControlPanel1.Location = new System.Drawing.Point(65, 0);
             this.superTabControlPanel1.Name = "superTabControlPanel1";
             this.superTabControlPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.superTabControlPanel1.Size = new System.Drawing.Size(556, 319);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(561, 319);
             this.superTabControlPanel1.TabIndex = 1;
             this.superTabControlPanel1.TabItem = this.superTabItem1;
             // 
@@ -1097,9 +1101,9 @@
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(70, 0);
+            this.superTabControlPanel2.Location = new System.Drawing.Point(65, 0);
             this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(556, 319);
+            this.superTabControlPanel2.Size = new System.Drawing.Size(561, 319);
             this.superTabControlPanel2.TabIndex = 0;
             this.superTabControlPanel2.TabItem = this.superTabItem2;
             // 
@@ -1144,6 +1148,10 @@
             this.btn_apply.Text = "应用";
             this.btn_apply.UseVisualStyleBackColor = false;
             this.btn_apply.Click += new System.EventHandler(this.btn_apply_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frm_Settings
             // 
@@ -1252,5 +1260,6 @@
         private System.Windows.Forms.RadioButton rb_online;
         private System.Windows.Forms.RadioButton rb_offline;
         private DevComponents.DotNetBar.ButtonX btn_testConn;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

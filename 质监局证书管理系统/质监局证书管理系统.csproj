@@ -38,6 +38,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -56,12 +57,12 @@
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=10.5.0.3, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.Instrumentation, Version=10.5.0.3, Culture=neutral, PublicKeyToken=bc4a9d761ea44ef0, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -69,8 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessHelper.cs" />
-    <Compile Include="DBManager.cs" />
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,7 +82,6 @@
     <Compile Include="frm_Settings.Designer.cs">
       <DependentUpon>frm_Settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="LicenseClass.cs" />
     <Compile Include="LicensePreview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +97,6 @@
     <Compile Include="LicenseControl.Designer.cs">
       <DependentUpon>LicenseControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="SqlHelper.cs" />
-    <Compile Include="SysUtil.cs" />
-    <Compile Include="WordHelper.cs" />
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +117,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -150,9 +146,10 @@
       <VersionMajor>2</VersionMajor>
       <VersionMinor>3</VersionMinor>
       <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
+      <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
     </COMReference>
     <COMReference Include="SHDocVw">
       <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
@@ -211,6 +208,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DATA\HTMLPage1.htm" />
+    <None Include="Resources\icon_pencil-edit_alt.png" />
+    <None Include="Resources\icon_pencil-edit.png" />
+    <None Include="Resources\icon_download.png" />
+    <None Include="Resources\icon_trash_alt.png" />
+    <None Include="Resources\icon_trash.png" />
+    <None Include="Resources\icon_plus.png" />
+    <None Include="Resources\icon_plus_alt.png" />
+    <None Include="Resources\icon_search.png" />
+    <None Include="Resources\icon_printer-alt.png" />
+    <None Include="Resources\icon_printer.png" />
+    <None Include="Resources\icon_search_alt.png" />
+    <None Include="Resources\058.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ModelLib\ModelLib.csproj">
+      <Project>{CBF2853F-E5EB-4F63-A7C4-981A125D772B}</Project>
+      <Name>ModelLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

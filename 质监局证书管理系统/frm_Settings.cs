@@ -42,6 +42,8 @@ namespace 质监局证书管理系统
             comb_freqtest.Text = ConfigurationManager.AppSettings["freq_test"];
             tb_appName.Text = ConfigurationManager.AppSettings["appName"];
             ip_sqlIPAddress.Value = ConfigurationManager.AppSettings["sqlServerIPAddress"];
+            int_port.Value = int.Parse(ConfigurationManager.AppSettings["sqlServerPort"].ToString());
+            tb_mdbfilename.Text = ConfigurationManager.AppSettings["mdbFilePath"].ToString();
             if (ConfigurationManager.AppSettings["DBType"].ToString() == "online")
             {
                 rb_online.Checked = true;
@@ -50,7 +52,7 @@ namespace 质监局证书管理系统
                 ip_sqlIPAddress.Enabled = true;
                 int_port.Enabled = true;
                 btn_testConn.Enabled = true;
-
+                
             }
             else
             {
@@ -126,8 +128,8 @@ namespace 质监局证书管理系统
             else
             {
                 this.SaveConfig("DBType", "online");
-                
-                this.SaveConfig("connStr",string.Format(@"Data Source={0}\SQLEXPRESS;Initial Catalog=QualityDB;Integrated Security=True;Pooling=False"))
+
+                this.SaveConfig("connection", string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
                 
             }
             ConfigurationManager.RefreshSection("appSettings");
@@ -173,6 +175,21 @@ namespace 质监局证书管理系统
             this.SaveConfig("appName", tb_appName.Text);
             this.SaveConfig("freq_test", comb_freqtest.Text);
 
+            this.SaveConfig("sqlServerIPAddress", ip_sqlIPAddress.Text);
+            this.SaveConfig("sqlServerPort", int_port.Value.ToString());
+            this.SaveConfig("mdbFilePath", tb_mdbfilename.Text);
+            if (rb_offline.Checked)
+            {
+                this.SaveConfig("DBType", "offline");
+
+            }
+            else
+            {
+                this.SaveConfig("DBType", "online");
+
+                this.SaveConfig("connStr", string.Format(@"Data Source={0}\SQLEXPRESS;Initial Catalog=QualityDB;Integrated Security=True;Pooling=False"));
+
+            }
             ConfigurationManager.RefreshSection("appSettings");
 
             //ConfigurationManager.AppSettings["programName"] = tb_appName.Text;
@@ -220,6 +237,39 @@ namespace 质监局证书管理系统
                 btn_testConn.Enabled = true;
             }
         }
+
+        private void btn_testConn_Click(object sender, EventArgs e)
+        {
+            bool isSuccess=SqlHelper.ConnectTest(string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
+            if (isSuccess)
+            {
+                MessageBox.Show("连接成功");
+
+            }
+            else
+            {
+                MessageBox.Show("连接失败");
+            }
+        }
+
+        private void btn_loadMDB_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = System.Windows.Forms.Application.StartupPath;
+            DialogResult result = openFileDialog1.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                tb_mdbfilename.Text = openFileDialog1.FileName;
+            
+            }
+        }
+
+        private void di_temper_ValueChanged(object sender, EventArgs e)
+        {
+           // di_temper.Text = di_temper.Text.Substring(0, di_temper.Text.IndexOf(".") + 2);
+        }
+        
+
         
     }
 }

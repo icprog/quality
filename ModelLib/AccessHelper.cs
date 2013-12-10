@@ -1,9 +1,9 @@
 ﻿
 using System;   
 using System.Data;   
-using System.Data.OleDb;   
-   
-namespace 质监局证书管理系统   
+using System.Data.OleDb;
+
+namespace ModelLib   
 {   
     /**//// <summary>   
     /// AccessDb 的摘要说明，以下信息请完整保留   

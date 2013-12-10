@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace 质监局证书管理系统
+namespace ModelLib
 {
     public class SysUtil
     {
