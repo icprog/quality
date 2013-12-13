@@ -1,0 +1,371 @@
+﻿<html>
+<head>
+    <title></title>
+    <style type='text/css'>
+        body
+        {
+            
+            text-align: center;
+            font-size: 5mm;
+            
+        }
+        .result
+        {
+            height:230mm;
+        }
+        .page
+        {
+            width: 200mm;
+            page-break-after: always;
+            padding: 5mm;
+            height: 287mm;
+            
+        }
+       
+        #page5
+        {
+           page-break-after:avoid;
+        }
+        #page1 h1
+        {
+            font-size: 15mm;
+            text-align: center;
+            letter-spacing: 15mm;
+            font-family: 隶书;
+            font-weight: normal;
+            margin-top: 35mm;
+        }
+        #page1 h3
+        {
+            font-size: 5mm;
+            text-align: center;
+            font-family: 宋体;
+            font-weight: normal;
+            margin-top: 12mm;
+        }
+        #frontLicenseNo
+        {
+            margin-left: 7mm;
+        }
+        .frontTh
+        {
+            letter-spacing: 5.5mm;
+            padding: 3mm 0 3mm 0;
+            text-align: left;
+            width: 45mm;
+        }
+        .frontTh_member
+        {
+            letter-spacing: 5.5mm;
+            padding: 3mm 0 3mm 0;
+            text-align: left;
+            width: 34mm;
+        }
+        .tbUnderline
+        {
+            border-bottom: 0.3mm solid #000;
+            text-align: center;
+        }
+        .stamp
+        {
+            margin-left: 55mm;
+            margin-top: 30mm;
+        }
+        .clearfix:after
+        {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .date
+        {
+            letter-spacing: 2mm;
+        }
+        .date span
+        {
+            margin: 0 2mm 0 2mm;
+            font-family: 黑体;
+        }
+        .footer td
+        {
+            font-family: 黑体;
+            font-size: 4mm;
+            width: 50%;
+            padding: 1mm 0 1mm 3mm;
+        }
+        .footer p
+        {
+            margin-top:0mm;
+            font-size:4mm;
+        }
+        #resultA td
+        {
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+            padding: 1mm;
+        }
+        .align_center
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="page1" class="page" style="page-break-after: always;">
+        <h1>
+            &nbsp;检定证书</h1>
+        <h3>
+            证书编号:<span id="frontLicenseNo">2008-11-155</span></h3>
+        <table style="margin-top: 13mm; font-family: 宋体; font-size: 5.5mm; width: 160mm">
+            <tr>
+                <td class="frontTh">
+                    送检单位
+                </td>
+                <td id="unitName" class="tbUnderline">
+                    延边州质量技术监督局
+                </td>
+            </tr>
+            <tr>
+                <td class="style1" style="padding-top: 3mm; padding-bottom: 3mm; letter-spacing: 1mm">
+                    计量器具名称
+                </td>
+                <td id="instName" class="tbUnderline">
+                    机械天平
+                </td>
+            </tr>
+            <tr>
+                <td class="frontTh" style="letter-spacing: 3.5mm">
+                    型号/规格
+                </td>
+                <td id="model" class="tbUnderline">
+                    长江3号
+                </td>
+            </tr>
+            <tr>
+                <td class="frontTh">
+                    出厂编号
+                </td>
+                <td id="manufactNo" class="tbUnderline">
+                    TP-2001
+                </td>
+            </tr>
+            <tr>
+                <td class="frontTh">
+                    制造单位
+                </td>
+                <td id="madeBy" class="tbUnderline">
+                    上海仪器一长
+                </td>
+            </tr>
+            <tr>
+                <td class="frontTh">
+                    检定依据
+                </td>
+                <td id="accordingTo" class="tbUnderline">
+                    我是依据啊
+                </td>
+            </tr>
+            <tr>
+                <td class="frontTh">
+                    检定结论
+                </td>
+                <td id="result" class="tbUnderline">
+                    合格
+                </td>
+            </tr>
+        </table>
+        
+        <table style="margin-top: 13mm; margin: 20mm  0 10mm 10mm; font-family: 宋体; width: 150mm">
+            <tr>
+                <td>
+                </td>
+                <td  class="frontTh_member">
+                    批准人
+                </td>
+                <td id="approver" style="width:40mm" class="tbUnderline">
+                    上海仪器一长
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    （检定专用章）
+                </td>
+                <td class="frontTh_member">
+                    核验员
+                </td>
+                <td id="checker" class="tbUnderline">
+                    我是依据啊
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="frontTh_member">
+                    检定员
+                </td>
+                <td id="recorder" class="tbUnderline">
+                    合格
+                </td>
+            </tr>
+        </table>
+        <br />
+        <div class="clearfix">
+        </div>
+        <p class="date">
+            检定日期<span id='date_y'>2008</span>年<span id='date_m'>5</span>月<span id='date_d'>5</span>日</p>
+        <p class="date" style="margin-bottom: 4mm">
+            有效期至<span id="expire_y">2009</span>年<span id="expire_m">5</span>月<span id="expire_d">5</span>日</p>
+        <hr color="#000" size="2" />
+        <table class="footer" style="width: 195mm">
+            <tr>
+                <td>
+                    计量检定机构授权证书号：<span id="verificationNo"></span>
+                </td>
+                <td>
+                    电话： <span id="tel" style="margin-right:20mm"></span>第<span>1</span>页 共<span id="totalPage1"></span>页
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    地址： <span id="address"></span>
+                </td>
+                <td>
+                    邮编： <span id="zipcode"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    传真： <span id="fax"></span>
+                </td>
+                <td>
+                    电子邮箱： <span id="email"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="page2" class="page" >
+        <p>
+            <span id=header_license1 style="float: left; font-size: 4mm; margin-top: 3mm">证书编号:</span><span style="font-size: 6mm;
+                font-family: 黑体; margin-left: -5mm; letter-spacing: 5mm">说明</span></p>
+        <table border="0" cellspacing="0" cellpadding="0" id="resultA" style="margin-top: -2mm;
+            width: 197mm; border-right: 1px solid #000; border-bottom: 1px solid #000">
+            <tr>
+                <td colspan="5">
+                    1.计量标准考核证书号：<span id=standard1></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    2.社会公用计量标准证书号：<span id=standard2></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    3.本次检定所使用的主要计量标准器具：
+                </td>
+            </tr>
+            <tr class="align_center">
+                <td>
+                    名称
+                </td>
+                <td>
+                    测量范围
+                </td>
+                <td>
+                    不确定度/准确度<br />
+                    等级/最大允许误差
+                </td>
+                <td>
+                    证书编号
+                </td>
+                <td>
+                    有效期至
+                </td>
+            </tr>
+            <tr class="align_center">
+                <td id=bench_name>
+                    
+                    
+                </td>
+                <td id=bench_range>
+                    
+                </td>
+                <td id=bench_notsure>
+                    
+                   
+                </td>
+                <td id=bench_sn>
+                    
+                </td>
+                <td id=bench_expire>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    4.检定地点：<span id="location"></span>
+                </td>
+            </tr>
+            <tr>
+                <td  style="border-bottom: none;" colspan="5">
+                    5.指定的环境条件：
+
+                </td>
+            </tr>
+            <tr>
+                <td style="border-top: none; text-align: center" colspan="5">
+                    温度:<span id="temperature" style="margin: 0 5mm 0 5mm"></span>湿度:<span id="humidity" style="margin: 0 5mm 0 5mm"></span>气压:<span
+                        id="presure" style="margin: 0 5mm 0 5mm"></span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-bottom: none; font-family: 楷体; font-size: 7mm; text-align: center;
+                    letter-spacing: 10mm" colspan="5">
+                    检定结果
+                </td>
+            </tr>
+            <tr>
+                <td id="htmlresultA" style="border-top: none; display: block; text-align: center;
+                    height: 180mm" colspan="5">
+                    
+                </td>
+            </tr>
+        </table>
+        <p style="width: 197mm; margin-top: 1mm; border: none; font-size: 4mm; text-align: left;">
+            注：我所仅对加盖“延边州计量检定测试所检定专用章”的完整证书负责。<span style="margin-left: 40mm">第2页 共<span id=totalPage2></span>页</span></p>
+    </div>
+    <div id="page3" class="page"  >
+        <p style="margin-top:10mm;border-bottom: 1px solid #000; text-align: left; padding-bottom: 1mm">
+            <span id=header_license2 style="font-size: 4mm;">证书编号:</span></p>
+        <h1 style="font-family: 楷体; font-size: 7mm; text-align: center; letter-spacing: 10mm">
+            检定结果<span style="letter-spacing: 0">(续1)</span></h1>
+            <div id=htmlresultB class="result"></div>
+            <div class=footer>
+             <hr color="#000" size="1" />
+             <p style="text-align:right;">第3页 共<span id=totalPage3></span>页</p>
+            </div>
+    </div>
+    <div id="page4" class="page" style="">
+        <p style="margin-top:10mm;border-bottom: 1px solid #000; text-align: left; padding-bottom: 1mm">
+            <span id=header_license3 style="font-size: 4mm;">证书编号:</span></p>
+        <h1 style="font-family: 楷体; font-size: 7mm; text-align: center; letter-spacing: 10mm">
+            检定结果<span style="letter-spacing: 0">(续2)</span></h1>
+            <div id=htmlresultC class="result"></div>
+            <div class=footer>
+             <hr color="#000" size="1" />
+             <p style="text-align:right;">第4页 共<span id=totalPage4></span>页</p>
+            </div>
+    </div>
+    <div id="page5" class="page">
+        <p style=" margin-top:10mm;border-bottom: 1px solid #000; text-align: left; padding-bottom: 1mm">
+            <span id=header_license4 style="font-size: 4mm;">证书编号:</span></p>
+        <h1 style="font-family: 楷体; font-size: 7mm; text-align: center; letter-spacing: 10mm">
+            检定结果<span style="letter-spacing: 0">(续3)</span></h1>
+            <div id=htmlresulD class="result"></div>
+            <div class=footer>
+             <hr color="#000" size="1" />
+             <p style="text-align:right;">第5页 共<span id=totalPage5></span>页</p>
+            </div>
+    </div>
+</body>
+</html>

@@ -29,6 +29,30 @@
         private void InitializeComponent()
         {
             this.superTabControl1 = new DevComponents.DotNetBar.SuperTabControl();
+            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.tb_standard2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
+            this.labelX11 = new DevComponents.DotNetBar.LabelX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.tb_fax = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_tel = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_email = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_zipcode = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_addressEng = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_address = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_unitNameEng = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_unitName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_auth = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_standard1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_testConn = new DevComponents.DotNetBar.ButtonX();
@@ -73,30 +97,6 @@
             this.di_humidity = new DevComponents.Editors.DoubleInput();
             this.di_temper = new DevComponents.Editors.DoubleInput();
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel1 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.tb_standard2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.labelX10 = new DevComponents.DotNetBar.LabelX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.tb_fax = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_tel = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_email = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_zipcode = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_addressEng = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_address = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_unitNameEng = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_unitName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_auth = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_standard1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.btn_save = new System.Windows.Forms.Button();
@@ -105,6 +105,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).BeginInit();
             this.superTabControl1.SuspendLayout();
+            this.superTabControlPanel1.SuspendLayout();
             this.superTabControlPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.int_port)).BeginInit();
@@ -113,7 +114,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.di_airPresure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_humidity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_temper)).BeginInit();
-            this.superTabControlPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // superTabControl1
@@ -155,6 +155,376 @@
             this.superTabItem4,
             this.superTabItem2});
             this.superTabControl1.Text = "系统设置";
+            // 
+            // superTabControlPanel1
+            // 
+            this.superTabControlPanel1.Controls.Add(this.tb_standard2);
+            this.superTabControlPanel1.Controls.Add(this.labelX12);
+            this.superTabControlPanel1.Controls.Add(this.labelX11);
+            this.superTabControlPanel1.Controls.Add(this.labelX10);
+            this.superTabControlPanel1.Controls.Add(this.labelX9);
+            this.superTabControlPanel1.Controls.Add(this.labelX8);
+            this.superTabControlPanel1.Controls.Add(this.labelX7);
+            this.superTabControlPanel1.Controls.Add(this.labelX6);
+            this.superTabControlPanel1.Controls.Add(this.labelX4);
+            this.superTabControlPanel1.Controls.Add(this.labelX3);
+            this.superTabControlPanel1.Controls.Add(this.labelX2);
+            this.superTabControlPanel1.Controls.Add(this.labelX1);
+            this.superTabControlPanel1.Controls.Add(this.tb_fax);
+            this.superTabControlPanel1.Controls.Add(this.tb_tel);
+            this.superTabControlPanel1.Controls.Add(this.tb_email);
+            this.superTabControlPanel1.Controls.Add(this.tb_zipcode);
+            this.superTabControlPanel1.Controls.Add(this.tb_addressEng);
+            this.superTabControlPanel1.Controls.Add(this.tb_address);
+            this.superTabControlPanel1.Controls.Add(this.tb_unitNameEng);
+            this.superTabControlPanel1.Controls.Add(this.tb_unitName);
+            this.superTabControlPanel1.Controls.Add(this.tb_auth);
+            this.superTabControlPanel1.Controls.Add(this.tb_standard1);
+            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel1.Location = new System.Drawing.Point(65, 0);
+            this.superTabControlPanel1.Name = "superTabControlPanel1";
+            this.superTabControlPanel1.Padding = new System.Windows.Forms.Padding(10);
+            this.superTabControlPanel1.Size = new System.Drawing.Size(561, 319);
+            this.superTabControlPanel1.TabIndex = 1;
+            this.superTabControlPanel1.TabItem = this.superTabItem1;
+            // 
+            // tb_standard2
+            // 
+            this.tb_standard2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_standard2.Border.Class = "TextBoxBorder";
+            this.tb_standard2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_standard2.ForeColor = System.Drawing.Color.Black;
+            this.tb_standard2.Location = new System.Drawing.Point(166, 71);
+            this.tb_standard2.Name = "tb_standard2";
+            this.tb_standard2.Size = new System.Drawing.Size(372, 22);
+            this.tb_standard2.TabIndex = 23;
+            this.tb_standard2.Text = "[2005]社量标延法证字第021号";
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.ForeColor = System.Drawing.Color.Black;
+            this.labelX12.Location = new System.Drawing.Point(13, 72);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(133, 22);
+            this.labelX12.TabIndex = 22;
+            this.labelX12.Text = "社会公用计量标准证书号:";
+            this.labelX12.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.labelX12.WordWrap = true;
+            // 
+            // labelX11
+            // 
+            this.labelX11.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX11.ForeColor = System.Drawing.Color.Black;
+            this.labelX11.Location = new System.Drawing.Point(320, 215);
+            this.labelX11.Name = "labelX11";
+            this.labelX11.Size = new System.Drawing.Size(57, 23);
+            this.labelX11.TabIndex = 18;
+            this.labelX11.Text = "电子邮箱:";
+            this.labelX11.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX10
+            // 
+            this.labelX10.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.ForeColor = System.Drawing.Color.Black;
+            this.labelX10.Location = new System.Drawing.Point(320, 245);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.Size = new System.Drawing.Size(57, 23);
+            this.labelX10.TabIndex = 14;
+            this.labelX10.Text = "传真:";
+            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX9
+            // 
+            this.labelX9.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.ForeColor = System.Drawing.Color.Black;
+            this.labelX9.Location = new System.Drawing.Point(14, 245);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(133, 23);
+            this.labelX9.TabIndex = 13;
+            this.labelX9.Text = "电话:";
+            this.labelX9.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX8
+            // 
+            this.labelX8.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.ForeColor = System.Drawing.Color.Black;
+            this.labelX8.Location = new System.Drawing.Point(14, 216);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.Size = new System.Drawing.Size(133, 23);
+            this.labelX8.TabIndex = 12;
+            this.labelX8.Text = "邮政编码:";
+            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX7
+            // 
+            this.labelX7.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.ForeColor = System.Drawing.Color.Black;
+            this.labelX7.Location = new System.Drawing.Point(14, 187);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(133, 23);
+            this.labelX7.TabIndex = 11;
+            this.labelX7.Text = "发证单位地址(英文):";
+            this.labelX7.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX6
+            // 
+            this.labelX6.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.ForeColor = System.Drawing.Color.Black;
+            this.labelX6.Location = new System.Drawing.Point(14, 158);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(133, 23);
+            this.labelX6.TabIndex = 10;
+            this.labelX6.Text = "发证单位地址(中文):";
+            this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX4
+            // 
+            this.labelX4.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.ForeColor = System.Drawing.Color.Black;
+            this.labelX4.Location = new System.Drawing.Point(14, 129);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(133, 23);
+            this.labelX4.TabIndex = 5;
+            this.labelX4.Text = "发证单位名称(英文):";
+            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX3
+            // 
+            this.labelX3.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.ForeColor = System.Drawing.Color.Black;
+            this.labelX3.Location = new System.Drawing.Point(14, 100);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.Size = new System.Drawing.Size(133, 23);
+            this.labelX3.TabIndex = 4;
+            this.labelX3.Text = "发证单位名称(中文):";
+            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX2
+            // 
+            this.labelX2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.ForeColor = System.Drawing.Color.Black;
+            this.labelX2.Location = new System.Drawing.Point(14, 43);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(133, 23);
+            this.labelX2.TabIndex = 2;
+            this.labelX2.Text = "授权证书号:";
+            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.ForeColor = System.Drawing.Color.Black;
+            this.labelX1.Location = new System.Drawing.Point(13, 13);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.Size = new System.Drawing.Size(134, 23);
+            this.labelX1.TabIndex = 0;
+            this.labelX1.Text = "计量标准考核证书号:";
+            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
+            // 
+            // tb_fax
+            // 
+            this.tb_fax.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_fax.Border.Class = "TextBoxBorder";
+            this.tb_fax.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_fax.ForeColor = System.Drawing.Color.Black;
+            this.tb_fax.Location = new System.Drawing.Point(383, 245);
+            this.tb_fax.Name = "tb_fax";
+            this.tb_fax.Size = new System.Drawing.Size(154, 22);
+            this.tb_fax.TabIndex = 21;
+            this.tb_fax.Text = "0433-266123";
+            // 
+            // tb_tel
+            // 
+            this.tb_tel.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_tel.Border.Class = "TextBoxBorder";
+            this.tb_tel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_tel.ForeColor = System.Drawing.Color.Black;
+            this.tb_tel.Location = new System.Drawing.Point(165, 245);
+            this.tb_tel.Name = "tb_tel";
+            this.tb_tel.Size = new System.Drawing.Size(149, 22);
+            this.tb_tel.TabIndex = 20;
+            this.tb_tel.Text = "0433-266123";
+            // 
+            // tb_email
+            // 
+            this.tb_email.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_email.Border.Class = "TextBoxBorder";
+            this.tb_email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_email.ForeColor = System.Drawing.Color.Black;
+            this.tb_email.Location = new System.Drawing.Point(383, 215);
+            this.tb_email.Name = "tb_email";
+            this.tb_email.Size = new System.Drawing.Size(154, 22);
+            this.tb_email.TabIndex = 19;
+            this.tb_email.Text = "faqldy001@yeah.net";
+            // 
+            // tb_zipcode
+            // 
+            this.tb_zipcode.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_zipcode.Border.Class = "TextBoxBorder";
+            this.tb_zipcode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_zipcode.ForeColor = System.Drawing.Color.Black;
+            this.tb_zipcode.Location = new System.Drawing.Point(165, 216);
+            this.tb_zipcode.Name = "tb_zipcode";
+            this.tb_zipcode.Size = new System.Drawing.Size(149, 22);
+            this.tb_zipcode.TabIndex = 17;
+            this.tb_zipcode.Text = "133000";
+            // 
+            // tb_addressEng
+            // 
+            this.tb_addressEng.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_addressEng.Border.Class = "TextBoxBorder";
+            this.tb_addressEng.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_addressEng.ForeColor = System.Drawing.Color.Black;
+            this.tb_addressEng.Location = new System.Drawing.Point(165, 188);
+            this.tb_addressEng.Name = "tb_addressEng";
+            this.tb_addressEng.Size = new System.Drawing.Size(372, 22);
+            this.tb_addressEng.TabIndex = 16;
+            this.tb_addressEng.Text = "No.2112 ChaoYang St.Yanji,Jilin,China";
+            // 
+            // tb_address
+            // 
+            this.tb_address.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_address.Border.Class = "TextBoxBorder";
+            this.tb_address.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_address.ForeColor = System.Drawing.Color.Black;
+            this.tb_address.Location = new System.Drawing.Point(165, 159);
+            this.tb_address.Name = "tb_address";
+            this.tb_address.Size = new System.Drawing.Size(372, 22);
+            this.tb_address.TabIndex = 15;
+            this.tb_address.Text = "133000";
+            // 
+            // tb_unitNameEng
+            // 
+            this.tb_unitNameEng.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_unitNameEng.Border.Class = "TextBoxBorder";
+            this.tb_unitNameEng.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_unitNameEng.ForeColor = System.Drawing.Color.Black;
+            this.tb_unitNameEng.Location = new System.Drawing.Point(166, 130);
+            this.tb_unitNameEng.Name = "tb_unitNameEng";
+            this.tb_unitNameEng.Size = new System.Drawing.Size(372, 22);
+            this.tb_unitNameEng.TabIndex = 8;
+            this.tb_unitNameEng.Text = "Jilin Yanbian Institute of Verification and Testing";
+            // 
+            // tb_unitName
+            // 
+            this.tb_unitName.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_unitName.Border.Class = "TextBoxBorder";
+            this.tb_unitName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_unitName.ForeColor = System.Drawing.Color.Black;
+            this.tb_unitName.Location = new System.Drawing.Point(166, 100);
+            this.tb_unitName.Name = "tb_unitName";
+            this.tb_unitName.Size = new System.Drawing.Size(372, 22);
+            this.tb_unitName.TabIndex = 7;
+            this.tb_unitName.Text = "吉林省延边州计量检定测试所";
+            // 
+            // tb_auth
+            // 
+            this.tb_auth.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_auth.Border.Class = "TextBoxBorder";
+            this.tb_auth.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_auth.ForeColor = System.Drawing.Color.Black;
+            this.tb_auth.Location = new System.Drawing.Point(166, 43);
+            this.tb_auth.Name = "tb_auth";
+            this.tb_auth.Size = new System.Drawing.Size(372, 22);
+            this.tb_auth.TabIndex = 3;
+            this.tb_auth.Text = "(吉)法计(2008)030号";
+            // 
+            // tb_standard1
+            // 
+            this.tb_standard1.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_standard1.Border.Class = "TextBoxBorder";
+            this.tb_standard1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_standard1.ForeColor = System.Drawing.Color.Black;
+            this.tb_standard1.Location = new System.Drawing.Point(166, 13);
+            this.tb_standard1.Name = "tb_standard1";
+            this.tb_standard1.Size = new System.Drawing.Size(372, 22);
+            this.tb_standard1.TabIndex = 1;
+            this.tb_standard1.Text = "吉林省延吉市朝阳街2112号";
+            // 
+            // superTabItem1
+            // 
+            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
+            this.superTabItem1.GlobalItem = false;
+            this.superTabItem1.Name = "superTabItem1";
+            this.superTabItem1.Text = "自定义";
             // 
             // superTabControlPanel4
             // 
@@ -728,376 +1098,6 @@
             this.superTabItem3.Name = "superTabItem3";
             this.superTabItem3.Text = "偏好设置";
             // 
-            // superTabControlPanel1
-            // 
-            this.superTabControlPanel1.Controls.Add(this.tb_standard2);
-            this.superTabControlPanel1.Controls.Add(this.labelX12);
-            this.superTabControlPanel1.Controls.Add(this.labelX11);
-            this.superTabControlPanel1.Controls.Add(this.labelX10);
-            this.superTabControlPanel1.Controls.Add(this.labelX9);
-            this.superTabControlPanel1.Controls.Add(this.labelX8);
-            this.superTabControlPanel1.Controls.Add(this.labelX7);
-            this.superTabControlPanel1.Controls.Add(this.labelX6);
-            this.superTabControlPanel1.Controls.Add(this.labelX4);
-            this.superTabControlPanel1.Controls.Add(this.labelX3);
-            this.superTabControlPanel1.Controls.Add(this.labelX2);
-            this.superTabControlPanel1.Controls.Add(this.labelX1);
-            this.superTabControlPanel1.Controls.Add(this.tb_fax);
-            this.superTabControlPanel1.Controls.Add(this.tb_tel);
-            this.superTabControlPanel1.Controls.Add(this.tb_email);
-            this.superTabControlPanel1.Controls.Add(this.tb_zipcode);
-            this.superTabControlPanel1.Controls.Add(this.tb_addressEng);
-            this.superTabControlPanel1.Controls.Add(this.tb_address);
-            this.superTabControlPanel1.Controls.Add(this.tb_unitNameEng);
-            this.superTabControlPanel1.Controls.Add(this.tb_unitName);
-            this.superTabControlPanel1.Controls.Add(this.tb_auth);
-            this.superTabControlPanel1.Controls.Add(this.tb_standard1);
-            this.superTabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel1.Location = new System.Drawing.Point(65, 0);
-            this.superTabControlPanel1.Name = "superTabControlPanel1";
-            this.superTabControlPanel1.Padding = new System.Windows.Forms.Padding(10);
-            this.superTabControlPanel1.Size = new System.Drawing.Size(561, 319);
-            this.superTabControlPanel1.TabIndex = 1;
-            this.superTabControlPanel1.TabItem = this.superTabItem1;
-            // 
-            // tb_standard2
-            // 
-            this.tb_standard2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_standard2.Border.Class = "TextBoxBorder";
-            this.tb_standard2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_standard2.ForeColor = System.Drawing.Color.Black;
-            this.tb_standard2.Location = new System.Drawing.Point(166, 71);
-            this.tb_standard2.Name = "tb_standard2";
-            this.tb_standard2.Size = new System.Drawing.Size(372, 22);
-            this.tb_standard2.TabIndex = 23;
-            this.tb_standard2.Text = "[2005]社量标延法证字第021号";
-            // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.ForeColor = System.Drawing.Color.Black;
-            this.labelX12.Location = new System.Drawing.Point(13, 72);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(133, 22);
-            this.labelX12.TabIndex = 22;
-            this.labelX12.Text = "社会公用计量标准证书号:";
-            this.labelX12.TextAlignment = System.Drawing.StringAlignment.Far;
-            this.labelX12.WordWrap = true;
-            // 
-            // labelX11
-            // 
-            this.labelX11.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.ForeColor = System.Drawing.Color.Black;
-            this.labelX11.Location = new System.Drawing.Point(320, 215);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(57, 23);
-            this.labelX11.TabIndex = 18;
-            this.labelX11.Text = "电子邮箱:";
-            this.labelX11.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX10
-            // 
-            this.labelX10.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX10.ForeColor = System.Drawing.Color.Black;
-            this.labelX10.Location = new System.Drawing.Point(320, 245);
-            this.labelX10.Name = "labelX10";
-            this.labelX10.Size = new System.Drawing.Size(57, 23);
-            this.labelX10.TabIndex = 14;
-            this.labelX10.Text = "传真:";
-            this.labelX10.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX9
-            // 
-            this.labelX9.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.ForeColor = System.Drawing.Color.Black;
-            this.labelX9.Location = new System.Drawing.Point(14, 245);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(133, 23);
-            this.labelX9.TabIndex = 13;
-            this.labelX9.Text = "电话:";
-            this.labelX9.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX8
-            // 
-            this.labelX8.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.ForeColor = System.Drawing.Color.Black;
-            this.labelX8.Location = new System.Drawing.Point(14, 216);
-            this.labelX8.Name = "labelX8";
-            this.labelX8.Size = new System.Drawing.Size(133, 23);
-            this.labelX8.TabIndex = 12;
-            this.labelX8.Text = "邮政编码:";
-            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX7
-            // 
-            this.labelX7.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.ForeColor = System.Drawing.Color.Black;
-            this.labelX7.Location = new System.Drawing.Point(14, 187);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(133, 23);
-            this.labelX7.TabIndex = 11;
-            this.labelX7.Text = "发证单位地址(英文):";
-            this.labelX7.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX6
-            // 
-            this.labelX6.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.ForeColor = System.Drawing.Color.Black;
-            this.labelX6.Location = new System.Drawing.Point(14, 158);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(133, 23);
-            this.labelX6.TabIndex = 10;
-            this.labelX6.Text = "发证单位地址(中文):";
-            this.labelX6.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX4
-            // 
-            this.labelX4.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.ForeColor = System.Drawing.Color.Black;
-            this.labelX4.Location = new System.Drawing.Point(14, 129);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.Size = new System.Drawing.Size(133, 23);
-            this.labelX4.TabIndex = 5;
-            this.labelX4.Text = "发证单位名称(英文):";
-            this.labelX4.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX3
-            // 
-            this.labelX3.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.ForeColor = System.Drawing.Color.Black;
-            this.labelX3.Location = new System.Drawing.Point(14, 100);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(133, 23);
-            this.labelX3.TabIndex = 4;
-            this.labelX3.Text = "发证单位名称(中文):";
-            this.labelX3.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX2
-            // 
-            this.labelX2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.ForeColor = System.Drawing.Color.Black;
-            this.labelX2.Location = new System.Drawing.Point(14, 43);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(133, 23);
-            this.labelX2.TabIndex = 2;
-            this.labelX2.Text = "授权证书号:";
-            this.labelX2.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.ForeColor = System.Drawing.Color.Black;
-            this.labelX1.Location = new System.Drawing.Point(13, 13);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(134, 23);
-            this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "计量标准考核证书号:";
-            this.labelX1.TextAlignment = System.Drawing.StringAlignment.Far;
-            // 
-            // tb_fax
-            // 
-            this.tb_fax.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_fax.Border.Class = "TextBoxBorder";
-            this.tb_fax.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_fax.ForeColor = System.Drawing.Color.Black;
-            this.tb_fax.Location = new System.Drawing.Point(383, 245);
-            this.tb_fax.Name = "tb_fax";
-            this.tb_fax.Size = new System.Drawing.Size(154, 22);
-            this.tb_fax.TabIndex = 21;
-            this.tb_fax.Text = "0433-266123";
-            // 
-            // tb_tel
-            // 
-            this.tb_tel.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_tel.Border.Class = "TextBoxBorder";
-            this.tb_tel.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_tel.ForeColor = System.Drawing.Color.Black;
-            this.tb_tel.Location = new System.Drawing.Point(165, 245);
-            this.tb_tel.Name = "tb_tel";
-            this.tb_tel.Size = new System.Drawing.Size(149, 22);
-            this.tb_tel.TabIndex = 20;
-            this.tb_tel.Text = "0433-266123";
-            // 
-            // tb_email
-            // 
-            this.tb_email.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_email.Border.Class = "TextBoxBorder";
-            this.tb_email.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_email.ForeColor = System.Drawing.Color.Black;
-            this.tb_email.Location = new System.Drawing.Point(383, 215);
-            this.tb_email.Name = "tb_email";
-            this.tb_email.Size = new System.Drawing.Size(154, 22);
-            this.tb_email.TabIndex = 19;
-            this.tb_email.Text = "faqldy001@yeah.net";
-            // 
-            // tb_zipcode
-            // 
-            this.tb_zipcode.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_zipcode.Border.Class = "TextBoxBorder";
-            this.tb_zipcode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_zipcode.ForeColor = System.Drawing.Color.Black;
-            this.tb_zipcode.Location = new System.Drawing.Point(165, 216);
-            this.tb_zipcode.Name = "tb_zipcode";
-            this.tb_zipcode.Size = new System.Drawing.Size(149, 22);
-            this.tb_zipcode.TabIndex = 17;
-            this.tb_zipcode.Text = "133000";
-            // 
-            // tb_addressEng
-            // 
-            this.tb_addressEng.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_addressEng.Border.Class = "TextBoxBorder";
-            this.tb_addressEng.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_addressEng.ForeColor = System.Drawing.Color.Black;
-            this.tb_addressEng.Location = new System.Drawing.Point(165, 188);
-            this.tb_addressEng.Name = "tb_addressEng";
-            this.tb_addressEng.Size = new System.Drawing.Size(372, 22);
-            this.tb_addressEng.TabIndex = 16;
-            this.tb_addressEng.Text = "No.2112 ChaoYang St.Yanji,Jilin,China";
-            // 
-            // tb_address
-            // 
-            this.tb_address.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_address.Border.Class = "TextBoxBorder";
-            this.tb_address.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_address.ForeColor = System.Drawing.Color.Black;
-            this.tb_address.Location = new System.Drawing.Point(165, 159);
-            this.tb_address.Name = "tb_address";
-            this.tb_address.Size = new System.Drawing.Size(372, 22);
-            this.tb_address.TabIndex = 15;
-            this.tb_address.Text = "133000";
-            // 
-            // tb_unitNameEng
-            // 
-            this.tb_unitNameEng.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_unitNameEng.Border.Class = "TextBoxBorder";
-            this.tb_unitNameEng.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_unitNameEng.ForeColor = System.Drawing.Color.Black;
-            this.tb_unitNameEng.Location = new System.Drawing.Point(166, 130);
-            this.tb_unitNameEng.Name = "tb_unitNameEng";
-            this.tb_unitNameEng.Size = new System.Drawing.Size(372, 22);
-            this.tb_unitNameEng.TabIndex = 8;
-            this.tb_unitNameEng.Text = "Jilin Yanbian Institute of Verification and Testing";
-            // 
-            // tb_unitName
-            // 
-            this.tb_unitName.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_unitName.Border.Class = "TextBoxBorder";
-            this.tb_unitName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_unitName.ForeColor = System.Drawing.Color.Black;
-            this.tb_unitName.Location = new System.Drawing.Point(166, 100);
-            this.tb_unitName.Name = "tb_unitName";
-            this.tb_unitName.Size = new System.Drawing.Size(372, 22);
-            this.tb_unitName.TabIndex = 7;
-            this.tb_unitName.Text = "吉林省延边州计量检定测试所";
-            // 
-            // tb_auth
-            // 
-            this.tb_auth.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_auth.Border.Class = "TextBoxBorder";
-            this.tb_auth.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_auth.ForeColor = System.Drawing.Color.Black;
-            this.tb_auth.Location = new System.Drawing.Point(166, 43);
-            this.tb_auth.Name = "tb_auth";
-            this.tb_auth.Size = new System.Drawing.Size(372, 22);
-            this.tb_auth.TabIndex = 3;
-            this.tb_auth.Text = "(吉)法计(2008)030号";
-            // 
-            // tb_standard1
-            // 
-            this.tb_standard1.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_standard1.Border.Class = "TextBoxBorder";
-            this.tb_standard1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_standard1.ForeColor = System.Drawing.Color.Black;
-            this.tb_standard1.Location = new System.Drawing.Point(166, 13);
-            this.tb_standard1.Name = "tb_standard1";
-            this.tb_standard1.Size = new System.Drawing.Size(372, 22);
-            this.tb_standard1.TabIndex = 1;
-            this.tb_standard1.Text = "吉林省延吉市朝阳街2112号";
-            // 
-            // superTabItem1
-            // 
-            this.superTabItem1.AttachedControl = this.superTabControlPanel1;
-            this.superTabItem1.GlobalItem = false;
-            this.superTabItem1.Name = "superTabItem1";
-            this.superTabItem1.Text = "自定义";
-            // 
             // superTabControlPanel2
             // 
             this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1170,6 +1170,7 @@
             this.Text = "设置";
             ((System.ComponentModel.ISupportInitialize)(this.superTabControl1)).EndInit();
             this.superTabControl1.ResumeLayout(false);
+            this.superTabControlPanel1.ResumeLayout(false);
             this.superTabControlPanel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1179,7 +1180,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.di_airPresure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_humidity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_temper)).EndInit();
-            this.superTabControlPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

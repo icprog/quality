@@ -208,6 +208,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DATA\HTMLPage1.htm" />
+    <Content Include="DATA\HTMLPage2.htm" />
     <None Include="Resources\icon_pencil-edit_alt.png" />
     <None Include="Resources\icon_pencil-edit.png" />
     <None Include="Resources\icon_download.png" />

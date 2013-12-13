@@ -187,6 +187,7 @@
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.cb_useResultA = new DevComponents.DotNetBar.Controls.SwitchButton();
             this.labelX44 = new DevComponents.DotNetBar.LabelX();
             this.labelX45 = new DevComponents.DotNetBar.LabelX();
             this.int_row = new DevComponents.Editors.IntegerInput();
@@ -2188,6 +2189,7 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.Color.Transparent;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.cb_useResultA);
             this.panelEx1.Controls.Add(this.labelX44);
             this.panelEx1.Controls.Add(this.labelX45);
             this.panelEx1.Controls.Add(this.int_row);
@@ -2203,6 +2205,23 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 6;
             this.panelEx1.Text = "panelEx1";
+            // 
+            // cb_useResultA
+            // 
+            // 
+            // 
+            // 
+            this.cb_useResultA.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.cb_useResultA.Location = new System.Drawing.Point(192, 3);
+            this.cb_useResultA.Name = "cb_useResultA";
+            this.cb_useResultA.OffText = "不使用";
+            this.cb_useResultA.OnText = "使用";
+            this.cb_useResultA.Size = new System.Drawing.Size(82, 22);
+            this.cb_useResultA.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cb_useResultA.TabIndex = 6;
+            this.cb_useResultA.Value = true;
+            this.cb_useResultA.ValueObject = "Y";
+            this.cb_useResultA.ValueChanged += new System.EventHandler(this.cb_useResultA_ValueChanged);
             // 
             // labelX44
             // 
@@ -2311,6 +2330,7 @@
             this.superGridControl1.Size = new System.Drawing.Size(877, 545);
             this.superGridControl1.TabIndex = 5;
             this.superGridControl1.Text = "superGridControl1";
+            this.superGridControl1.EditorValueChanged += new System.EventHandler<DevComponents.DotNetBar.SuperGrid.GridEditEventArgs>(this.superGridControl1_EditorValueChanged);
             // 
             // superTabItem2
             // 
@@ -2345,7 +2365,7 @@
             // 
             this.splitContainer_A.Panel2.Controls.Add(this.webBrowser1);
             this.splitContainer_A.Size = new System.Drawing.Size(877, 575);
-            this.splitContainer_A.SplitterDistance = 48;
+            this.splitContainer_A.SplitterDistance = 47;
             this.splitContainer_A.TabIndex = 191;
             // 
             // panel_filename1
@@ -2356,7 +2376,7 @@
             this.panel_filename1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_filename1.Location = new System.Drawing.Point(0, 0);
             this.panel_filename1.Name = "panel_filename1";
-            this.panel_filename1.Size = new System.Drawing.Size(877, 48);
+            this.panel_filename1.Size = new System.Drawing.Size(877, 47);
             this.panel_filename1.TabIndex = 0;
             // 
             // btn_OpenA
@@ -2405,7 +2425,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(877, 523);
+            this.webBrowser1.Size = new System.Drawing.Size(877, 524);
             this.webBrowser1.TabIndex = 190;
             // 
             // superTabItem6
@@ -2441,7 +2461,7 @@
             // 
             this.splitContainer_B.Panel2.Controls.Add(this.webBrowser2);
             this.splitContainer_B.Size = new System.Drawing.Size(877, 575);
-            this.splitContainer_B.SplitterDistance = 48;
+            this.splitContainer_B.SplitterDistance = 47;
             this.splitContainer_B.TabIndex = 192;
             // 
             // panel_filename2
@@ -2452,7 +2472,7 @@
             this.panel_filename2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_filename2.Location = new System.Drawing.Point(0, 0);
             this.panel_filename2.Name = "panel_filename2";
-            this.panel_filename2.Size = new System.Drawing.Size(877, 48);
+            this.panel_filename2.Size = new System.Drawing.Size(877, 47);
             this.panel_filename2.TabIndex = 0;
             // 
             // btb_openB
@@ -2501,7 +2521,7 @@
             this.webBrowser2.Location = new System.Drawing.Point(0, 0);
             this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(877, 523);
+            this.webBrowser2.Size = new System.Drawing.Size(877, 524);
             this.webBrowser2.TabIndex = 190;
             // 
             // superTabItem4
@@ -3051,6 +3071,7 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx tb_accordingTo;
         private DevComponents.DotNetBar.Controls.ComboBoxEx tb_license;
         public DevComponents.DotNetBar.Controls.TextBoxX tb_type;
+        private DevComponents.DotNetBar.Controls.SwitchButton cb_useResultA;
 
     }
 }

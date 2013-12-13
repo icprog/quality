@@ -20,7 +20,9 @@ namespace 质监局证书管理系统
         bool b_isOpen = false;
         bool c_isOpen = false;
         bool Validated = true;
+        bool gridChanged=false;
         DBManager manager;
+        LicenseClass license;
         #endregion
 
         public LicenseControl()
@@ -577,7 +579,7 @@ namespace 质监局证书管理系统
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            LicenseClass license = new LicenseClass();
+            license = new LicenseClass();
             license.According = tb_accordingTo.Text;
             license.ApprovedBy = tb_approver.Text;
             license.Benchexpire1 = dt_benchExpire1.Value;
@@ -614,10 +616,33 @@ namespace 质监局证书管理系统
             license.Presure = (float)di_presure.Value;
             license.Result = tb_result.Text;
             license.ResultHTML = GetResultAGrid();
+            license.ResultHTML2 = (a_isOpen ? webBrowser1.Document.GetElementById("htmlText").InnerHtml : "");
+            license.ResultHTML3 = (b_isOpen ? webBrowser2.Document.GetElementById("htmlText").InnerHtml : "");
+            license.ResultHTML4 = (c_isOpen ? webBrowser3.Document.GetElementById("htmlText").InnerHtml : "");
 
-            license.ResultHTML2 = (a_isOpen ? webBrowser1.Document.GetElementById("htmlText").ToString() : "");
-            license.ResultHTML3 = (b_isOpen ? webBrowser2.Document.GetElementById("htmlText").ToString() : "");
-            license.ResultHTML4 = (c_isOpen ? webBrowser3.Document.GetElementById("htmlText").ToString() : "");
+            for (int i = 0; i < 3; i++)
+            {
+                if (string.IsNullOrEmpty(license.ResultHTML))
+                {
+                    license.ResultHTML = license.ResultHTML2;
+                    license.ResultHTML2 = license.ResultHTML3;
+                    license.ResultHTML3 = license.ResultHTML4;
+                }
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                if (string.IsNullOrEmpty(license.ResultHTML2))
+                {
+                    license.ResultHTML2 = license.ResultHTML3;
+                    license.ResultHTML3 = license.ResultHTML4;
+                }
+            }
+            if (string.IsNullOrEmpty(license.ResultHTML3))
+            {
+                license.ResultHTML3 = license.ResultHTML4;
+            }
+            
+            
 
             license.Serial = tb_licenseNo.Text;
             license.Telephone = tb_authToTel.Text;
@@ -741,17 +766,25 @@ namespace 质监局证书管理系统
             html += "<meta charset=\"UTF-8\">";
             html += "<title>API Usage &mdash; CKEditor Sample</title>";
             html += "<script src=../ckeditor/ckeditor.js ></script>";
+            html += "<script src=../ckeditor/jquery-1.10.2.js ></script>";
             html += "<link href=\"sample.css\" rel=\"stylesheet\">";
             //html += "<script>";
-            html += "<script>   function GetContents() {";
+            html += "<script>";
+            html += " function keyup(e){";
+            html+=" GetContents();";
+            
+             html+="}";
+            html+=" function GetContents() {";
             html += "var editor = CKEDITOR.instances.editor1;";
-            html += "document.getElementById('htmlText').innerText=editor.getData();";
+            html += "document.getElementById('htmlText').innerHTML=editor.getData();";
             html += "}";
-            html += "CKEDITOR.on( 'instanceReady', function( ev ) {";
-            html += "var editor = CKEDITOR.instances.editor1;";
+            html += "CKEDITOR.on( 'instanceReady', function( ev ) {GetContents();";
+            html += "var editor = CKEDITOR.instances.editor1;if(ev.editor.document.$.addEventListener) ";
+            html += " ev.editor.document.$.addEventListener('keyup',keyup,false);";
+                html += " else if(ev.editor.document.$.attachEvent)";
+                html += " ev.editor.document.$.attachEvent('onkeyup',function(ev){keyup(ev)});  ";
             html += "var command = editor.getCommand( 'maximize' );";
             html += "command.exec();});";
-
             html += "</script>";
             html += "</head><body>";
             html += "<div id=htmlText style='display:none'></div>";
@@ -782,29 +815,52 @@ namespace 质监局证书管理系统
         }
         private string GetResultAGrid()
         {
-            string html = "<table border=1>";
-            int roucount = superGridControl1.PrimaryGrid.Rows.Count;
-            int colcount = superGridControl1.PrimaryGrid.Columns.Count;
-            for (int i = 0; i < roucount; i++)
-            {
-                html += "<tr>";
-                DevComponents.DotNetBar.SuperGrid.GridRow row = (DevComponents.DotNetBar.SuperGrid.GridRow)superGridControl1.PrimaryGrid.Rows[i];
-                for (int j = 0; j < colcount; j++)
+                int colCnt = superGridControl1.PrimaryGrid.Columns.Count;
+                int rowCnt = superGridControl1.PrimaryGrid.Rows.Count;
+                
+                for (int i = 0; i < rowCnt; i++)
                 {
+                    for (int j = 0; j < colCnt; j++)
+                    {
+                        DevComponents.DotNetBar.SuperGrid.GridRow row = (DevComponents.DotNetBar.SuperGrid.GridRow)superGridControl1.PrimaryGrid.Rows[i];
+                        if (row.Cells[j].Value != null)
+                        {
+                            this.gridChanged=true;
 
-                    if (row.Cells[j].Value == null)
-                    {
-                        html += "<td></td>";
-                    }
-                    else
-                    {
-                        html += "<td>" + row.Cells[j].Value.ToString() + "</td>";
+                        }
+                       
                     }
                 }
-                html += "</tr>";
-            }
-            html += "</table>";
-            return html;
+            
+            
+            if(cb_useResultA.Value&&this.gridChanged)
+            {
+                string html = "<table border=1>";
+                int roucount = superGridControl1.PrimaryGrid.Rows.Count;
+                int colcount = superGridControl1.PrimaryGrid.Columns.Count;
+                for (int i = 0; i < roucount; i++)
+                {
+                    html += "<tr>";
+                    DevComponents.DotNetBar.SuperGrid.GridRow row = (DevComponents.DotNetBar.SuperGrid.GridRow)superGridControl1.PrimaryGrid.Rows[i];
+                    for (int j = 0; j < colcount; j++)
+                    {
+
+                        if (row.Cells[j].Value == null)
+                        {
+                            html += "<td></td>";
+                        }
+                        else
+                        {
+                            html += "<td>" + row.Cells[j].Value.ToString() + "</td>";
+                        }
+                    }
+                    html += "</tr>";
+                }
+                html += "</table>";
+                return html;
+                }
+                else 
+                    return "";
         }
         #endregion
 
@@ -822,12 +878,33 @@ namespace 质监局证书管理系统
 
         }
 
+       
 
+        private void superGridControl1_EditorValueChanged(object sender, DevComponents.DotNetBar.SuperGrid.GridEditEventArgs e)
+        {
+            this.gridChanged=true;
+        
+        }
 
+        private void cb_useResultA_ValueChanged(object sender, EventArgs e)
+        {
+            if (!cb_useResultA.Value)
+            {
+                int_col.Enabled = false;
+                int_row.Enabled = false;
+                superGridControl1.Enabled = false;
+            }
+            else
+            {
+                int_col.Enabled = true;
+                int_row.Enabled = true;
+                superGridControl1.Enabled = true;
+            }
+        }
 
+        
 
-
-
+        
 
 
 

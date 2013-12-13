@@ -34,6 +34,7 @@
             this.metroStatusBar1 = new DevComponents.DotNetBar.Metro.MetroStatusBar();
             this.metroShell1 = new DevComponents.DotNetBar.Metro.MetroShell();
             this.metroTabPanel1 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
+            this.web_dummy = new System.Windows.Forms.WebBrowser();
             this.metroToolbar1 = new DevComponents.DotNetBar.Metro.MetroToolbar();
             this.btn_tool_download = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
@@ -47,6 +48,10 @@
             this.advTree_licenseList = new DevComponents.AdvTree.AdvTree();
             this.columnHeader2 = new DevComponents.AdvTree.ColumnHeader();
             this.columnHeader3 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader4 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader6 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader7 = new DevComponents.AdvTree.ColumnHeader();
+            this.columnHeader5 = new DevComponents.AdvTree.ColumnHeader();
             this.columnHeader1 = new DevComponents.AdvTree.ColumnHeader();
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
@@ -58,10 +63,7 @@
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.columnHeader4 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader5 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader6 = new DevComponents.AdvTree.ColumnHeader();
-            this.columnHeader7 = new DevComponents.AdvTree.ColumnHeader();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.metroShell1.SuspendLayout();
             this.metroTabPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advTree_licenseList)).BeginInit();
@@ -138,6 +140,7 @@
             // metroTabPanel1
             // 
             this.metroTabPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.metroTabPanel1.Controls.Add(this.web_dummy);
             this.metroTabPanel1.Controls.Add(this.metroToolbar1);
             this.metroTabPanel1.Controls.Add(this.webBrowser1);
             this.metroTabPanel1.Controls.Add(this.expandableSplitter1);
@@ -162,6 +165,16 @@
             this.metroTabPanel1.TabIndex = 1;
             this.metroTabPanel1.Visible = false;
             // 
+            // web_dummy
+            // 
+            this.web_dummy.Location = new System.Drawing.Point(0, 217);
+            this.web_dummy.MinimumSize = new System.Drawing.Size(20, 20);
+            this.web_dummy.Name = "web_dummy";
+            this.web_dummy.Size = new System.Drawing.Size(250, 250);
+            this.web_dummy.TabIndex = 6;
+            this.web_dummy.Visible = false;
+            this.web_dummy.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.web_dummy_DocumentCompleted);
+            // 
             // metroToolbar1
             // 
             this.metroToolbar1.BackColor = System.Drawing.Color.White;
@@ -183,9 +196,9 @@
             this.btn_tool_preview,
             this.btn_tool_print});
             this.metroToolbar1.ItemSpacing = 20;
-            this.metroToolbar1.Location = new System.Drawing.Point(279, 541);
+            this.metroToolbar1.Location = new System.Drawing.Point(279, 463);
             this.metroToolbar1.Name = "metroToolbar1";
-            this.metroToolbar1.Size = new System.Drawing.Size(319, 38);
+            this.metroToolbar1.Size = new System.Drawing.Size(319, 77);
             this.metroToolbar1.TabIndex = 4;
             this.metroToolbar1.Text = "metroToolbar1";
             this.metroToolbar1.MouseEnter += new System.EventHandler(this.metroToolbar1_MouseHover);
@@ -208,6 +221,7 @@
             this.btn_tool_New.Name = "btn_tool_New";
             this.btn_tool_New.Text = "buttonItem2";
             this.btn_tool_New.Tooltip = "新建证书";
+            this.btn_tool_New.Click += new System.EventHandler(this.btn_tool_New_Click);
             // 
             // buttonItem7
             // 
@@ -232,6 +246,7 @@
             this.btn_tool_preview.Name = "btn_tool_preview";
             this.btn_tool_preview.Text = "buttonItem3";
             this.btn_tool_preview.Tooltip = "预览";
+            this.btn_tool_preview.Click += new System.EventHandler(this.btn_tool_preview_Click);
             // 
             // btn_tool_print
             // 
@@ -240,6 +255,7 @@
             this.btn_tool_print.Name = "btn_tool_print";
             this.btn_tool_print.Text = "buttonItem5";
             this.btn_tool_print.Tooltip = "打印";
+            this.btn_tool_print.Click += new System.EventHandler(this.btn_tool_print_Click);
             // 
             // webBrowser1
             // 
@@ -334,6 +350,30 @@
             this.columnHeader3.Text = "受检/委托方";
             this.columnHeader3.Width.Relative = 40;
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Name = "columnHeader4";
+            this.columnHeader4.Text = "计量器具名称";
+            this.columnHeader4.Width.Relative = 10;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Name = "columnHeader6";
+            this.columnHeader6.Text = "型号规格";
+            this.columnHeader6.Width.Relative = 10;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Name = "columnHeader7";
+            this.columnHeader7.Text = "编号";
+            this.columnHeader7.Width.Relative = 10;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Name = "columnHeader5";
+            this.columnHeader5.Text = "登陆者";
+            this.columnHeader5.Width.Relative = 10;
+            // 
             // columnHeader1
             // 
             this.columnHeader1.MinimumWidth = 70;
@@ -422,29 +462,15 @@
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Metro;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
             // 
-            // columnHeader4
+            // printPreviewDialog1
             // 
-            this.columnHeader4.Name = "columnHeader4";
-            this.columnHeader4.Text = "计量器具名称";
-            this.columnHeader4.Width.Relative = 10;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Name = "columnHeader5";
-            this.columnHeader5.Text = "登陆者";
-            this.columnHeader5.Width.Relative = 10;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Name = "columnHeader6";
-            this.columnHeader6.Text = "型号规格";
-            this.columnHeader6.Width.Relative = 10;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Name = "columnHeader7";
-            this.columnHeader7.Text = "编号";
-            this.columnHeader7.Width.Relative = 10;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // frm_main
             // 
@@ -498,6 +524,8 @@
         private DevComponents.AdvTree.ColumnHeader columnHeader6;
         private DevComponents.AdvTree.ColumnHeader columnHeader7;
         private DevComponents.AdvTree.ColumnHeader columnHeader5;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.WebBrowser web_dummy;
     }
 }
 

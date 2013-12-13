@@ -43,7 +43,16 @@ namespace 质监局证书管理系统
             tb_appName.Text = ConfigurationManager.AppSettings["appName"];
             ip_sqlIPAddress.Value = ConfigurationManager.AppSettings["sqlServerIPAddress"];
             int_port.Value = int.Parse(ConfigurationManager.AppSettings["sqlServerPort"].ToString());
-            tb_mdbfilename.Text = ConfigurationManager.AppSettings["mdbFilePath"].ToString();
+            if (ConfigurationManager.AppSettings["mdbFilePath"].ToString() == "")
+            {
+                ConfigurationManager.AppSettings["mdbFilePath"] = Application.StartupPath + "\\Data\\license.mdb";
+                tb_mdbfilename.Text = ConfigurationManager.AppSettings["mdbFilePath"].ToString();
+            }
+            else
+            {
+                tb_mdbfilename.Text = ConfigurationManager.AppSettings["mdbFilePath"].ToString();
+            }
+            
             if (ConfigurationManager.AppSettings["DBType"].ToString() == "online")
             {
                 rb_online.Checked = true;
