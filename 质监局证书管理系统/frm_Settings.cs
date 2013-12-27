@@ -8,7 +8,7 @@ using System.Text;
 using System.Xml;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
-
+using Quality;
 namespace 质监局证书管理系统
 {
     public partial class frm_Settings : DevComponents.DotNetBar.Metro.MetroForm
@@ -249,16 +249,16 @@ namespace 质监局证书管理系统
 
         private void btn_testConn_Click(object sender, EventArgs e)
         {
-            bool isSuccess=SqlHelper.ConnectTest(string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
-            if (isSuccess)
-            {
-                MessageBox.Show("连接成功");
+            //bool isSuccess=SqlHelper.ConnectTest(string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
+            //if (isSuccess)
+            //{
+            //    MessageBox.Show("连接成功");
 
-            }
-            else
-            {
-                MessageBox.Show("连接失败");
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("连接失败");
+            //}
         }
 
         private void btn_loadMDB_Click(object sender, EventArgs e)

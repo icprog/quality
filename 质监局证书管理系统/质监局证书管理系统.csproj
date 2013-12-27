@@ -13,6 +13,7 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -61,6 +61,7 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -70,6 +71,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CertificateSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CertificateSearch.Designer.cs">
+      <DependentUpon>CertificateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DBSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DBSettings.Designer.cs">
+      <DependentUpon>frm_DBSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +100,18 @@
     </Compile>
     <Compile Include="frm_Settings.Designer.cs">
       <DependentUpon>frm_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_splash.Designer.cs">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_userSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_userSettings.Designer.cs">
+      <DependentUpon>frm_userSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="LicensePreview.cs">
       <SubType>Form</SubType>
@@ -97,11 +128,26 @@
     <Compile Include="LicenseControl.Designer.cs">
       <DependentUpon>LicenseControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CertificateSearch.resx">
+      <DependentUpon>CertificateSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_DBSettings.resx">
+      <DependentUpon>frm_DBSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Settings.resx">
       <DependentUpon>frm_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_splash.resx">
+      <DependentUpon>frm_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_userSettings.resx">
+      <DependentUpon>frm_userSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseControl.resx">
       <DependentUpon>LicenseControl.cs</DependentUpon>
@@ -200,15 +246,44 @@
       <ProductName>SQL Server Compact 3.5 SP2</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
       <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <Content Include="DATA\HTMLPage1.htm" />
     <Content Include="DATA\HTMLPage2.htm" />
+    <Content Include="DATA\license.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DATA\license_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>license.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\icon_pencil-edit_alt1.png" />
+    <None Include="Resources\icon_pencil-edit1.png" />
+    <None Include="Resources\icon_search2.png" />
+    <None Include="Resources\icon_documents.png" />
+    <None Include="Resources\icon_documents_alt.png" />
+    <None Include="Resources\arrow_carrot-up.png" />
+    <None Include="Resources\arrow_carrot-down.png" />
+    <None Include="Resources\icon_group_rev.png" />
+    <None Include="Resources\quality副本.png" />
+    <None Include="Resources\icon_folder_rev.png" />
+    <None Include="Resources\icon_document_rev.png" />
+    <None Include="Resources\icon_document.png" />
     <None Include="Resources\icon_pencil-edit_alt.png" />
     <None Include="Resources\icon_pencil-edit.png" />
     <None Include="Resources\icon_download.png" />
@@ -226,6 +301,14 @@
     <ProjectReference Include="..\ModelLib\ModelLib.csproj">
       <Project>{CBF2853F-E5EB-4F63-A7C4-981A125D772B}</Project>
       <Name>ModelLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quality.BLL\Quality.BLL.csproj">
+      <Project>{2E3A6FFB-9A47-431F-B38E-5371EEC3699A}</Project>
+      <Name>Quality.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quality.Model\Quality.Model.csproj">
+      <Project>{C6803E3A-CE7E-4AF8-A207-945B7915E83C}</Project>
+      <Name>Quality.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

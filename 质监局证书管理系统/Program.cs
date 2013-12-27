@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
+using Quality;
 namespace 质监局证书管理系统
 {
     static class Program
@@ -15,7 +15,25 @@ namespace 质监局证书管理系统
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_main());
+           
+
+            frm_login login = new frm_login();
+            login.ShowDialog();
+            if (login.DialogResult == DialogResult.OK)
+            {
+                if (login.bLogin)
+                {
+                    
+                    Application.Run(new frm_main(login.Users));
+                }
+
+            }
+            else if(login.DialogResult==DialogResult.Abort)
+            {
+                Application.Exit();
+            }
+
+           // Application.Run(new frm_main());
         }
     }
 }

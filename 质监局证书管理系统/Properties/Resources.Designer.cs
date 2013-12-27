@@ -67,9 +67,65 @@ namespace 质监局证书管理系统.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap arrow_carrot_down {
+            get {
+                object obj = ResourceManager.GetObject("arrow_carrot-down", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap arrow_carrot_up {
+            get {
+                object obj = ResourceManager.GetObject("arrow_carrot-up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_document {
+            get {
+                object obj = ResourceManager.GetObject("icon_document", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_document_rev {
+            get {
+                object obj = ResourceManager.GetObject("icon_document_rev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_documents {
+            get {
+                object obj = ResourceManager.GetObject("icon_documents", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_documents_alt {
+            get {
+                object obj = ResourceManager.GetObject("icon_documents_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap icon_download {
             get {
                 object obj = ResourceManager.GetObject("icon_download", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_folder_rev {
+            get {
+                object obj = ResourceManager.GetObject("icon_folder_rev", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_group_rev {
+            get {
+                object obj = ResourceManager.GetObject("icon_group_rev", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -84,6 +140,20 @@ namespace 质监局证书管理系统.Properties {
         internal static System.Drawing.Bitmap icon_pencil_edit_alt {
             get {
                 object obj = ResourceManager.GetObject("icon_pencil-edit_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_pencil_edit_alt1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_pencil-edit_alt1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_pencil_edit1 {
+            get {
+                object obj = ResourceManager.GetObject("icon_pencil-edit1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -130,6 +200,13 @@ namespace 质监局证书管理系统.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap icon_search2 {
+            get {
+                object obj = ResourceManager.GetObject("icon_search2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap icon_trash {
             get {
                 object obj = ResourceManager.GetObject("icon_trash", resourceCulture);
@@ -140,6 +217,13 @@ namespace 质监局证书管理系统.Properties {
         internal static System.Drawing.Bitmap icon_trash_alt {
             get {
                 object obj = ResourceManager.GetObject("icon_trash_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap quality副本 {
+            get {
+                object obj = ResourceManager.GetObject("quality副本", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

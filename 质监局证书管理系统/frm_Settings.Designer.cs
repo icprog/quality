@@ -555,7 +555,7 @@
             this.groupBox1.Size = new System.Drawing.Size(530, 135);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "数据库连接模式:";
+            this.groupBox1.Text = "数据库连接:";
             // 
             // btn_testConn
             // 

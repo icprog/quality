@@ -3,7 +3,7 @@ using System;
 using System.Data;   
 using System.Data.OleDb;
 
-namespace ModelLib   
+namespace Quality   
 {   
     /**//// <summary>   
     /// AccessDb 的摘要说明，以下信息请完整保留   

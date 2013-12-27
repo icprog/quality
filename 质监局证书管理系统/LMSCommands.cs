@@ -17,6 +17,14 @@ namespace 质监局证书管理系统
             get { return _LicenseCommands; }
             set { _LicenseCommands = value; }
         }
+        private DialogCommands _SearchDialogCommands = new DialogCommands();
+
+        public DialogCommands SearchDialogCommands
+        {
+            get { return _SearchDialogCommands; }
+            set { _SearchDialogCommands = value; }
+        }
+       
     }
 
     public class DocumentCommands
@@ -62,5 +70,26 @@ namespace 质监局证书管理系统
             get { return _Preview; }
             set { _Preview = value; }
         }
+    }
+    public class DialogCommands
+    {
+        private Command _Open;
+
+        public Command Open
+        {
+            get { return _Open; }
+            set { _Open = value; }
+        }
+
+
+        private Command _Cancel;
+
+        public Command Cancel
+        {
+            get { return _Cancel; }
+            set { _Cancel = value; }
+        }
+      
+        
     }
 }

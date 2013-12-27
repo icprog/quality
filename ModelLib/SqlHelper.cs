@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Collections;
 using System.Configuration;
 
-namespace 质监局证书管理系统
+namespace Quality
 {
     public abstract class SqlHelper
     {
@@ -15,7 +15,7 @@ namespace 质监局证书管理系统
 
         // 哈希表用来存储缓存的参数信息，哈希表可以存储任意类型的参数。
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
-        public static bool ConnectTest(string conn)
+        public static string  ConnectTest(string conn)
         {
             bool isSuccess;
             SqlConnection con = new SqlConnection(conn);
@@ -24,16 +24,18 @@ namespace 质监局证书管理系统
                 
                 con.Open();
                 isSuccess = true;
+                return con.State.ToString();
             }
-            catch
+            catch(SqlException ex)
             {
                 isSuccess = false;
+                return ex.Message.ToString();
             }
             finally
             {
                 con.Close();
             }
-            return isSuccess;
+            
         }
         /// <summary>
         ///执行一个不需要返回值的SqlCommand命令，通过指定专用的连接字符串。

@@ -8,7 +8,7 @@
     <ProjectGuid>{CBF2853F-E5EB-4F63-A7C4-981A125D772B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ModelLib</RootNamespace>
+    <RootNamespace>Quality</RootNamespace>
     <AssemblyName>ModelLib</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,7 +46,6 @@
     <Compile Include="AccessHelper.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DBManager.cs" />
-    <Compile Include="LicenseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
     <Compile Include="SysUtil.cs" />
@@ -80,6 +79,12 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Quality.Model\Quality.Model.csproj">
+      <Project>{C6803E3A-CE7E-4AF8-A207-945B7915E83C}</Project>
+      <Name>Quality.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,8 +9,9 @@ using System.Windows.Forms;
 using System.IO;
 using System.Threading;
 using Word;
-using ModelLib;
+using Quality;
 using System.Configuration;
+using Quality.Model;
 namespace 质监局证书管理系统
 {
     public partial class LicenseControl : UserControl
@@ -22,7 +23,7 @@ namespace 质监局证书管理系统
         bool Validated = true;
         bool gridChanged=false;
         DBManager manager;
-        LicenseClass license;
+        Certification license;
         #endregion
 
         public LicenseControl()
@@ -32,13 +33,7 @@ namespace 质监局证书管理系统
             //InitializeEmptyGrid();
             superTabControl1.Visible = true;
             tb_type.Focus();
-            if (ConfigurationManager.AppSettings["DBType"].ToString() == "offline")
-            {
-                manager = new DBManager("offline", ConfigurationManager.AppSettings["mdbFilePath"].ToString());
-            }
-            else
-            {
-            }
+            manager = new DBManager();
         }
         public void InitAutoComplete()
         {
@@ -419,7 +414,7 @@ namespace 质监局证书管理系统
                 tbd_filename1.Text = openFileDialog1.FileName;
                 string sFilePath = openFileDialog1.FileName;
 
-                if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".doc")
+                if (Quality.SysUtil.GetFileExt(sFilePath) == ".doc")
                 {
                     WordHelp helper = new WordHelp();
                     helper.Open(sFilePath);
@@ -443,7 +438,7 @@ namespace 质监局证书管理系统
 
                     webBrowser1.Navigate(this.getEditorHTML(html));
                 }
-                else if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".html")
+                else if (Quality.SysUtil.GetFileExt(sFilePath) == ".html")
                 {
                     webBrowser1.Navigate(sFilePath);
                 }
@@ -461,7 +456,7 @@ namespace 质监局证书管理系统
                 webBrowser2.Navigate("about:blank");
                 tbd_filename2.Text = openFileDialog1.FileName;
                 string sFilePath = openFileDialog1.FileName;
-                if (ModelLib.SysUtil.GetFileExt(sFilePath) == ".doc")
+                if (Quality.SysUtil.GetFileExt(sFilePath) == ".doc")
                 {
                     WordHelp helper = new WordHelp();
                     helper.Open(sFilePath);
@@ -579,7 +574,7 @@ namespace 质监局证书管理系统
 
         private void btn_save_Click(object sender, EventArgs e)
         {
-            license = new LicenseClass();
+            license = new Certification();
             license.According = tb_accordingTo.Text;
             license.ApprovedBy = tb_approver.Text;
             license.Benchexpire1 = dt_benchExpire1.Value;
@@ -606,14 +601,14 @@ namespace 质监局证书管理系统
             license.Comment = tb_comment.Text;
             license.Date = dt_date.Value;
             license.Expire = dt_expire.Value;
-            license.Humidity =(float) di_humidity.Value;
+            license.Humidity =di_humidity.Text;
             license.InstructionName = tbd_instName.Text;
             license.LicenseNotsure = tb_licenseNotsure.Text;
             license.Location = comb_location.Text;
             license.Madeby = tbd_madeBy.Text;
             license.Manufact_no = tb_instSerial.Text;
             license.Module = tb_module.Text;
-            license.Presure = (float)di_presure.Value;
+            license.Presure = di_presure.Text;
             license.Result = tb_result.Text;
             license.ResultHTML = GetResultAGrid();
             license.ResultHTML2 = (a_isOpen ? webBrowser1.Document.GetElementById("htmlText").InnerHtml : "");
@@ -646,20 +641,20 @@ namespace 质监局证书管理系统
 
             license.Serial = tb_licenseNo.Text;
             license.Telephone = tb_authToTel.Text;
-            license.Temperature =(float) di_temperatue.Value;
+            license.Temperature =di_temperatue.Text;
             license.Type = tb_type.Text;
             license.UnitName = tb_authTo.Text;
             license.UseLimit = tb_limit.Text;
             license.VerifiedBy = tb_recorder.Text;
             license.UseLicense = tb_license.Text;
-            if (license.AddLicense())
-            {
-                MessageBox.Show("添加成功");
-            }
-            else
-            {
-                MessageBox.Show("添加成功");
-            }
+            //if (license.AddLicense())
+            //{
+            //    MessageBox.Show("添加成功");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("添加成功");
+            //}
             
 
                 
@@ -787,8 +782,8 @@ namespace 质监局证书管理系统
             html += "command.exec();});";
             html += "</script>";
             html += "</head><body>";
-            html += "<div id=htmlText style='display:none'></div>";
-            html += "<textarea cols=\"100\" id=\"editor1\" name=\"editor1\" rows=\"20\">" + replace + "</textarea>";
+            html += "<div Id=htmlText style='display:none'></div>";
+            html += "<textarea cols=\"100\" Id=\"editor1\" name=\"editor1\" rows=\"20\">" + replace + "</textarea>";
             html += "<script>";
             html += " CKEDITOR.replace( 'editor1', {";
             html += "customConfig : \"../ckeditor/config.js\",";
@@ -868,13 +863,13 @@ namespace 质监局证书管理系统
         private void comb_benchSet1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            BenchSetClass bench = manager.GetBenchSet(comb_benchSet1.SelectedItem.ToString());
-            tb_benchname1.Text = bench.BenchName;
-            tb_benchRange1.Text = bench.BenchRange;
-            tb_benchserial1.Text = bench.BenchSerial;
-            dt_benchExpire1.Value = bench.Expire;
-            tb_benchSn1.Text = bench.BenchSn;
-            tb_notsure1.Text = bench.Notsure;
+            //BenchSetbench = manager.GetBenchSet(comb_benchSet1.SelectedItem.ToString());
+            //tb_benchname1.Text = bench.BenchName;
+            //tb_benchRange1.Text = bench.BenchRange;
+            //tb_benchserial1.Text = bench.BenchSerial;
+            //dt_benchExpire1.Value = bench.Expire;
+            //tb_benchSn1.Text = bench.BenchSn;
+            //tb_notsure1.Text = bench.Notsure;
 
         }
 
