@@ -11,6 +11,8 @@ using System.Configuration;
 using Quality.Model;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Quality.BLL;
+using Quality.Utility;
 namespace 质监局证书管理系统
 {
     public partial class frm_login : DevComponents.DotNetBar.Metro.MetroForm
@@ -18,7 +20,7 @@ namespace 质监局证书管理系统
         public bool bLogin = false;
         private Users _users;
         private int attemptCount = 0; //尝试次数
-
+        private UserBLL userbll;
         public Users Users
         {
             get { return _users; }
@@ -85,9 +87,10 @@ namespace 质监局证书管理系统
          Dictionary<string, Users> users = new Dictionary<string, Users>();
         private void tb_login_Click(object sender, EventArgs e)
         {
+            userbll = new UserBLL();
             if (attemptCount < 6)
             {
-                _users = manager.Login(comb_username.Text.ToLower(), tb_password.Text.Trim());
+                _users = userbll.Login(comb_username.Text.ToLower(), tb_password.Text.Trim());
                 if (_users != null)
                 {
 
@@ -100,6 +103,10 @@ namespace 质监局证书管理系统
                     if (!cb_remember.Checked)
                     {
                         _users.Password = "";
+                    }
+                    else
+                    {
+                        _users.Password = tb_password.Text;
                     }
                     if (users.ContainsKey(_users.Username))
                     {

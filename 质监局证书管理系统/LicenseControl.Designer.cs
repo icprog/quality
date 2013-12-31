@@ -30,23 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LicenseControl));
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
-            DevComponents.DotNetBar.SuperGrid.GridRow gridRow1 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell1 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell2 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridRow gridRow2 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell3 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell4 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridRow gridRow3 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell5 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell6 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridRow gridRow4 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell7 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell8 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridRow gridRow5 = new DevComponents.DotNetBar.SuperGrid.GridRow();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell9 = new DevComponents.DotNetBar.SuperGrid.GridCell();
-            DevComponents.DotNetBar.SuperGrid.GridCell gridCell10 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            DevComponents.DotNetBar.SuperGrid.GridRow gridRow6 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell11 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell12 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridRow gridRow7 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell13 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell14 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridRow gridRow8 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell15 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell16 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridRow gridRow9 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell17 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell18 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridRow gridRow10 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell19 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            DevComponents.DotNetBar.SuperGrid.GridCell gridCell20 = new DevComponents.DotNetBar.SuperGrid.GridCell();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.tb_type = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -118,8 +118,8 @@
             this.tb_accordingTo = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.tb_license = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.groupPanel1 = new System.Windows.Forms.GroupBox();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.comb_benchSet1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.dt_benchExpire1 = new System.Windows.Forms.DateTimePicker();
             this.labelX20 = new DevComponents.DotNetBar.LabelX();
             this.tb_benchname1 = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -147,21 +147,6 @@
             this.labelX28 = new DevComponents.DotNetBar.LabelX();
             this.labelX30 = new DevComponents.DotNetBar.LabelX();
             this.labelX32 = new DevComponents.DotNetBar.LabelX();
-            this.groupPanel2 = new System.Windows.Forms.GroupBox();
-            this.labelX26 = new DevComponents.DotNetBar.LabelX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.comb_benchSet2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.dt_benchExpire2 = new System.Windows.Forms.DateTimePicker();
-            this.tb_benchName2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX33 = new DevComponents.DotNetBar.LabelX();
-            this.tb_benchSerial2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX34 = new DevComponents.DotNetBar.LabelX();
-            this.tb_benchRange2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_notSure2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.tb_benchSn2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX35 = new DevComponents.DotNetBar.LabelX();
-            this.labelX36 = new DevComponents.DotNetBar.LabelX();
-            this.labelX37 = new DevComponents.DotNetBar.LabelX();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tb_limit = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX38 = new DevComponents.DotNetBar.LabelX();
@@ -183,6 +168,21 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX29 = new DevComponents.DotNetBar.LabelX();
+            this.groupPanel2 = new System.Windows.Forms.GroupBox();
+            this.labelX26 = new DevComponents.DotNetBar.LabelX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.comb_benchSet2 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.dt_benchExpire2 = new System.Windows.Forms.DateTimePicker();
+            this.tb_benchName2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX33 = new DevComponents.DotNetBar.LabelX();
+            this.tb_benchSerial2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX34 = new DevComponents.DotNetBar.LabelX();
+            this.tb_benchRange2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_notSure2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_benchSn2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX35 = new DevComponents.DotNetBar.LabelX();
+            this.labelX36 = new DevComponents.DotNetBar.LabelX();
+            this.labelX37 = new DevComponents.DotNetBar.LabelX();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -262,11 +262,11 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.groupPanel3.SuspendLayout();
-            this.groupPanel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.di_presure)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_temperatue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_humidity)).BeginInit();
+            this.groupPanel2.SuspendLayout();
             this.superTabControlPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -579,6 +579,7 @@
             this.radio_test.TabIndex = 2;
             this.radio_test.Text = "测试";
             this.radio_test.UseVisualStyleBackColor = true;
+            this.radio_test.CheckedChanged += new System.EventHandler(this.radio_test_CheckedChanged);
             // 
             // radio_match
             // 
@@ -589,6 +590,7 @@
             this.radio_match.TabIndex = 1;
             this.radio_match.Text = "校准";
             this.radio_match.UseVisualStyleBackColor = true;
+            this.radio_match.CheckedChanged += new System.EventHandler(this.radio_match_CheckedChanged);
             // 
             // radio_exam
             // 
@@ -601,6 +603,7 @@
             this.radio_exam.TabStop = true;
             this.radio_exam.Text = "检定";
             this.radio_exam.UseVisualStyleBackColor = true;
+            this.radio_exam.CheckedChanged += new System.EventHandler(this.radio_exam_CheckedChanged);
             // 
             // panel2
             // 
@@ -708,8 +711,8 @@
             // 
             this.splitContainer4.Panel2.Controls.Add(this.groupPanel1);
             this.splitContainer4.Panel2.Controls.Add(this.groupPanel3);
-            this.splitContainer4.Panel2.Controls.Add(this.groupPanel2);
             this.splitContainer4.Panel2.Controls.Add(this.panel4);
+            this.splitContainer4.Panel2.Controls.Add(this.groupPanel2);
             this.splitContainer4.Size = new System.Drawing.Size(887, 518);
             this.splitContainer4.SplitterDistance = 363;
             this.splitContainer4.TabIndex = 172;
@@ -1294,8 +1297,8 @@
             // groupPanel1
             // 
             this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel1.Controls.Add(this.labelX6);
             this.groupPanel1.Controls.Add(this.comb_benchSet1);
+            this.groupPanel1.Controls.Add(this.labelX6);
             this.groupPanel1.Controls.Add(this.dt_benchExpire1);
             this.groupPanel1.Controls.Add(this.labelX20);
             this.groupPanel1.Controls.Add(this.tb_benchname1);
@@ -1315,19 +1318,6 @@
             this.groupPanel1.TabStop = false;
             this.groupPanel1.Text = "标准器具1";
             // 
-            // labelX6
-            // 
-            this.labelX6.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(8, 20);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.Size = new System.Drawing.Size(56, 16);
-            this.labelX6.TabIndex = 109;
-            this.labelX6.Text = "常用器具:";
-            // 
             // comb_benchSet1
             // 
             this.comb_benchSet1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -1340,8 +1330,21 @@
             this.comb_benchSet1.Name = "comb_benchSet1";
             this.comb_benchSet1.Size = new System.Drawing.Size(175, 21);
             this.comb_benchSet1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comb_benchSet1.TabIndex = 108;
-            this.comb_benchSet1.SelectedIndexChanged += new System.EventHandler(this.comb_benchSet1_SelectedIndexChanged);
+            this.comb_benchSet1.TabIndex = 110;
+            this.comb_benchSet1.SelectedIndexChanged += new System.EventHandler(this.comb_benchSet1_SelectedIndexChanged_1);
+            // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(8, 20);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.Size = new System.Drawing.Size(56, 16);
+            this.labelX6.TabIndex = 109;
+            this.labelX6.Text = "常用器具:";
             // 
             // dt_benchExpire1
             // 
@@ -1551,6 +1554,8 @@
             // 
             // comb_benchSet3
             // 
+            this.comb_benchSet3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comb_benchSet3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.comb_benchSet3.DisplayMember = "Text";
             this.comb_benchSet3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comb_benchSet3.FormattingEnabled = true;
@@ -1560,6 +1565,7 @@
             this.comb_benchSet3.Size = new System.Drawing.Size(175, 21);
             this.comb_benchSet3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comb_benchSet3.TabIndex = 110;
+            this.comb_benchSet3.SelectedIndexChanged += new System.EventHandler(this.comb_benchSet3_SelectedIndexChanged);
             // 
             // dt_benchExpire3
             // 
@@ -1702,211 +1708,6 @@
             this.labelX32.Size = new System.Drawing.Size(56, 16);
             this.labelX32.TabIndex = 95;
             this.labelX32.Text = "不确定度:";
-            // 
-            // groupPanel2
-            // 
-            this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel2.Controls.Add(this.labelX26);
-            this.groupPanel2.Controls.Add(this.labelX7);
-            this.groupPanel2.Controls.Add(this.comb_benchSet2);
-            this.groupPanel2.Controls.Add(this.dt_benchExpire2);
-            this.groupPanel2.Controls.Add(this.tb_benchName2);
-            this.groupPanel2.Controls.Add(this.labelX33);
-            this.groupPanel2.Controls.Add(this.tb_benchSerial2);
-            this.groupPanel2.Controls.Add(this.labelX34);
-            this.groupPanel2.Controls.Add(this.tb_benchRange2);
-            this.groupPanel2.Controls.Add(this.tb_notSure2);
-            this.groupPanel2.Controls.Add(this.tb_benchSn2);
-            this.groupPanel2.Controls.Add(this.labelX35);
-            this.groupPanel2.Controls.Add(this.labelX36);
-            this.groupPanel2.Controls.Add(this.labelX37);
-            this.groupPanel2.Location = new System.Drawing.Point(6, 134);
-            this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(522, 120);
-            this.groupPanel2.TabIndex = 167;
-            this.groupPanel2.TabStop = false;
-            this.groupPanel2.Text = "标准器具2";
-            this.groupPanel2.Visible = false;
-            // 
-            // labelX26
-            // 
-            this.labelX26.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX26.Location = new System.Drawing.Point(9, 42);
-            this.labelX26.Name = "labelX26";
-            this.labelX26.Size = new System.Drawing.Size(56, 16);
-            this.labelX26.TabIndex = 92;
-            this.labelX26.Text = "标准名称:";
-            // 
-            // labelX7
-            // 
-            this.labelX7.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(8, 20);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.Size = new System.Drawing.Size(56, 16);
-            this.labelX7.TabIndex = 111;
-            this.labelX7.Text = "常用器具:";
-            // 
-            // comb_benchSet2
-            // 
-            this.comb_benchSet2.DisplayMember = "Text";
-            this.comb_benchSet2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comb_benchSet2.FormattingEnabled = true;
-            this.comb_benchSet2.ItemHeight = 15;
-            this.comb_benchSet2.Location = new System.Drawing.Point(77, 15);
-            this.comb_benchSet2.Name = "comb_benchSet2";
-            this.comb_benchSet2.Size = new System.Drawing.Size(175, 21);
-            this.comb_benchSet2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comb_benchSet2.TabIndex = 110;
-            // 
-            // dt_benchExpire2
-            // 
-            this.dt_benchExpire2.Location = new System.Drawing.Point(323, 92);
-            this.dt_benchExpire2.Name = "dt_benchExpire2";
-            this.dt_benchExpire2.Size = new System.Drawing.Size(176, 21);
-            this.dt_benchExpire2.TabIndex = 107;
-            // 
-            // tb_benchName2
-            // 
-            this.tb_benchName2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_benchName2.Border.Class = "TextBoxBorder";
-            this.tb_benchName2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_benchName2.ForeColor = System.Drawing.Color.Black;
-            this.tb_benchName2.Location = new System.Drawing.Point(77, 42);
-            this.tb_benchName2.Name = "tb_benchName2";
-            this.tb_benchName2.Size = new System.Drawing.Size(176, 21);
-            this.tb_benchName2.TabIndex = 102;
-            // 
-            // labelX33
-            // 
-            this.labelX33.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX33.Location = new System.Drawing.Point(9, 67);
-            this.labelX33.Name = "labelX33";
-            this.labelX33.Size = new System.Drawing.Size(32, 16);
-            this.labelX33.TabIndex = 93;
-            this.labelX33.Text = "编号:";
-            // 
-            // tb_benchSerial2
-            // 
-            this.tb_benchSerial2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_benchSerial2.Border.Class = "TextBoxBorder";
-            this.tb_benchSerial2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_benchSerial2.ForeColor = System.Drawing.Color.Black;
-            this.tb_benchSerial2.Location = new System.Drawing.Point(77, 67);
-            this.tb_benchSerial2.Name = "tb_benchSerial2";
-            this.tb_benchSerial2.Size = new System.Drawing.Size(176, 21);
-            this.tb_benchSerial2.TabIndex = 103;
-            // 
-            // labelX34
-            // 
-            this.labelX34.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX34.Location = new System.Drawing.Point(9, 91);
-            this.labelX34.Name = "labelX34";
-            this.labelX34.Size = new System.Drawing.Size(56, 16);
-            this.labelX34.TabIndex = 94;
-            this.labelX34.Text = "测量范围:";
-            // 
-            // tb_benchRange2
-            // 
-            this.tb_benchRange2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_benchRange2.Border.Class = "TextBoxBorder";
-            this.tb_benchRange2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_benchRange2.ForeColor = System.Drawing.Color.Black;
-            this.tb_benchRange2.Location = new System.Drawing.Point(77, 91);
-            this.tb_benchRange2.Name = "tb_benchRange2";
-            this.tb_benchRange2.Size = new System.Drawing.Size(176, 21);
-            this.tb_benchRange2.TabIndex = 104;
-            // 
-            // tb_notSure2
-            // 
-            this.tb_notSure2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_notSure2.Border.Class = "TextBoxBorder";
-            this.tb_notSure2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_notSure2.ForeColor = System.Drawing.Color.Black;
-            this.tb_notSure2.Location = new System.Drawing.Point(323, 44);
-            this.tb_notSure2.Name = "tb_notSure2";
-            this.tb_notSure2.Size = new System.Drawing.Size(176, 21);
-            this.tb_notSure2.TabIndex = 105;
-            // 
-            // tb_benchSn2
-            // 
-            this.tb_benchSn2.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.tb_benchSn2.Border.Class = "TextBoxBorder";
-            this.tb_benchSn2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tb_benchSn2.ForeColor = System.Drawing.Color.Black;
-            this.tb_benchSn2.Location = new System.Drawing.Point(323, 68);
-            this.tb_benchSn2.Name = "tb_benchSn2";
-            this.tb_benchSn2.Size = new System.Drawing.Size(176, 21);
-            this.tb_benchSn2.TabIndex = 106;
-            // 
-            // labelX35
-            // 
-            this.labelX35.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX35.Location = new System.Drawing.Point(259, 70);
-            this.labelX35.Name = "labelX35";
-            this.labelX35.Size = new System.Drawing.Size(56, 16);
-            this.labelX35.TabIndex = 96;
-            this.labelX35.Text = "标准证号:";
-            // 
-            // labelX36
-            // 
-            this.labelX36.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX36.Location = new System.Drawing.Point(259, 91);
-            this.labelX36.Name = "labelX36";
-            this.labelX36.Size = new System.Drawing.Size(56, 16);
-            this.labelX36.TabIndex = 97;
-            this.labelX36.Text = "有效期至:";
-            // 
-            // labelX37
-            // 
-            this.labelX37.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX37.Location = new System.Drawing.Point(259, 44);
-            this.labelX37.Name = "labelX37";
-            this.labelX37.Size = new System.Drawing.Size(56, 16);
-            this.labelX37.TabIndex = 95;
-            this.labelX37.Text = "不确定度:";
             // 
             // panel4
             // 
@@ -2074,10 +1875,9 @@
             this.di_presure.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.di_presure.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.di_presure.Increment = 1D;
-            this.di_presure.Location = new System.Drawing.Point(465, 6);
+            this.di_presure.Location = new System.Drawing.Point(446, 6);
             this.di_presure.Name = "di_presure";
-            this.di_presure.ShowUpDown = true;
-            this.di_presure.Size = new System.Drawing.Size(46, 21);
+            this.di_presure.Size = new System.Drawing.Size(60, 21);
             this.di_presure.TabIndex = 111;
             // 
             // di_temperatue
@@ -2089,9 +1889,8 @@
             this.di_temperatue.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.di_temperatue.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.di_temperatue.Increment = 0.1D;
-            this.di_temperatue.Location = new System.Drawing.Point(295, 6);
+            this.di_temperatue.Location = new System.Drawing.Point(289, 6);
             this.di_temperatue.Name = "di_temperatue";
-            this.di_temperatue.ShowUpDown = true;
             this.di_temperatue.Size = new System.Drawing.Size(47, 21);
             this.di_temperatue.TabIndex = 109;
             // 
@@ -2104,9 +1903,8 @@
             this.di_humidity.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.di_humidity.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
             this.di_humidity.Increment = 1D;
-            this.di_humidity.Location = new System.Drawing.Point(381, 6);
+            this.di_humidity.Location = new System.Drawing.Point(369, 6);
             this.di_humidity.Name = "di_humidity";
-            this.di_humidity.ShowUpDown = true;
             this.di_humidity.Size = new System.Drawing.Size(45, 21);
             this.di_humidity.TabIndex = 110;
             // 
@@ -2130,7 +1928,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(345, 8);
+            this.labelX3.Location = new System.Drawing.Point(337, 8);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(32, 16);
             this.labelX3.TabIndex = 100;
@@ -2143,11 +1941,219 @@
             // 
             // 
             this.labelX29.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX29.Location = new System.Drawing.Point(430, 8);
+            this.labelX29.Location = new System.Drawing.Point(415, 8);
             this.labelX29.Name = "labelX29";
             this.labelX29.Size = new System.Drawing.Size(32, 16);
             this.labelX29.TabIndex = 101;
             this.labelX29.Text = "气压:";
+            // 
+            // groupPanel2
+            // 
+            this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.groupPanel2.Controls.Add(this.labelX26);
+            this.groupPanel2.Controls.Add(this.labelX7);
+            this.groupPanel2.Controls.Add(this.comb_benchSet2);
+            this.groupPanel2.Controls.Add(this.dt_benchExpire2);
+            this.groupPanel2.Controls.Add(this.tb_benchName2);
+            this.groupPanel2.Controls.Add(this.labelX33);
+            this.groupPanel2.Controls.Add(this.tb_benchSerial2);
+            this.groupPanel2.Controls.Add(this.labelX34);
+            this.groupPanel2.Controls.Add(this.tb_benchRange2);
+            this.groupPanel2.Controls.Add(this.tb_notSure2);
+            this.groupPanel2.Controls.Add(this.tb_benchSn2);
+            this.groupPanel2.Controls.Add(this.labelX35);
+            this.groupPanel2.Controls.Add(this.labelX36);
+            this.groupPanel2.Controls.Add(this.labelX37);
+            this.groupPanel2.Location = new System.Drawing.Point(6, 134);
+            this.groupPanel2.Name = "groupPanel2";
+            this.groupPanel2.Size = new System.Drawing.Size(522, 120);
+            this.groupPanel2.TabIndex = 167;
+            this.groupPanel2.TabStop = false;
+            this.groupPanel2.Text = "标准器具2";
+            this.groupPanel2.Visible = false;
+            // 
+            // labelX26
+            // 
+            this.labelX26.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Location = new System.Drawing.Point(9, 42);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(56, 16);
+            this.labelX26.TabIndex = 92;
+            this.labelX26.Text = "标准名称:";
+            // 
+            // labelX7
+            // 
+            this.labelX7.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Location = new System.Drawing.Point(8, 20);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(56, 16);
+            this.labelX7.TabIndex = 111;
+            this.labelX7.Text = "常用器具:";
+            // 
+            // comb_benchSet2
+            // 
+            this.comb_benchSet2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comb_benchSet2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.comb_benchSet2.DisplayMember = "Text";
+            this.comb_benchSet2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comb_benchSet2.FormattingEnabled = true;
+            this.comb_benchSet2.ItemHeight = 15;
+            this.comb_benchSet2.Location = new System.Drawing.Point(77, 15);
+            this.comb_benchSet2.Name = "comb_benchSet2";
+            this.comb_benchSet2.Size = new System.Drawing.Size(175, 21);
+            this.comb_benchSet2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.comb_benchSet2.TabIndex = 110;
+            this.comb_benchSet2.SelectedIndexChanged += new System.EventHandler(this.comb_benchSet2_SelectedIndexChanged);
+            // 
+            // dt_benchExpire2
+            // 
+            this.dt_benchExpire2.Location = new System.Drawing.Point(323, 92);
+            this.dt_benchExpire2.Name = "dt_benchExpire2";
+            this.dt_benchExpire2.Size = new System.Drawing.Size(176, 21);
+            this.dt_benchExpire2.TabIndex = 107;
+            // 
+            // tb_benchName2
+            // 
+            this.tb_benchName2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_benchName2.Border.Class = "TextBoxBorder";
+            this.tb_benchName2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_benchName2.ForeColor = System.Drawing.Color.Black;
+            this.tb_benchName2.Location = new System.Drawing.Point(77, 42);
+            this.tb_benchName2.Name = "tb_benchName2";
+            this.tb_benchName2.Size = new System.Drawing.Size(176, 21);
+            this.tb_benchName2.TabIndex = 102;
+            // 
+            // labelX33
+            // 
+            this.labelX33.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX33.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX33.Location = new System.Drawing.Point(9, 67);
+            this.labelX33.Name = "labelX33";
+            this.labelX33.Size = new System.Drawing.Size(32, 16);
+            this.labelX33.TabIndex = 93;
+            this.labelX33.Text = "编号:";
+            // 
+            // tb_benchSerial2
+            // 
+            this.tb_benchSerial2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_benchSerial2.Border.Class = "TextBoxBorder";
+            this.tb_benchSerial2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_benchSerial2.ForeColor = System.Drawing.Color.Black;
+            this.tb_benchSerial2.Location = new System.Drawing.Point(77, 67);
+            this.tb_benchSerial2.Name = "tb_benchSerial2";
+            this.tb_benchSerial2.Size = new System.Drawing.Size(176, 21);
+            this.tb_benchSerial2.TabIndex = 103;
+            // 
+            // labelX34
+            // 
+            this.labelX34.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX34.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX34.Location = new System.Drawing.Point(9, 91);
+            this.labelX34.Name = "labelX34";
+            this.labelX34.Size = new System.Drawing.Size(56, 16);
+            this.labelX34.TabIndex = 94;
+            this.labelX34.Text = "测量范围:";
+            // 
+            // tb_benchRange2
+            // 
+            this.tb_benchRange2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_benchRange2.Border.Class = "TextBoxBorder";
+            this.tb_benchRange2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_benchRange2.ForeColor = System.Drawing.Color.Black;
+            this.tb_benchRange2.Location = new System.Drawing.Point(77, 91);
+            this.tb_benchRange2.Name = "tb_benchRange2";
+            this.tb_benchRange2.Size = new System.Drawing.Size(176, 21);
+            this.tb_benchRange2.TabIndex = 104;
+            // 
+            // tb_notSure2
+            // 
+            this.tb_notSure2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_notSure2.Border.Class = "TextBoxBorder";
+            this.tb_notSure2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_notSure2.ForeColor = System.Drawing.Color.Black;
+            this.tb_notSure2.Location = new System.Drawing.Point(323, 44);
+            this.tb_notSure2.Name = "tb_notSure2";
+            this.tb_notSure2.Size = new System.Drawing.Size(176, 21);
+            this.tb_notSure2.TabIndex = 105;
+            // 
+            // tb_benchSn2
+            // 
+            this.tb_benchSn2.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.tb_benchSn2.Border.Class = "TextBoxBorder";
+            this.tb_benchSn2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_benchSn2.ForeColor = System.Drawing.Color.Black;
+            this.tb_benchSn2.Location = new System.Drawing.Point(323, 68);
+            this.tb_benchSn2.Name = "tb_benchSn2";
+            this.tb_benchSn2.Size = new System.Drawing.Size(176, 21);
+            this.tb_benchSn2.TabIndex = 106;
+            // 
+            // labelX35
+            // 
+            this.labelX35.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX35.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX35.Location = new System.Drawing.Point(259, 70);
+            this.labelX35.Name = "labelX35";
+            this.labelX35.Size = new System.Drawing.Size(56, 16);
+            this.labelX35.TabIndex = 96;
+            this.labelX35.Text = "标准证号:";
+            // 
+            // labelX36
+            // 
+            this.labelX36.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX36.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX36.Location = new System.Drawing.Point(259, 91);
+            this.labelX36.Name = "labelX36";
+            this.labelX36.Size = new System.Drawing.Size(56, 16);
+            this.labelX36.TabIndex = 97;
+            this.labelX36.Text = "有效期至:";
+            // 
+            // labelX37
+            // 
+            this.labelX37.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX37.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX37.Location = new System.Drawing.Point(259, 44);
+            this.labelX37.Name = "labelX37";
+            this.labelX37.Size = new System.Drawing.Size(56, 16);
+            this.labelX37.TabIndex = 95;
+            this.labelX37.Text = "不确定度:";
             // 
             // superTabItem1
             // 
@@ -2293,40 +2299,40 @@
             this.superGridControl1.Name = "superGridControl1";
             this.superGridControl1.PrimaryGrid.Caption.Text = "检定数据";
             this.superGridControl1.PrimaryGrid.ColumnAutoSizeMode = DevComponents.DotNetBar.SuperGrid.ColumnAutoSizeMode.Fill;
-            gridColumn1.Name = "数据项1";
-            gridColumn2.Name = "数据项2";
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn1);
-            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn2);
+            gridColumn3.Name = "数据项1";
+            gridColumn4.Name = "数据项2";
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn3);
+            this.superGridControl1.PrimaryGrid.Columns.Add(gridColumn4);
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HorizontalLineColor = System.Drawing.Color.Silver;
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.HorizontalLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.Dash;
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.VerticalLineColor = System.Drawing.Color.Silver;
             this.superGridControl1.PrimaryGrid.DefaultVisualStyles.GridPanelStyle.VerticalLinePattern = DevComponents.DotNetBar.SuperGrid.Style.LinePattern.Dash;
             this.superGridControl1.PrimaryGrid.NullString = " ";
-            gridCell1.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridCell2.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridRow1.Cells.Add(gridCell1);
-            gridRow1.Cells.Add(gridCell2);
-            gridCell3.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridCell4.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridRow2.Cells.Add(gridCell3);
-            gridRow2.Cells.Add(gridCell4);
-            gridCell5.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridCell6.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridRow3.Cells.Add(gridCell5);
-            gridRow3.Cells.Add(gridCell6);
-            gridCell7.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridCell8.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridRow4.Cells.Add(gridCell7);
-            gridRow4.Cells.Add(gridCell8);
-            gridCell9.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridCell10.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
-            gridRow5.Cells.Add(gridCell9);
-            gridRow5.Cells.Add(gridCell10);
-            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow1);
-            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow2);
-            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow3);
-            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow4);
-            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow5);
+            gridCell11.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridCell12.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridRow6.Cells.Add(gridCell11);
+            gridRow6.Cells.Add(gridCell12);
+            gridCell13.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridCell14.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridRow7.Cells.Add(gridCell13);
+            gridRow7.Cells.Add(gridCell14);
+            gridCell15.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridCell16.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridRow8.Cells.Add(gridCell15);
+            gridRow8.Cells.Add(gridCell16);
+            gridCell17.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridCell18.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridRow9.Cells.Add(gridCell17);
+            gridRow9.Cells.Add(gridCell18);
+            gridCell19.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridCell20.EditorType = typeof(DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl);
+            gridRow10.Cells.Add(gridCell19);
+            gridRow10.Cells.Add(gridCell20);
+            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow6);
+            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow7);
+            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow8);
+            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow9);
+            this.superGridControl1.PrimaryGrid.Rows.Add(gridRow10);
             this.superGridControl1.Size = new System.Drawing.Size(877, 545);
             this.superGridControl1.TabIndex = 5;
             this.superGridControl1.Text = "superGridControl1";
@@ -2676,6 +2682,7 @@
             this.btn_preview.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_preview.TabIndex = 181;
             this.btn_preview.Text = "预览";
+            this.btn_preview.Click += new System.EventHandler(this.btn_preview_Click);
             // 
             // btn_cancel
             // 
@@ -2837,13 +2844,13 @@
             this.groupPanel1.PerformLayout();
             this.groupPanel3.ResumeLayout(false);
             this.groupPanel3.PerformLayout();
-            this.groupPanel2.ResumeLayout(false);
-            this.groupPanel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.di_presure)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_temperatue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.di_humidity)).EndInit();
+            this.groupPanel2.ResumeLayout(false);
+            this.groupPanel2.PerformLayout();
             this.superTabControlPanel2.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -2934,7 +2941,6 @@
         private DevComponents.DotNetBar.LabelX lb_according;
         private System.Windows.Forms.GroupBox groupPanel1;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comb_benchSet1;
         private System.Windows.Forms.DateTimePicker dt_benchExpire1;
         private DevComponents.DotNetBar.LabelX labelX20;
         private DevComponents.DotNetBar.Controls.TextBoxX tb_benchname1;
@@ -3072,6 +3078,7 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx tb_license;
         public DevComponents.DotNetBar.Controls.TextBoxX tb_type;
         private DevComponents.DotNetBar.Controls.SwitchButton cb_useResultA;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx comb_benchSet1;
 
     }
 }

@@ -138,7 +138,7 @@ namespace 质监局证书管理系统
             {
                 this.SaveConfig("DBType", "online");
 
-                this.SaveConfig("connection", string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
+                this.SaveConfig("connection", string.Format("Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
                 
             }
             ConfigurationManager.RefreshSection("appSettings");
@@ -196,7 +196,7 @@ namespace 质监局证书管理系统
             {
                 this.SaveConfig("DBType", "online");
 
-                this.SaveConfig("connStr", string.Format(@"Data Source={0}\SQLEXPRESS;Initial Catalog=QualityDB;Integrated Security=True;Pooling=False"));
+                this.SaveConfig("connStr", string.Format("Data Source={0}\\SQLEXPRESS;Initial Catalog=QualityDB;Integrated Security=True;Pooling=False"));
 
             }
             ConfigurationManager.RefreshSection("appSettings");
@@ -249,7 +249,7 @@ namespace 质监局证书管理系统
 
         private void btn_testConn_Click(object sender, EventArgs e)
         {
-            //bool isSuccess=SqlHelper.ConnectTest(string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
+            //bool isSuccess=SqlHelper.ConnectTest(string.Format("Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID=sa;Password=dbadmin;", ip_sqlIPAddress.Text, int_port.Value.ToString()));
             //if (isSuccess)
             //{
             //    MessageBox.Show("连接成功");

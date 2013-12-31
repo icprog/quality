@@ -47,16 +47,24 @@ namespace 质监局证书管理系统
             _Commands.LicenseCommands.Save.Executed += SaveLicenseExecuted;
             _Commands.SearchDialogCommands.Open = new Command(components);
             _Commands.SearchDialogCommands.Open.Executed += CertificationSearchExcuted;
+            _Commands.SearchDialogCommands.Cancel = new Command(components);
+            _Commands.SearchDialogCommands.Cancel.Executed += CancelSearchDialogExecuted;
             tile_certManage.Command = _Commands.SearchDialogCommands.Open;
-            if (ConfigurationManager.AppSettings["mdbFilePath"].ToString() == "")
+            lb_indexTitle.Text += user.Realname;
+            lb_username.Text = user.Username;
+            lb_role.Text = user.RoleName;
+            currentUser = user;
+            if (user.RoleName.IndexOf("管理员") >= 0)
             {
-                ConfigurationManager.AppSettings["mdbFilePath"] = Application.StartupPath + "\\Data\\license.mdb";
-                
+                pictureBox1.Image = Properties.Resources.admin;
             }
-            lb_indexTitle.Text += user.Username;
-
+            else
+            {
+                pictureBox1.Image = Properties.Resources.normal;
+            }
             metroToolbar1.Location = new Point((this.Width - metroToolbar1.Width) / 2, metroToolbar1.Parent.Height - metroToolbar1.Height - 1);
             metroTilePanel1.Location = new Point((this.Width - metroTilePanel1.Width) / 2, (this.Height - metroTilePanel1.Height) / 2);
+            
             
             
         }
@@ -67,7 +75,7 @@ namespace 质监局证书管理系统
         {
             Quality.AccessDbClass accClass=new AccessDbClass(Application.StartupPath+"/DATA/license.mdb");
             DataTable dt = new DataTable(); 
-            dt = accClass.SelectToDataTable(@"select * from license");
+            dt = accClass.SelectToDataTable("select * from license");
             advTree_licenseList.Nodes.Clear();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -144,7 +152,8 @@ namespace 质监局证书管理系统
         {
             Debug.Assert(_LicenseControl == null);
             _Commands.LicenseCommands.New.Enabled = false; // Disable new client command to prevent re-entrancy
-            _LicenseControl = new LicenseControl();
+            _LicenseControl = new LicenseControl(currentUser);
+            
             _LicenseControl.Dock = System.Windows.Forms.DockStyle.Fill;
             //this.Padding = new System.Windows.Forms.Padding(8);
             _LicenseControl.Commands = _Commands;
@@ -159,15 +168,17 @@ namespace 质监局证书管理系统
             InitLicenseList();
             CloseClientDialog();
         }
+        private void CancelSearchDialogExecuted(object sender, EventArgs e)
+        {
+            CloseSearchDialog();
+        }
         CertificateSearch _CertificationSearch=null;
        private  void CertificationSearchExcuted(object sender,EventArgs e)
         {
             _CertificationSearch=new CertificateSearch();
             _CertificationSearch.Dock=System.Windows.Forms.DockStyle.Fill;
-           
+            _CertificationSearch.Commands = _Commands;
             this.ShowModalPanel(_CertificationSearch, DevComponents.DotNetBar.Controls.eSlideSide.Left);
-            
-                
         }
         private void SaveLicenseExecuted(object sender, EventArgs e)
         {
@@ -186,7 +197,14 @@ namespace 质监局证书管理系统
             _LicenseControl.Dispose();
             _LicenseControl = null;
         }
-
+        private void CloseSearchDialog()
+        {
+            _Commands.SearchDialogCommands.Open.Enabled = true;
+            this.CloseModalPanel(_CertificationSearch, DevComponents.DotNetBar.Controls.eSlideSide.Left);
+            _CertificationSearch.Commands = null;
+            _CertificationSearch.Dispose();
+            _CertificationSearch = null;
+        }
        
         private void metroShell1_SettingsButtonClick(object sender, EventArgs e)
         {
@@ -235,161 +253,13 @@ namespace 质监局证书管理系统
 
         //private void web_dummy_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         //{
-        //    LicenseClass license = new LicenseClass(int.Parse(advTree_licenseList.SelectedNode.Tag.ToString()));
-        //    int total=2;
-        //    web_dummy.Document.GetElementById("frontLicenseNo").InnerText = license.Serial;
-        //    web_dummy.Document.GetElementById("unitName").InnerText = license.UnitName;
-        //    web_dummy.Document.GetElementById("instName").InnerText = license.InstructionName;
-        //    web_dummy.Document.GetElementById("model").InnerText = license.Module;
-        //    web_dummy.Document.GetElementById("manufactNo").InnerText = license.Manufact_no;
-        //    web_dummy.Document.GetElementById("madeBy").InnerText = license.Madeby;
-        //    web_dummy.Document.GetElementById("accordingTo").InnerText = license.According;
-        //    web_dummy.Document.GetElementById("result").InnerText = license.Result;
-        //    web_dummy.Document.GetElementById("approver").InnerText = license.ApprovedBy;
-        //    web_dummy.Document.GetElementById("checker").InnerText = license.CheckedBy;
-        //    web_dummy.Document.GetElementById("recorder").InnerText = license.VerifiedBy;
-        //    web_dummy.Document.GetElementById("date_y").InnerText = license.Date.Year.ToString();
-        //    web_dummy.Document.GetElementById("date_m").InnerText = license.Date.Month.ToString();
-        //    web_dummy.Document.GetElementById("date_d").InnerText = license.Date.Day.ToString();
-        //    web_dummy.Document.GetElementById("expire_y").InnerText = license.Expire.Year.ToString();
-        //    web_dummy.Document.GetElementById("expire_m").InnerText = license.Expire.Month.ToString();
-        //    web_dummy.Document.GetElementById("expire_d").InnerText = license.Expire.Day.ToString();
-        //    web_dummy.Document.GetElementById("verificationNo").InnerText = ConfigurationManager.AppSettings["verificationNumber"].ToString();
-        //    web_dummy.Document.GetElementById("tel").InnerText = ConfigurationManager.AppSettings["telephone"].ToString();
-        //    web_dummy.Document.GetElementById("zipcode").InnerText = ConfigurationManager.AppSettings["zipcode"].ToString();
-        //    web_dummy.Document.GetElementById("address").InnerText = ConfigurationManager.AppSettings["address"].ToString();
-        //    web_dummy.Document.GetElementById("fax").InnerText = ConfigurationManager.AppSettings["fax"].ToString();
-        //    web_dummy.Document.GetElementById("email").InnerText = ConfigurationManager.AppSettings["email"].ToString();
-        //    web_dummy.Document.GetElementById("header_license1").InnerText ="证书编号："+license.Serial;
-        //    web_dummy.Document.GetElementById("standard1").InnerText = ConfigurationManager.AppSettings["standard1"].ToString();
-        //    web_dummy.Document.GetElementById("standard2").InnerText = ConfigurationManager.AppSettings["standard2"].ToString();
-        //    if(!string.IsNullOrEmpty(license.BenchName1)){
-        //        web_dummy.Document.GetElementById("bench_name").InnerHtml = "<span>" + license.BenchName1 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchName2))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_name").InnerHtml += "<span>" + license.BenchName2 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchName3))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_name").InnerHtml += "<span>" + license.BenchName3 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchRange1))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_range").InnerHtml = "<span>" + license.BenchRange1 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchRange2))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_range").InnerHtml += "<span>" + license.BenchRange2 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchRange3))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_range").InnerHtml += "<span>" + license.BenchRange3 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.Notsure1))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_notsure").InnerHtml = "<span>" + license.Notsure1 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.Notsure2))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_notsure").InnerHtml += "<span>" + license.Notsure2 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.Notsure3))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_notsure").InnerHtml += "<span>" + license.Notsure3 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchSn1))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_sn").InnerHtml = "<span>" + license.BenchSn1 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchSn2))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_sn").InnerHtml += "<span>" + license.BenchSn2 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchSn3))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_sn").InnerHtml += "<span>" + license.BenchSn3 + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchName1))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_expire").InnerHtml = "<span>" + license.Benchexpire1.ToString("yyyy年 MM月 dd日") + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchName2))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_expire").InnerHtml += "<span>" + license.Benchexpire1.ToString("yyyy年 MM月 dd日") + "</span><br/>";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.BenchName3))
-        //    {
-        //        web_dummy.Document.GetElementById("bench_expire").InnerHtml += "<span>" + license.Benchexpire1.ToString("yyyy年 MM月 dd日") + "</span><br/>";
-        //    }
-        //    web_dummy.Document.GetElementById("location").InnerText = license.Location;
-        //    web_dummy.Document.GetElementById("temperature").InnerText = license.Temperature + "   ℃";
-        //    web_dummy.Document.GetElementById("humidity").InnerText = license.Humidity + "   %RH";
-        //    web_dummy.Document.GetElementById("presure").InnerText = license.Presure + "   kpa";
-        //    if (!string.IsNullOrEmpty(license.ResultHTML))
-        //    {
-        //        web_dummy.Document.GetElementById("htmlresultA").InnerHtml = license.ResultHTML;
-        //        web_dummy.Document.GetElementById("page1").Style = "page-break-after: always;";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.ResultHTML2))
-        //    {
-        //        web_dummy.Document.GetElementById("htmlresultB").InnerHtml = license.ResultHTML2;
-        //        web_dummy.Document.GetElementById("page2").Style = "page-break-after: always;";
-        //        total++;
-        //    }
-        //    else
-        //    {
-                
-        //        web_dummy.Document.GetElementById("page3").Style = "display:none";
-                
-                
-        //    }
-        //    if (!string.IsNullOrEmpty(license.ResultHTML3))
-        //    {
-        //        web_dummy.Document.GetElementById("htmlresultC").InnerHtml = license.ResultHTML3;
-        //        web_dummy.Document.GetElementById("page3").Style = "page-break-after: always;";
-        //        total++;
-        //    }
-        //    else
-        //    {
-               
-        //        web_dummy.Document.GetElementById("page4").Style = "display:none";
-        //    }
-        //    if (!string.IsNullOrEmpty(license.ResultHTML4))
-        //    {
-        //        web_dummy.Document.GetElementById("htmlresultD").InnerHtml = license.ResultHTML4;
-        //        total++;
-        //    }
-        //    else
-        //    {
-        //        web_dummy.Document.GetElementById("page5").Style = "display:none";
-        //        //web_dummy.Document.GetElementById("page4").Style += "page-break-after: avoid;";
-        //    }
-        //    web_dummy.Document.GetElementById("totalPage1").InnerText = total.ToString();
-        //    web_dummy.Document.GetElementById("totalPage2").InnerText = total.ToString();
-        //    web_dummy.Document.GetElementById("totalPage3").InnerText = total.ToString();
-        //    web_dummy.Document.GetElementById("totalPage4").InnerText = total.ToString();
-        //    web_dummy.Document.GetElementById("totalPage5").InnerText = total.ToString();
-        //    web_dummy.Document.GetElementById("header_license1").InnerText = "证书编号:" + license.Serial;
-        //    web_dummy.Document.GetElementById("header_license2").InnerText = "证书编号:" + license.Serial;
-        //    web_dummy.Document.GetElementById("header_license3").InnerText = "证书编号:" + license.Serial;
-        //    web_dummy.Document.GetElementById("header_license4").InnerText = "证书编号:" + license.Serial;
-        //    if (isPreviewCalled)
-        //    {
-        //        web_dummy.ShowPrintPreviewDialog();
-        //        isPreviewCalled = false;
-        //    }
-        //    else if (isPrintCalled)
-        //    {
-        //        web_dummy.ShowPrintDialog();
-        //        isPrintCalled = false;
-        //    }
+      
         //}
 
         private void btn_tool_New_Click(object sender, EventArgs e)
         {
             _Commands.LicenseCommands.New.Enabled = false; // Disable new client command to prevent re-entrancy
-            _LicenseControl = new LicenseControl();
+            _LicenseControl = new LicenseControl(currentUser);
             _LicenseControl.Dock = System.Windows.Forms.DockStyle.Fill;
             //this.Padding = new System.Windows.Forms.Padding(8);
             _LicenseControl.Commands = _Commands;
@@ -418,6 +288,23 @@ namespace 质监局证书管理系统
         {
             frm_userSettings userSetting = new frm_userSettings();
             userSetting.ShowDialog();
+        }
+
+        private void tile_certManage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_username_Click(object sender, EventArgs e)
+        {
+            frm_userinfo userinfo = new frm_userinfo();
+            userinfo.User = this.currentUser;
+            userinfo.ShowDialog();
+        }
+
+        private void metroTileItem4_Click(object sender, EventArgs e)
+        {
+
         }
        
     }

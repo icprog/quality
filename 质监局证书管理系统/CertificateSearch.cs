@@ -56,15 +56,11 @@ namespace 质监局证书管理系统
         {
             if (newValue != null)
             {
-                //btn_save.Command = newValue.LicenseCommands.Save;
-                //btn_cancel.Command = newValue.LicenseCommands.Cancel;
-                //btn_preview.Command = newValue.LicenseCommands.Preview;
-                //btn_print.Command = newValue.LicenseCommands.Print;
-                //btn_reset.Command = newValue.LicenseCommands.Reset;
+                btn_exit.Command = newValue.SearchDialogCommands.Cancel;
             }
             else
             {
-            //    btn_save.Command = null;
+                btn_exit.Command = null;
             //    btn_cancel.Command = null;
             //    btn_preview.Command = null;
             //    btn_print.Command = null;
@@ -143,6 +139,17 @@ namespace 质监局证书管理系统
         private void dateTimeInput2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonX1_Click_1(object sender, EventArgs e)
+        {
+            comb_range.ResetText();
+            comb_type.ResetText();
+            dt_start.ResetText();
+            dt_end.ResetText();
+            dt_expire1.ResetText();
+            dt_expire2.ResetText();
+            tb_keyword.Text = "";
         }
 
       

@@ -12,6 +12,8 @@ namespace Quality.IDAL
         bool DeleteUserById(int id);
         bool CheckUsername(string username);
         bool InsertUser(Users user);
+        bool UpdateUser(Users user);
+        Users Login(string username, string password);
         
     }
 }

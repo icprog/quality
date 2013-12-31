@@ -70,7 +70,7 @@ namespace Quality.Model
             this.realname = realname;
 
         }
-        public Users(int id, string username, int roleId, string roleName, string roleValue,string realname)
+        public Users(int id, string username, int roleId, string roleName, string roleValue,string realname,string password)
         {
             this.id = id;
             this.username = username;
@@ -78,6 +78,17 @@ namespace Quality.Model
             this.roleName = roleName;
             this.roleValue = roleValue;
             this.realname = realname;
+            this.password = password;
+        }
+        public Users(int id, string username, int roleId, string roleName, string roleValue, string realname)
+        {
+            this.id = id;
+            this.username = username;
+            this.roleId = roleId;
+            this.roleName = roleName;
+            this.roleValue = roleValue;
+            this.realname = realname;
+           
         }
         public Users()
         {
@@ -89,6 +100,16 @@ namespace Quality.Model
             this.password = password;
             this.realname = realname;
         }
+        public Users(int id, string username, string password, string realname, int roleId)
+        {
+            this.id = id;
+            this.username = username;
+            this.roleId = roleId;
+            this.password = password;
+            this.realname = realname;
+            
+        }
+       
         #endregion
     }
 }

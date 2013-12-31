@@ -16,6 +16,8 @@ namespace Quality.DAL
         private readonly string SQL_DELETE_USERBYID = "SP_DeleteUserById";
         private readonly string SQL_SELECT_USERCHECKUSERNAME = "SP_CheckUsername";
         private readonly string SQL_INSERT_USER = "SP_InsertUser";
+        private readonly string SQL_UPDATE_USERBYID = "SP_UpdateUserById";
+        private readonly string SQL_SELECT_USERLOGIN = "SP_GetUserByLogin";
         private string _connectString;
         public UserDAL(string connStr)
         {
@@ -30,7 +32,7 @@ namespace Quality.DAL
                 while (rdr.Read())
                 {
                   //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
-                    Users user = new Users(rdr.GetInt32(0), rdr.GetString(1), rdr.GetInt32(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5));
+                    Users user = new Users(rdr.GetInt32(0), rdr.GetString(1), rdr.GetInt32(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5),rdr.GetString(6));
                     Users.Add(user);
                 }
             
@@ -48,7 +50,7 @@ namespace Quality.DAL
                 if (rdr.Read())
                 {
                     //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
-                    user = new Users(rdr.GetInt32(0), rdr.GetString(1), rdr.GetInt32(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5));
+                    user = new Users(rdr.GetInt32(0), rdr.GetString(1), rdr.GetInt32(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5),rdr.GetString(6));
                   
                 }
 
@@ -100,6 +102,47 @@ namespace Quality.DAL
             }
             else return false;
 
+        }
+
+
+        public bool UpdateUser(Users user)
+        {
+            SqlParameter[] parms =
+            {
+                new SqlParameter("USERNAME",user.Username),
+                new SqlParameter("USERID",user.Id),
+                new SqlParameter("REALNAME",user.Realname),
+                new SqlParameter("ROLEID",user.RoleId),
+                new SqlParameter("PASSWORD",user.Password)};
+            int result = SqlHelper.ExecuteNonQuery(_connectString, CommandType.StoredProcedure, SQL_UPDATE_USERBYID, parms);
+            if (result == 1)
+            {
+                return true;
+            }
+            else return false;
+        }
+
+
+        public Users Login(string username, string password)
+        {
+            SqlParameter[] parms=
+            {
+           new SqlParameter("USERNAME", username),
+           new SqlParameter("PASSWORD", password)
+        };
+            using (SqlDataReader rdr = SqlHelper.ExecuteReader(_connectString, CommandType.StoredProcedure, SQL_SELECT_USERLOGIN, parms))
+            {
+                Users user = new Users();
+
+                if (rdr.Read())
+                {
+                    //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
+                    user = new Users(rdr.GetInt32(0), rdr.GetString(1), rdr.GetInt32(2), rdr.GetString(3), rdr.GetString(4), rdr.GetString(5));
+
+                }
+
+                return user;
+            }
         }
     }
 }

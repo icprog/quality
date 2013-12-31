@@ -67,6 +67,13 @@ namespace 质监局证书管理系统.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap admin {
+            get {
+                object obj = ResourceManager.GetObject("admin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap arrow_carrot_down {
             get {
                 object obj = ResourceManager.GetObject("arrow_carrot-down", resourceCulture);
@@ -77,6 +84,13 @@ namespace 质监局证书管理系统.Properties {
         internal static System.Drawing.Bitmap arrow_carrot_up {
             get {
                 object obj = ResourceManager.GetObject("arrow_carrot-up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap icon_cogs_rev {
+            get {
+                object obj = ResourceManager.GetObject("icon_cogs_rev", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -217,6 +231,13 @@ namespace 质监局证书管理系统.Properties {
         internal static System.Drawing.Bitmap icon_trash_alt {
             get {
                 object obj = ResourceManager.GetObject("icon_trash_alt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap normal {
+            get {
+                object obj = ResourceManager.GetObject("normal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

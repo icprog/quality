@@ -31,5 +31,13 @@ namespace Quality.BLL
        {
            return dal.InsertUser(user);
        }
+       public bool UpdateUser(Users user)
+       {
+           return dal.UpdateUser(user);
+       }
+       public Users Login(string username, string password)
+       {
+           return dal.Login(username, password);
+       }
     }
 }

@@ -30,6 +30,10 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
+            this.btn_exit = new DevComponents.DotNetBar.ButtonX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.dt_expire2 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.dt_expire1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.btn_search = new DevComponents.DotNetBar.ButtonX();
             this.comb_type = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -69,19 +73,16 @@
             this.nodeConnector1 = new DevComponents.AdvTree.NodeConnector();
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.node3 = new DevComponents.AdvTree.Node();
-            this.dt_expire1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.dt_expire2 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_expire2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_expire1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_end)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_start)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.advTree1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_expire1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_expire2)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -113,6 +114,7 @@
             this.expandablePanel1.ButtonImageExpand = global::质监局证书管理系统.Properties.Resources.arrow_carrot_down;
             this.expandablePanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Windows7;
+            this.expandablePanel1.Controls.Add(this.btn_exit);
             this.expandablePanel1.Controls.Add(this.labelX2);
             this.expandablePanel1.Controls.Add(this.dt_expire2);
             this.expandablePanel1.Controls.Add(this.dt_expire1);
@@ -146,6 +148,130 @@
             this.expandablePanel1.TitleText = "搜索条件";
             this.expandablePanel1.ExpandedChanged += new DevComponents.DotNetBar.ExpandChangeEventHandler(this.expandablePanel1_ExpandedChanged);
             // 
+            // btn_exit
+            // 
+            this.btn_exit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btn_exit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_exit.Location = new System.Drawing.Point(820, 86);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(75, 23);
+            this.btn_exit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btn_exit.TabIndex = 11;
+            this.btn_exit.Text = "退出";
+            // 
+            // labelX2
+            // 
+            this.labelX2.AutoSize = true;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(740, 34);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.Size = new System.Drawing.Size(12, 16);
+            this.labelX2.TabIndex = 10;
+            this.labelX2.Text = "~";
+            // 
+            // dt_expire2
+            // 
+            // 
+            // 
+            // 
+            this.dt_expire2.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dt_expire2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire2.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dt_expire2.ButtonDropDown.Visible = true;
+            this.dt_expire2.IsPopupCalendarOpen = false;
+            this.dt_expire2.Location = new System.Drawing.Point(757, 29);
+            // 
+            // 
+            // 
+            this.dt_expire2.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dt_expire2.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire2.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dt_expire2.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire2.MonthCalendar.DisplayMonth = new System.DateTime(2013, 12, 1, 0, 0, 0, 0);
+            this.dt_expire2.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dt_expire2.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire2.MonthCalendar.TodayButtonVisible = true;
+            this.dt_expire2.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dt_expire2.Name = "dt_expire2";
+            this.dt_expire2.Size = new System.Drawing.Size(123, 21);
+            this.dt_expire2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dt_expire2.TabIndex = 9;
+            this.dt_expire2.WatermarkText = "过期日期终止";
+            this.dt_expire2.Click += new System.EventHandler(this.dateTimeInput2_Click);
+            // 
+            // dt_expire1
+            // 
+            // 
+            // 
+            // 
+            this.dt_expire1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.dt_expire1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.dt_expire1.ButtonDropDown.Visible = true;
+            this.dt_expire1.IsPopupCalendarOpen = false;
+            this.dt_expire1.Location = new System.Drawing.Point(610, 29);
+            // 
+            // 
+            // 
+            this.dt_expire1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dt_expire1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.dt_expire1.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire1.MonthCalendar.DisplayMonth = new System.DateTime(2013, 12, 1, 0, 0, 0, 0);
+            this.dt_expire1.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dt_expire1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
+            // 
+            // 
+            // 
+            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.dt_expire1.MonthCalendar.TodayButtonVisible = true;
+            this.dt_expire1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
+            this.dt_expire1.Name = "dt_expire1";
+            this.dt_expire1.Size = new System.Drawing.Size(124, 21);
+            this.dt_expire1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.dt_expire1.TabIndex = 8;
+            this.dt_expire1.WatermarkText = "过期日期起始";
+            // 
             // buttonX1
             // 
             this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -156,6 +282,7 @@
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.TabIndex = 3;
             this.buttonX1.Text = "重置";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click_1);
             // 
             // btn_search
             // 
@@ -491,6 +618,8 @@
             this.advTree1.Columns.Add(this.columnHeader7);
             this.advTree1.Columns.Add(this.columnHeader8);
             this.advTree1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advTree1.DragDropEnabled = false;
+            this.advTree1.DragDropNodeCopyEnabled = false;
             this.advTree1.ExpandWidth = 0;
             this.advTree1.GridColumnLines = false;
             this.advTree1.Indent = 0;
@@ -571,119 +700,6 @@
             this.node3.Name = "node3";
             this.node3.Text = "metroToolbar2";
             // 
-            // dt_expire1
-            // 
-            // 
-            // 
-            // 
-            this.dt_expire1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dt_expire1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dt_expire1.ButtonDropDown.Visible = true;
-            this.dt_expire1.IsPopupCalendarOpen = false;
-            this.dt_expire1.Location = new System.Drawing.Point(610, 29);
-            // 
-            // 
-            // 
-            this.dt_expire1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dt_expire1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dt_expire1.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dt_expire1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire1.MonthCalendar.DisplayMonth = new System.DateTime(2013, 12, 1, 0, 0, 0, 0);
-            this.dt_expire1.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dt_expire1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dt_expire1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire1.MonthCalendar.TodayButtonVisible = true;
-            this.dt_expire1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dt_expire1.Name = "dt_expire1";
-            this.dt_expire1.Size = new System.Drawing.Size(124, 21);
-            this.dt_expire1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dt_expire1.TabIndex = 8;
-            this.dt_expire1.WatermarkText = "过期日期起始";
-            // 
-            // dt_expire2
-            // 
-            // 
-            // 
-            // 
-            this.dt_expire2.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.dt_expire2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire2.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.dt_expire2.ButtonDropDown.Visible = true;
-            this.dt_expire2.IsPopupCalendarOpen = false;
-            this.dt_expire2.Location = new System.Drawing.Point(757, 29);
-            // 
-            // 
-            // 
-            this.dt_expire2.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dt_expire2.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire2.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.dt_expire2.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.dt_expire2.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire2.MonthCalendar.DisplayMonth = new System.DateTime(2013, 12, 1, 0, 0, 0, 0);
-            this.dt_expire2.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dt_expire2.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.dt_expire2.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.dt_expire2.MonthCalendar.TodayButtonVisible = true;
-            this.dt_expire2.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.dt_expire2.Name = "dt_expire2";
-            this.dt_expire2.Size = new System.Drawing.Size(123, 21);
-            this.dt_expire2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.dt_expire2.TabIndex = 9;
-            this.dt_expire2.WatermarkText = "过期日期终止";
-            this.dt_expire2.Click += new System.EventHandler(this.dateTimeInput2_Click);
-            // 
-            // labelX2
-            // 
-            this.labelX2.AutoSize = true;
-            this.labelX2.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(740, 34);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.Size = new System.Drawing.Size(12, 16);
-            this.labelX2.TabIndex = 10;
-            this.labelX2.Text = "~";
-            // 
             // CertificateSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -698,11 +714,11 @@
             this.splitContainer1.ResumeLayout(false);
             this.expandablePanel1.ResumeLayout(false);
             this.expandablePanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_expire2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_expire1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_end)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_start)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.advTree1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_expire1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_expire2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -753,6 +769,7 @@
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dt_expire2;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput dt_expire1;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.ButtonX btn_exit;
 
     }
 }

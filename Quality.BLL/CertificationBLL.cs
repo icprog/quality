@@ -46,6 +46,13 @@ namespace Quality.BLL
            return  dal.GetCertificationsByCondition(range, keyword, start, end, type, expire1, expire2);
             
         }
-
+        public bool AddCertification(Certification cert)
+        {
+            return dal.AddCertification(cert);
+        }
+        public void PrintOnce(string serial)
+        {
+            dal.PrintOnce(serial);
+        }
     }
 }

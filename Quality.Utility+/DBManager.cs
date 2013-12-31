@@ -8,8 +8,8 @@ using System.Configuration;
 
 namespace Quality.Utility
 {
-   
-    public  class DBManager
+
+    public class DBManager
     {
         #region 成员变量
         private string _errorMsg;
@@ -62,16 +62,36 @@ namespace Quality.Utility
             set { _connectString = value; }
         }
         #endregion
-        
+
 
         public DBManager()
         {
 
-            _ipAddr= ConfigurationManager.AppSettings["sqlServerIPAddress"].ToString();
-            _port= ConfigurationManager.AppSettings["sqlServerPort"].ToString();
+            _ipAddr = ConfigurationManager.AppSettings["sqlServerIPAddress"].ToString();
+            _port = ConfigurationManager.AppSettings["sqlServerPort"].ToString();
             _username = ConfigurationManager.AppSettings["dbUsername"].ToString();
             _encryptPassword = ConfigurationManager.AppSettings["dbPassword"].ToString();
             _connectString = GetDBConnectionString(_ipAddr, _port, _username, _encryptPassword);
+            string connectState = TestConnect();
+            if (connectState == "Open")
+            {
+                isConnectable = true;
+                _state = "Connectable";
+                _errorMsg = "0";
+            }
+            else
+            {
+                isConnectable = false;
+                _errorMsg = connectState;
+            }
+        }
+        public DBManager(string ip, string port, string username, string password)
+        {
+            _ipAddr = ip;
+            _port = port;
+            _username = username;
+            _encryptPassword = SysUtil.EncryptDES(password, password);
+            _connectString = GetDBConnectionString();
             string connectState = TestConnect();
             if (connectState == "Open")
             {
@@ -95,65 +115,15 @@ namespace Quality.Utility
             string decryptedPassword = SysUtil.DecryptDES(encrptyPassword, "quality");
             return string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID={2};Password={3};", ip, port, username, decryptedPassword);
         }
-        
-        //public BenchSet GetBenchSet(string name)
-        //{
-
-        //    SqlParameter[] parms ={
-        //                             new SqlParameter ("BENCHSET_NAME",name)
-        //                         };
-        //    DataSet ds = SqlHelper.ExecuteDataSet(_connectString, CommandType.StoredProcedure, "GetBenchSetByName", parms);
-        //    DataRow row= ds.Tables[0].Rows[0];
-        //    //BenchSet bench = new BenchSetClass(row[0].ToString(), row[1].ToString(), row[2].ToString(), row[3].ToString(), row[4].ToString(), row[5].ToString(), row[6].ToString(), DateTime.Parse(row[7].ToString()));
-        //    return null;
-          
-        //}
-        //public bool Login(string username, string password)
-        //{
-        //    if ("offline" == _type)
-        //    {
-        //        string sql = "select * from users where username='" + username + "' and password='" + password + "'";
-        //        access = new AccessDbClass(_mdbFilePath);
-        //        int count = access.SelectToDataTable(sql).Rows.Count;
-        //        access.Close();
-        //        if (count == 1)
-        //        {
-        //            return true;
-        //        }
-        //        else if (count > 1)
-        //        {
-        //            return false;
-        //        }
-        //        else
-        //        {
-        //            return false;
-        //        }
-
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
-        //public Users Login(string username, string password)
-        //{
-        //    SqlParameter[] parms=
-        //    {
-        //        new SqlParameter("USERNAME",username),
-        //        new SqlParameter("PASSWORD",password)
-        //    };
-        //    DataSet ds = SqlHelper.ExecuteDataSet(_connectString, CommandType.StoredProcedure, "SP_GetUserByLogin", parms);
-        //   Users user;
-        //   if (ds.Tables[0].Rows.Count > 0)
-        //   {
-        //       user = new Users(int.Parse(ds.Tables[0].Rows[0]["id"].ToString()), ds.Tables[0].Rows[0]["username"].ToString(), int.Parse(ds.Tables[0].Rows[0]["roleid"].ToString()), ds.Tables[0].Rows[0]["roleName"].ToString(), ds.Tables[0].Rows[0]["roleValue"].ToString());
-        //   }
-        //   else
-        //       user = null;
-        //   return user;
-        //}
+        public string GetDBConnectionString()
+        {
+            string decryptedPassword = SysUtil.DecryptDES(_encryptPassword, "quality");
+            return string.Format(@"Data Source={0},{1};Network Library=DBMSSOCN;Initial Catalog=qualityDB;User ID={2};Password={3};", _ipAddr, _port, _username, decryptedPassword);
+        }
        
-        
-        
+      
+
+
+
     }
 }

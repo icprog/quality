@@ -113,6 +113,7 @@
             this.cb_autoLogin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cb_autoLogin.TabIndex = 4;
             this.cb_autoLogin.Text = "自动登录";
+            this.cb_autoLogin.Visible = false;
             this.cb_autoLogin.CheckedChanged += new System.EventHandler(this.cb_autoLogin_CheckedChanged);
             // 
             // lb_info

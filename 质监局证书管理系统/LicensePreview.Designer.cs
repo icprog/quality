@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LicensePreview));
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.web_dummy = new System.Windows.Forms.WebBrowser();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.button1 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.SuspendLayout();
             // 
-            // webBrowser1
+            // web_dummy
             // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(30, 0);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(832, 570);
-            this.webBrowser1.TabIndex = 0;
+            this.web_dummy.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.web_dummy.Location = new System.Drawing.Point(30, 0);
+            this.web_dummy.MinimumSize = new System.Drawing.Size(20, 20);
+            this.web_dummy.Name = "web_dummy";
+            this.web_dummy.Size = new System.Drawing.Size(832, 570);
+            this.web_dummy.TabIndex = 0;
             // 
             // printPreviewDialog1
             // 
@@ -54,27 +53,13 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(30, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(832, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // LicensePreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(892, 570);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.webBrowser1);
+            this.Controls.Add(this.web_dummy);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "LicensePreview";
@@ -86,9 +71,8 @@
 
         #endregion
 
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser web_dummy;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.Button button1;
         private System.Drawing.Printing.PrintDocument printDocument1;
 
     }

@@ -37,14 +37,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_role = new DevComponents.DotNetBar.LabelX();
             this.lb_username = new DevComponents.DotNetBar.LabelX();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_indexTitle = new DevComponents.DotNetBar.LabelX();
             this.metroTilePanel1 = new DevComponents.DotNetBar.Metro.MetroTilePanel();
             this.itemContainer1 = new DevComponents.DotNetBar.ItemContainer();
-            this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.tile_certManage = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem3 = new DevComponents.DotNetBar.Metro.MetroTileItem();
-            this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem5 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem6 = new DevComponents.DotNetBar.Metro.MetroTileItem();
             this.metroTileItem7 = new DevComponents.DotNetBar.Metro.MetroTileItem();
@@ -52,13 +47,7 @@
             this.metroToolbar2 = new DevComponents.DotNetBar.Metro.MetroToolbar();
             this.web_dummy = new System.Windows.Forms.WebBrowser();
             this.metroToolbar1 = new DevComponents.DotNetBar.Metro.MetroToolbar();
-            this.btn_tool_download = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.btn_tool_New = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
-            this.btn_tool_delete = new DevComponents.DotNetBar.ButtonItem();
-            this.btn_tool_preview = new DevComponents.DotNetBar.ButtonItem();
-            this.btn_tool_print = new DevComponents.DotNetBar.ButtonItem();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.expandableSplitter1 = new DevComponents.DotNetBar.ExpandableSplitter();
             this.advTree_licenseList = new DevComponents.AdvTree.AdvTree();
@@ -73,7 +62,6 @@
             this.elementStyle1 = new DevComponents.DotNetBar.ElementStyle();
             this.metroTabPanel2 = new DevComponents.DotNetBar.Metro.MetroTabPanel();
             this.metroAppButton1 = new DevComponents.DotNetBar.Metro.MetroAppButton();
-            this.btn_newLicense = new DevComponents.DotNetBar.ButtonItem();
             this.metroTabItem3 = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.metroTabItem1 = new DevComponents.DotNetBar.Metro.MetroTabItem();
             this.metroTabItem2 = new DevComponents.DotNetBar.Metro.MetroTabItem();
@@ -81,12 +69,24 @@
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.metroTileItem1 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.tile_certManage = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metro_role = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.metroTileItem4 = new DevComponents.DotNetBar.Metro.MetroTileItem();
+            this.btn_tool_download = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_tool_New = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_tool_delete = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_tool_preview = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_tool_print = new DevComponents.DotNetBar.ButtonItem();
+            this.btn_newLicense = new DevComponents.DotNetBar.ButtonItem();
             this.metroShell1.SuspendLayout();
             this.metroTabPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.metroTabPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.advTree_licenseList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -119,8 +119,8 @@
             this.metroShell1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroShell1.CaptionVisible = true;
             this.metroShell1.CausesValidation = false;
-            this.metroShell1.Controls.Add(this.metroTabPanel1);
             this.metroShell1.Controls.Add(this.metroTabPanel3);
+            this.metroShell1.Controls.Add(this.metroTabPanel1);
             this.metroShell1.Controls.Add(this.metroTabPanel2);
             this.metroShell1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroShell1.ForeColor = System.Drawing.Color.Black;
@@ -182,7 +182,6 @@
             // 
             this.metroTabPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTabPanel3.TabIndex = 3;
-            this.metroTabPanel3.Visible = false;
             // 
             // panel1
             // 
@@ -206,11 +205,12 @@
             // 
             this.lb_role.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lb_role.ForeColor = System.Drawing.Color.Black;
-            this.lb_role.Location = new System.Drawing.Point(788, 35);
+            this.lb_role.Location = new System.Drawing.Point(795, 37);
             this.lb_role.Name = "lb_role";
             this.lb_role.Size = new System.Drawing.Size(38, 16);
             this.lb_role.TabIndex = 3;
             this.lb_role.Text = "管理员";
+            this.lb_role.TextAlignment = System.Drawing.StringAlignment.Far;
             // 
             // lb_username
             // 
@@ -219,22 +219,16 @@
             // 
             // 
             this.lb_username.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lb_username.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_username.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lb_username.ForeColor = System.Drawing.Color.Black;
-            this.lb_username.Location = new System.Drawing.Point(735, 3);
+            this.lb_username.Location = new System.Drawing.Point(800, 3);
             this.lb_username.Name = "lb_username";
-            this.lb_username.Size = new System.Drawing.Size(98, 31);
+            this.lb_username.Size = new System.Drawing.Size(33, 31);
             this.lb_username.TabIndex = 2;
-            this.lb_username.Text = "Jim Green";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ForeColor = System.Drawing.Color.Black;
-            this.pictureBox1.Location = new System.Drawing.Point(839, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lb_username.Text = "faq";
+            this.lb_username.TextAlignment = System.Drawing.StringAlignment.Far;
+            this.lb_username.Click += new System.EventHandler(this.lb_username_Click);
             // 
             // lb_indexTitle
             // 
@@ -282,73 +276,11 @@
             this.itemContainer1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.metroTileItem1,
             this.tile_certManage,
-            this.metroTileItem3,
+            this.metro_role,
             this.metroTileItem4,
             this.metroTileItem5,
             this.metroTileItem6,
             this.metroTileItem7});
-            // 
-            // metroTileItem1
-            // 
-            this.metroTileItem1.Image = global::质监局证书管理系统.Properties.Resources.icon_document_rev;
-            this.metroTileItem1.ImageIndent = new System.Drawing.Point(15, 15);
-            this.metroTileItem1.Name = "metroTileItem1";
-            this.metroTileItem1.Text = "<font size=\"+8\">新建证书</font>";
-            this.metroTileItem1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
-            // 
-            // 
-            // 
-            this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem1.TileStyle.PaddingBottom = 5;
-            this.metroTileItem1.TileStyle.PaddingLeft = 15;
-            this.metroTileItem1.TileStyle.PaddingRight = 15;
-            this.metroTileItem1.TileStyle.PaddingTop = 15;
-            this.metroTileItem1.TitleText = "证书";
-            this.metroTileItem1.Click += new System.EventHandler(this.metroTileItem1_Click);
-            // 
-            // tile_certManage
-            // 
-            this.tile_certManage.Image = global::质监局证书管理系统.Properties.Resources.icon_folder_rev;
-            this.tile_certManage.ImageIndent = new System.Drawing.Point(15, 15);
-            this.tile_certManage.Name = "tile_certManage";
-            this.tile_certManage.Text = "<font size=\"+8\">管理证书</font>";
-            this.tile_certManage.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
-            // 
-            // 
-            // 
-            this.tile_certManage.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.tile_certManage.TileStyle.PaddingBottom = 3;
-            this.tile_certManage.TileStyle.PaddingLeft = 15;
-            this.tile_certManage.TileStyle.PaddingRight = 15;
-            this.tile_certManage.TileStyle.PaddingTop = 15;
-            this.tile_certManage.TitleText = "证书";
-            // 
-            // metroTileItem3
-            // 
-            this.metroTileItem3.Image = global::质监局证书管理系统.Properties.Resources.icon_group_rev;
-            this.metroTileItem3.ImageIndent = new System.Drawing.Point(15, 15);
-            this.metroTileItem3.Name = "metroTileItem3";
-            this.metroTileItem3.Text = "<font size=\"+8\">权限管理</font>";
-            this.metroTileItem3.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
-            // 
-            // 
-            // 
-            this.metroTileItem3.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.metroTileItem3.TileStyle.PaddingBottom = 3;
-            this.metroTileItem3.TileStyle.PaddingLeft = 15;
-            this.metroTileItem3.TileStyle.PaddingRight = 15;
-            this.metroTileItem3.TileStyle.PaddingTop = 15;
-            this.metroTileItem3.TitleText = "用户";
-            this.metroTileItem3.Click += new System.EventHandler(this.metroTileItem3_Click);
-            // 
-            // metroTileItem4
-            // 
-            this.metroTileItem4.Name = "metroTileItem4";
-            this.metroTileItem4.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Default;
-            // 
-            // 
-            // 
-            this.metroTileItem4.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // metroTileItem5
             // 
@@ -408,6 +340,7 @@
             // 
             this.metroTabPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.metroTabPanel1.TabIndex = 1;
+            this.metroTabPanel1.Visible = false;
             // 
             // metroToolbar2
             // 
@@ -462,59 +395,10 @@
             this.metroToolbar1.Text = "metroToolbar1";
             this.metroToolbar1.MouseEnter += new System.EventHandler(this.metroToolbar1_MouseHover);
             // 
-            // btn_tool_download
-            // 
-            this.btn_tool_download.Image = global::质监局证书管理系统.Properties.Resources.icon_download;
-            this.btn_tool_download.Name = "btn_tool_download";
-            this.btn_tool_download.Text = "buttonItem6";
-            // 
             // buttonItem2
             // 
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "buttonItem2";
-            // 
-            // btn_tool_New
-            // 
-            this.btn_tool_New.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_plus;
-            this.btn_tool_New.Image = global::质监局证书管理系统.Properties.Resources.icon_plus_alt;
-            this.btn_tool_New.Name = "btn_tool_New";
-            this.btn_tool_New.Text = "buttonItem2";
-            this.btn_tool_New.Tooltip = "新建证书";
-            this.btn_tool_New.Click += new System.EventHandler(this.btn_tool_New_Click);
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.Image = global::质监局证书管理系统.Properties.Resources.icon_pencil_edit;
-            this.buttonItem7.ImageAlt = global::质监局证书管理系统.Properties.Resources.icon_pencil_edit_alt;
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Text = "buttonItem7";
-            this.buttonItem7.Tooltip = "修改证书";
-            // 
-            // btn_tool_delete
-            // 
-            this.btn_tool_delete.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_trash_alt;
-            this.btn_tool_delete.Image = global::质监局证书管理系统.Properties.Resources.icon_trash;
-            this.btn_tool_delete.Name = "btn_tool_delete";
-            this.btn_tool_delete.Text = "buttonItem4";
-            this.btn_tool_delete.Tooltip = "删除证书";
-            // 
-            // btn_tool_preview
-            // 
-            this.btn_tool_preview.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_search;
-            this.btn_tool_preview.Image = global::质监局证书管理系统.Properties.Resources.icon_search_alt;
-            this.btn_tool_preview.Name = "btn_tool_preview";
-            this.btn_tool_preview.Text = "buttonItem3";
-            this.btn_tool_preview.Tooltip = "预览";
-            this.btn_tool_preview.Click += new System.EventHandler(this.btn_tool_preview_Click);
-            // 
-            // btn_tool_print
-            // 
-            this.btn_tool_print.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_printer;
-            this.btn_tool_print.Image = global::质监局证书管理系统.Properties.Resources.icon_printer_alt;
-            this.btn_tool_print.Name = "btn_tool_print";
-            this.btn_tool_print.Text = "buttonItem5";
-            this.btn_tool_print.Tooltip = "打印";
-            this.btn_tool_print.Click += new System.EventHandler(this.btn_tool_print_Click);
             // 
             // webBrowser1
             // 
@@ -687,22 +571,15 @@
             this.metroAppButton1.Text = "&File";
             this.metroAppButton1.Click += new System.EventHandler(this.metroAppButton1_Click);
             // 
-            // btn_newLicense
-            // 
-            this.btn_newLicense.Image = ((System.Drawing.Image)(resources.GetObject("btn_newLicense.Image")));
-            this.btn_newLicense.Name = "btn_newLicense";
-            this.btn_newLicense.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlN);
-            this.btn_newLicense.Text = "新建证书";
-            // 
             // metroTabItem3
             // 
+            this.metroTabItem3.Checked = true;
             this.metroTabItem3.Name = "metroTabItem3";
             this.metroTabItem3.Panel = this.metroTabPanel3;
             this.metroTabItem3.Text = "首页";
             // 
             // metroTabItem1
             // 
-            this.metroTabItem1.Checked = true;
             this.metroTabItem1.Name = "metroTabItem1";
             this.metroTabItem1.Panel = this.metroTabPanel1;
             this.metroTabItem1.Text = "&证书";
@@ -738,6 +615,144 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ForeColor = System.Drawing.Color.Black;
+            this.pictureBox1.Image = global::质监局证书管理系统.Properties.Resources.admin;
+            this.pictureBox1.Location = new System.Drawing.Point(839, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // metroTileItem1
+            // 
+            this.metroTileItem1.Image = global::质监局证书管理系统.Properties.Resources.icon_document_rev;
+            this.metroTileItem1.ImageIndent = new System.Drawing.Point(15, 15);
+            this.metroTileItem1.Name = "metroTileItem1";
+            this.metroTileItem1.Text = "<font size=\"+8\">新建证书</font>";
+            this.metroTileItem1.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Green;
+            // 
+            // 
+            // 
+            this.metroTileItem1.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem1.TileStyle.PaddingBottom = 5;
+            this.metroTileItem1.TileStyle.PaddingLeft = 15;
+            this.metroTileItem1.TileStyle.PaddingRight = 15;
+            this.metroTileItem1.TileStyle.PaddingTop = 15;
+            this.metroTileItem1.TitleText = "证书";
+            this.metroTileItem1.Click += new System.EventHandler(this.metroTileItem1_Click);
+            // 
+            // tile_certManage
+            // 
+            this.tile_certManage.Image = global::质监局证书管理系统.Properties.Resources.icon_folder_rev;
+            this.tile_certManage.ImageIndent = new System.Drawing.Point(15, 15);
+            this.tile_certManage.Name = "tile_certManage";
+            this.tile_certManage.Text = "<font size=\"+8\">管理证书</font>";
+            this.tile_certManage.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Orange;
+            // 
+            // 
+            // 
+            this.tile_certManage.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tile_certManage.TileStyle.PaddingBottom = 3;
+            this.tile_certManage.TileStyle.PaddingLeft = 15;
+            this.tile_certManage.TileStyle.PaddingRight = 15;
+            this.tile_certManage.TileStyle.PaddingTop = 15;
+            this.tile_certManage.TitleText = "证书";
+            this.tile_certManage.Click += new System.EventHandler(this.tile_certManage_Click);
+            // 
+            // metro_role
+            // 
+            this.metro_role.Image = global::质监局证书管理系统.Properties.Resources.icon_group_rev;
+            this.metro_role.ImageIndent = new System.Drawing.Point(15, 15);
+            this.metro_role.Name = "metro_role";
+            this.metro_role.Text = "<font size=\"+8\">权限管理</font>";
+            this.metro_role.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Blue;
+            // 
+            // 
+            // 
+            this.metro_role.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metro_role.TileStyle.PaddingBottom = 3;
+            this.metro_role.TileStyle.PaddingLeft = 15;
+            this.metro_role.TileStyle.PaddingRight = 15;
+            this.metro_role.TileStyle.PaddingTop = 15;
+            this.metro_role.TitleText = "用户";
+            this.metro_role.Click += new System.EventHandler(this.metroTileItem3_Click);
+            // 
+            // metroTileItem4
+            // 
+            this.metroTileItem4.Image = global::质监局证书管理系统.Properties.Resources.icon_cogs_rev;
+            this.metroTileItem4.ImageIndent = new System.Drawing.Point(15, 15);
+            this.metroTileItem4.Name = "metroTileItem4";
+            this.metroTileItem4.Text = "<font size=\"+8\">系统设定</font>";
+            this.metroTileItem4.TileColor = DevComponents.DotNetBar.Metro.eMetroTileColor.Teal;
+            // 
+            // 
+            // 
+            this.metroTileItem4.TileStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.metroTileItem4.TileStyle.PaddingBottom = 3;
+            this.metroTileItem4.TileStyle.PaddingLeft = 15;
+            this.metroTileItem4.TileStyle.PaddingRight = 15;
+            this.metroTileItem4.TileStyle.PaddingTop = 15;
+            this.metroTileItem4.TitleText = "设置";
+            this.metroTileItem4.Click += new System.EventHandler(this.metroTileItem4_Click);
+            // 
+            // btn_tool_download
+            // 
+            this.btn_tool_download.Image = global::质监局证书管理系统.Properties.Resources.icon_download;
+            this.btn_tool_download.Name = "btn_tool_download";
+            this.btn_tool_download.Text = "buttonItem6";
+            // 
+            // btn_tool_New
+            // 
+            this.btn_tool_New.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_plus;
+            this.btn_tool_New.Image = global::质监局证书管理系统.Properties.Resources.icon_plus_alt;
+            this.btn_tool_New.Name = "btn_tool_New";
+            this.btn_tool_New.Text = "buttonItem2";
+            this.btn_tool_New.Tooltip = "新建证书";
+            this.btn_tool_New.Click += new System.EventHandler(this.btn_tool_New_Click);
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.Image = global::质监局证书管理系统.Properties.Resources.icon_pencil_edit;
+            this.buttonItem7.ImageAlt = global::质监局证书管理系统.Properties.Resources.icon_pencil_edit_alt;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Text = "buttonItem7";
+            this.buttonItem7.Tooltip = "修改证书";
+            // 
+            // btn_tool_delete
+            // 
+            this.btn_tool_delete.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_trash_alt;
+            this.btn_tool_delete.Image = global::质监局证书管理系统.Properties.Resources.icon_trash;
+            this.btn_tool_delete.Name = "btn_tool_delete";
+            this.btn_tool_delete.Text = "buttonItem4";
+            this.btn_tool_delete.Tooltip = "删除证书";
+            // 
+            // btn_tool_preview
+            // 
+            this.btn_tool_preview.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_search;
+            this.btn_tool_preview.Image = global::质监局证书管理系统.Properties.Resources.icon_search_alt;
+            this.btn_tool_preview.Name = "btn_tool_preview";
+            this.btn_tool_preview.Text = "buttonItem3";
+            this.btn_tool_preview.Tooltip = "预览";
+            this.btn_tool_preview.Click += new System.EventHandler(this.btn_tool_preview_Click);
+            // 
+            // btn_tool_print
+            // 
+            this.btn_tool_print.HoverImage = global::质监局证书管理系统.Properties.Resources.icon_printer;
+            this.btn_tool_print.Image = global::质监局证书管理系统.Properties.Resources.icon_printer_alt;
+            this.btn_tool_print.Name = "btn_tool_print";
+            this.btn_tool_print.Text = "buttonItem5";
+            this.btn_tool_print.Tooltip = "打印";
+            this.btn_tool_print.Click += new System.EventHandler(this.btn_tool_print_Click);
+            // 
+            // btn_newLicense
+            // 
+            this.btn_newLicense.Image = ((System.Drawing.Image)(resources.GetObject("btn_newLicense.Image")));
+            this.btn_newLicense.Name = "btn_newLicense";
+            this.btn_newLicense.Shortcuts.Add(DevComponents.DotNetBar.eShortcut.CtrlN);
+            this.btn_newLicense.Text = "新建证书";
+            // 
             // frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -757,9 +772,9 @@
             this.metroTabPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.metroTabPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.advTree_licenseList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -806,7 +821,7 @@
         private DevComponents.DotNetBar.ItemContainer itemContainer1;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem1;
         private DevComponents.DotNetBar.Metro.MetroTileItem tile_certManage;
-        private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem3;
+        private DevComponents.DotNetBar.Metro.MetroTileItem metro_role;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem4;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem5;
         private DevComponents.DotNetBar.Metro.MetroTileItem metroTileItem6;

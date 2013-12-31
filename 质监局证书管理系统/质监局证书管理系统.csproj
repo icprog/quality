@@ -24,9 +24,12 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -48,6 +51,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2C25F94C18F3D0B0CC23A17957B3A841337C18A6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>质监局证书管理系统_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Design, Version=10.0.0.3, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
@@ -107,6 +122,12 @@
     <Compile Include="frm_splash.Designer.cs">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_userinfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_userinfo.Designer.cs">
+      <DependentUpon>frm_userinfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_userSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +167,9 @@
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_userinfo.resx">
+      <DependentUpon>frm_userinfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_userSettings.resx">
       <DependentUpon>frm_userSettings.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +201,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="质监局证书管理系统_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AxSHDocVw">
@@ -272,6 +297,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>license.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\icon_cogs_rev.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\normal.png" />
     <None Include="Resources\icon_pencil-edit_alt1.png" />
     <None Include="Resources\icon_pencil-edit1.png" />
     <None Include="Resources\icon_search2.png" />
@@ -309,6 +337,10 @@
     <ProjectReference Include="..\Quality.Model\Quality.Model.csproj">
       <Project>{C6803E3A-CE7E-4AF8-A207-945B7915E83C}</Project>
       <Name>Quality.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Quality.Utility+\Quality.Utility.csproj">
+      <Project>{A9890586-4831-4B4C-ABCF-FE63388CD891}</Project>
+      <Name>Quality.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

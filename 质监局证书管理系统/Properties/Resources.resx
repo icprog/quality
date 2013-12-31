@@ -145,11 +145,14 @@
   <data name="arrow_carrot-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_carrot-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_pencil-edit_alt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pencil-edit_alt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_trash_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_trash_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_document_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_document_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,6 +175,9 @@
   <data name="arrow_carrot-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_carrot-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_pencil-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_pencil-edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -184,10 +190,13 @@
   <data name="icon_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_pencil-edit_alt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pencil-edit_alt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_cogs_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_cogs_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -43,6 +43,7 @@
     <Compile Include="BenchSet.cs" />
     <Compile Include="Certification.cs" />
     <Compile Include="Roles.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

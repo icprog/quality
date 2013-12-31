@@ -8,9 +8,9 @@ namespace Quality.Model
     public class BenchSet
     {
         #region 成员变量
-        private string _id;
+        private int _id;
 
-        public string Id
+        public int Id
         {
             get { return _id; }
             set { _id = value; }
@@ -64,9 +64,16 @@ namespace Quality.Model
             get { return _benchRange; }
             set { _benchRange = value; }
         }
+        private int _creatorId;
+
+        public int CreatorId
+        {
+            get { return _creatorId; }
+            set { _creatorId = value; }
+        }
         #endregion
         #region //构造函数
-        public BenchSet(string id, string name, string bench_sn, string benchName, string notsure, string serial, string range, DateTime expire)
+        public BenchSet(int id, string name, string bench_sn, string benchName, string notsure, string serial, string range, DateTime expire,int creator)
         {
             _id = id;
             _setName = name;
@@ -76,8 +83,9 @@ namespace Quality.Model
             _notsure = notsure;
             _benchName = benchName;
             _expire = expire;
+            _creatorId = creator;
         }
-        public BenchSet(string name, string range, string serial, string bench_sn, string notsure, string benchName, DateTime expire)
+        public BenchSet(string name, string range, string serial, string bench_sn, string notsure, string benchName, DateTime expire,int creator)
         {
             _setName = name;
             _benchRange = range;
@@ -86,7 +94,10 @@ namespace Quality.Model
             _notsure = notsure;
             _benchName = benchName;
             _expire = expire;
+            _creatorId = creator;
         }
+        public BenchSet()
+        { }
         #endregion
 
     }

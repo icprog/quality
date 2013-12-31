@@ -34,9 +34,9 @@
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ip_serverip = new DevComponents.Editors.IpAddressInput();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_password = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.int_port = new DevComponents.Editors.IntegerInput();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.tb_username = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.ip_serverip)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.int_port)).BeginInit();
             this.SuspendLayout();
@@ -88,6 +88,7 @@
             this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX2.TabIndex = 12;
             this.buttonX2.Text = "确定";
+            this.buttonX2.Click += new System.EventHandler(this.buttonX2_Click);
             // 
             // buttonX1
             // 
@@ -99,6 +100,7 @@
             this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.buttonX1.TabIndex = 11;
             this.buttonX1.Text = "测试";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
             // 
             // ip_serverip
             // 
@@ -119,20 +121,20 @@
             this.ip_serverip.TabIndex = 7;
             this.ip_serverip.WatermarkText = "服务器IP";
             // 
-            // textBoxX2
+            // tb_password
             // 
-            this.textBoxX2.BackColor = System.Drawing.Color.White;
+            this.tb_password.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX2.Location = new System.Drawing.Point(21, 94);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.Size = new System.Drawing.Size(280, 22);
-            this.textBoxX2.TabIndex = 10;
-            this.textBoxX2.WatermarkText = "密码";
+            this.tb_password.Border.Class = "TextBoxBorder";
+            this.tb_password.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_password.ForeColor = System.Drawing.Color.Black;
+            this.tb_password.Location = new System.Drawing.Point(21, 94);
+            this.tb_password.Name = "tb_password";
+            this.tb_password.Size = new System.Drawing.Size(280, 22);
+            this.tb_password.TabIndex = 10;
+            this.tb_password.WatermarkText = "密码";
             // 
             // int_port
             // 
@@ -150,20 +152,20 @@
             this.int_port.TabIndex = 8;
             this.int_port.WatermarkText = "端口号";
             // 
-            // textBoxX1
+            // tb_username
             // 
-            this.textBoxX1.BackColor = System.Drawing.Color.White;
+            this.tb_username.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.ForeColor = System.Drawing.Color.Black;
-            this.textBoxX1.Location = new System.Drawing.Point(21, 65);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(280, 22);
-            this.textBoxX1.TabIndex = 9;
-            this.textBoxX1.WatermarkText = "数据库用户名";
+            this.tb_username.Border.Class = "TextBoxBorder";
+            this.tb_username.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.tb_username.ForeColor = System.Drawing.Color.Black;
+            this.tb_username.Location = new System.Drawing.Point(21, 65);
+            this.tb_username.Name = "tb_username";
+            this.tb_username.Size = new System.Drawing.Size(280, 22);
+            this.tb_username.TabIndex = 9;
+            this.tb_username.WatermarkText = "数据库用户名";
             // 
             // frm_DBSettings
             // 
@@ -175,9 +177,9 @@
             this.Controls.Add(this.buttonX2);
             this.Controls.Add(this.ip_serverip);
             this.Controls.Add(this.buttonX1);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.tb_username);
             this.Controls.Add(this.int_port);
-            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.tb_password);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -200,9 +202,9 @@
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.Editors.IpAddressInput ip_serverip;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_password;
         private DevComponents.Editors.IntegerInput int_port;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX tb_username;
 
     }
 }
