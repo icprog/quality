@@ -78,7 +78,6 @@ namespace Quality.DAL
         {
             SqlParameter[] parms =
             {
-                new SqlParameter("ID",setting.Id),
                  new SqlParameter("SETTING_NAME",setting.SettingName),
                   new SqlParameter("UNITCHS",setting.AuthUnitChs),
                    new SqlParameter("UNITENG",setting.AuthUnitEng),

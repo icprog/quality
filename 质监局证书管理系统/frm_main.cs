@@ -23,8 +23,10 @@ namespace 质监局证书管理系统
         private bool isPreviewCalled=false;
         private bool isPrintCalled = false;
         Users currentUser;
+        Roles role;
         private Settings defaultSetting;
         private SettingBLL settingBll;
+        private RoleBLL roleBll;
         public Users CurrentUser
         {
             get { return currentUser; }
@@ -70,9 +72,35 @@ namespace 质监局证书管理系统
             settingBll = new SettingBLL();
             defaultSetting = settingBll.GetDefaultSetting();
 
+            roleBll=new RoleBLL();
+            role=roleBll.GetRoleById(currentUser.RoleId);
             if (defaultSetting == null)
             {
-                if(currentUser.RoleName
+
+                if (role.AdminFlag == 1)
+                {
+                    if (DialogResult.OK == MessageBoxEx.Show("未配置系统全局设定，请配置全局设定", "全局设定未配置", MessageBoxButtons.OK))
+                    {
+                        new frm_globalSetting().ShowDialog();
+                    }
+                    else
+                    {
+                        this.Close();
+
+
+                    }
+                }
+                else
+                {
+                    if (DialogResult.OK == MessageBoxEx.Show("未配置系统全局设定，请联系管理员配置全局设定", "全局设定未配置", MessageBoxButtons.OK))
+                    {
+                        this.Close();
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
                 
                
             }

@@ -72,6 +72,7 @@
             this.tb_standard2.Name = "tb_standard2";
             this.tb_standard2.Size = new System.Drawing.Size(372, 22);
             this.tb_standard2.TabIndex = 45;
+            this.tb_standard2.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // labelX12
             // 
@@ -252,6 +253,7 @@
             this.tb_fax.Name = "tb_fax";
             this.tb_fax.Size = new System.Drawing.Size(154, 22);
             this.tb_fax.TabIndex = 43;
+            this.tb_fax.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_tel
             // 
@@ -266,6 +268,7 @@
             this.tb_tel.Name = "tb_tel";
             this.tb_tel.Size = new System.Drawing.Size(149, 22);
             this.tb_tel.TabIndex = 42;
+            this.tb_tel.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_email
             // 
@@ -280,6 +283,7 @@
             this.tb_email.Name = "tb_email";
             this.tb_email.Size = new System.Drawing.Size(154, 22);
             this.tb_email.TabIndex = 41;
+            this.tb_email.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_zipcode
             // 
@@ -294,6 +298,7 @@
             this.tb_zipcode.Name = "tb_zipcode";
             this.tb_zipcode.Size = new System.Drawing.Size(149, 22);
             this.tb_zipcode.TabIndex = 39;
+            this.tb_zipcode.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_addressEng
             // 
@@ -308,6 +313,7 @@
             this.tb_addressEng.Name = "tb_addressEng";
             this.tb_addressEng.Size = new System.Drawing.Size(372, 22);
             this.tb_addressEng.TabIndex = 38;
+            this.tb_addressEng.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_address
             // 
@@ -322,6 +328,7 @@
             this.tb_address.Name = "tb_address";
             this.tb_address.Size = new System.Drawing.Size(372, 22);
             this.tb_address.TabIndex = 37;
+            this.tb_address.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_unitNameEng
             // 
@@ -336,6 +343,7 @@
             this.tb_unitNameEng.Name = "tb_unitNameEng";
             this.tb_unitNameEng.Size = new System.Drawing.Size(372, 22);
             this.tb_unitNameEng.TabIndex = 31;
+            this.tb_unitNameEng.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_unitName
             // 
@@ -350,6 +358,7 @@
             this.tb_unitName.Name = "tb_unitName";
             this.tb_unitName.Size = new System.Drawing.Size(372, 22);
             this.tb_unitName.TabIndex = 30;
+            this.tb_unitName.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_auth
             // 
@@ -364,6 +373,7 @@
             this.tb_auth.Name = "tb_auth";
             this.tb_auth.Size = new System.Drawing.Size(372, 22);
             this.tb_auth.TabIndex = 27;
+            this.tb_auth.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // tb_standard1
             // 
@@ -378,11 +388,13 @@
             this.tb_standard1.Name = "tb_standard1";
             this.tb_standard1.Size = new System.Drawing.Size(372, 22);
             this.tb_standard1.TabIndex = 25;
+            this.tb_standard1.TextChanged += new System.EventHandler(this.Form_TextChanged);
             // 
             // btn_apply
             // 
             this.btn_apply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_apply.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btn_apply.Enabled = false;
             this.btn_apply.Location = new System.Drawing.Point(331, 339);
             this.btn_apply.Name = "btn_apply";
             this.btn_apply.Size = new System.Drawing.Size(75, 23);
@@ -401,6 +413,7 @@
             this.btn_ok.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_ok.TabIndex = 47;
             this.btn_ok.Text = "确定";
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
             // 
             // btn_cancel
             // 
@@ -412,6 +425,7 @@
             this.btn_cancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_cancel.TabIndex = 48;
             this.btn_cancel.Text = "取消";
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // highlighter1
             // 

@@ -23,16 +23,40 @@ namespace 质监局证书管理系统
         public frm_globalSetting()
         {
             InitializeComponent();
+            bll=new SettingBLL();
+            settings = bll.GetDefaultSetting();
+            tb_address.Text = settings.AddrChs;
+            tb_addressEng.Text = settings.AddrEng;
+            tb_auth.Text = settings.VerificationNo;
+            tb_email.Text = settings.Email;
+            tb_fax.Text = settings.Fax;
+            tb_standard1.Text = settings.Standard1;
+            tb_standard2.Text = settings.Standard2;
+            tb_tel.Text = settings.Telephone;
+            tb_unitName.Text = settings.AuthUnitChs;
+            tb_unitNameEng.Text = settings.AuthUnitEng;
+            tb_zipcode.Text = settings.Zipcode;
+            this.btn_apply.Enabled = false;
+            
         }
 
         private void btn_apply_Click(object sender, EventArgs e)
         {
             if (CheckForm())
             {
-                Settings setting = new Settings("默认", tb_address.Text.Trim(), tb_addressEng.Text.Trim(), tb_unitName.Text.Trim(),
+                settings = new Settings("默认", tb_address.Text.Trim(), tb_addressEng.Text.Trim(), tb_unitName.Text.Trim(),
                                 tb_unitNameEng.Text.Trim(), tb_email.Text.Trim(), tb_fax.Text.Trim(), tb_standard1.Text.Trim(),
                                 tb_standard2.Text.Trim(), tb_tel.Text.Trim(), tb_auth.Text.Trim(),tb_zipcode.Text.Trim(), 1);
-                
+                bll = new SettingBLL();
+                if (bll.UpdateSetting(settings))
+                {
+                    MessageBoxEx.Show("设定成功", "提示");
+                    this.btn_apply.Enabled = false;
+                }
+                else
+                {
+                    MessageBoxEx.Show("设定失败", "提示");
+                }
             }
         }
         private bool CheckForm()
@@ -121,6 +145,57 @@ namespace 质监局证书管理系统
         {
             errorProvider1.Clear();
             highlighter1.SetHighlightColor(c, DevComponents.DotNetBar.Validator.eHighlightColor.None);
+        }
+
+        private void Form_TextChanged(object sender, EventArgs e)
+        {
+            this.btn_apply.Enabled = true;
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            if (btn_apply.Enabled)
+            {
+                if (DialogResult.Yes == MessageBoxEx.Show("内容已变更，确定放弃编辑？", "提示", MessageBoxButtons.YesNo))
+                {
+                    this.Close();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            if (btn_apply.Enabled)
+            {
+                if (CheckForm())
+                {
+                    settings = new Settings("默认", tb_address.Text.Trim(), tb_addressEng.Text.Trim(), tb_unitName.Text.Trim(),
+                                    tb_unitNameEng.Text.Trim(), tb_email.Text.Trim(), tb_fax.Text.Trim(), tb_standard1.Text.Trim(),
+                                    tb_standard2.Text.Trim(), tb_tel.Text.Trim(), tb_auth.Text.Trim(), tb_zipcode.Text.Trim(), 1);
+                    bll = new SettingBLL();
+                    if (bll.UpdateSetting(settings))
+                    {
+                        MessageBoxEx.Show("设定成功", "提示");
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBoxEx.Show("设定失败", "提示");
+                    }
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
     }
 }

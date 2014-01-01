@@ -427,6 +427,7 @@ namespace 质监局证书管理系统
             this.cb_roleReprint.Checked = false;
             this.cb_roleSearch.Checked = false;
             this.cb_roleTemplate.Checked = false;
+            this.cb_adminFlag.Checked = false;
         }
         private void SetRoleValue(string roleValue)
         {
@@ -504,6 +505,8 @@ namespace 质监局证书管理系统
 
             tb_roleName.Text = role.RoleName;
             this.SetRoleValue(role.RoleValue);
+            if (role.AdminFlag == 1)
+                cb_adminFlag.Checked = true;
             lb_roleId.Text = role.Id.ToString();
             this.btn_roleModify.Enabled = true;
             this.btn_roleDelete.Enabled = true;
@@ -530,7 +533,7 @@ namespace 质监局证书管理系统
             Roles role;
             if (isRoleModify)
             {
-                role = new Roles(int.Parse(this.lb_roleId.Text), tb_roleName.Text.Trim(), GetRoleValue());
+                role = new Roles(int.Parse(this.lb_roleId.Text), tb_roleName.Text.Trim(), GetRoleValue(),int.Parse(cb_adminFlag.CheckValue.ToString()));
                 
                     if (roleBll.UpdateRole(role))
                     {
@@ -548,7 +551,7 @@ namespace 质监局证书管理系统
             }
             else
             {
-                role = new Roles(tb_roleName.Text.Trim(), GetRoleValue());
+                role = new Roles(tb_roleName.Text.Trim(), GetRoleValue(), int.Parse(cb_adminFlag.CheckValue.ToString()));
                 if (roleBll.Check(role.RoleName))
                 {
                     if (roleBll.AddRole(role))
