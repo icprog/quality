@@ -98,6 +98,12 @@
     <Compile Include="frm_DBSettings.Designer.cs">
       <DependentUpon>frm_DBSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_globalSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_globalSetting.Designer.cs">
+      <DependentUpon>frm_globalSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,10 +127,6 @@
     </Compile>
     <Compile Include="frm_splash.Designer.cs">
       <DependentUpon>frm_splash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_sysSetting.cs" />
-    <Compile Include="frm_sysSetting.Designer.cs">
-      <DependentUpon>frm_sysSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_userinfo.cs">
       <SubType>Form</SubType>
@@ -159,6 +161,9 @@
     <EmbeddedResource Include="frm_DBSettings.resx">
       <DependentUpon>frm_DBSettings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_globalSetting.resx">
+      <DependentUpon>frm_globalSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -170,9 +175,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_sysSetting.resx">
-      <DependentUpon>frm_sysSetting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_userinfo.resx">
       <DependentUpon>frm_userinfo.cs</DependentUpon>

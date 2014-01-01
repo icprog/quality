@@ -53,6 +53,8 @@
             this.tb_auth = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.tb_standard1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.superTabItem1 = new DevComponents.DotNetBar.SuperTabItem();
+            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
+            this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.superTabControlPanel4 = new DevComponents.DotNetBar.SuperTabControlPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_testConn = new DevComponents.DotNetBar.ButtonX();
@@ -97,8 +99,6 @@
             this.di_humidity = new DevComponents.Editors.DoubleInput();
             this.di_temper = new DevComponents.Editors.DoubleInput();
             this.superTabItem3 = new DevComponents.DotNetBar.SuperTabItem();
-            this.superTabControlPanel2 = new DevComponents.DotNetBar.SuperTabControlPanel();
-            this.superTabItem2 = new DevComponents.DotNetBar.SuperTabItem();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
             this.btn_apply = new System.Windows.Forms.Button();
@@ -135,9 +135,9 @@
             this.superTabControl1.ControlBox.MenuBox,
             this.superTabControl1.ControlBox.CloseBox});
             this.superTabControl1.Controls.Add(this.superTabControlPanel1);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
-            this.superTabControl1.Controls.Add(this.superTabControlPanel4);
             this.superTabControl1.Controls.Add(this.superTabControlPanel3);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel4);
+            this.superTabControl1.Controls.Add(this.superTabControlPanel2);
             this.superTabControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.superTabControl1.ForeColor = System.Drawing.Color.Black;
             this.superTabControl1.Location = new System.Drawing.Point(8, 8);
@@ -525,6 +525,22 @@
             this.superTabItem1.GlobalItem = false;
             this.superTabItem1.Name = "superTabItem1";
             this.superTabItem1.Text = "自定义";
+            // 
+            // superTabControlPanel2
+            // 
+            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.superTabControlPanel2.Location = new System.Drawing.Point(65, 0);
+            this.superTabControlPanel2.Name = "superTabControlPanel2";
+            this.superTabControlPanel2.Size = new System.Drawing.Size(561, 319);
+            this.superTabControlPanel2.TabIndex = 0;
+            this.superTabControlPanel2.TabItem = this.superTabItem2;
+            // 
+            // superTabItem2
+            // 
+            this.superTabItem2.AttachedControl = this.superTabControlPanel2;
+            this.superTabItem2.GlobalItem = false;
+            this.superTabItem2.Name = "superTabItem2";
+            this.superTabItem2.Text = "关于";
             // 
             // superTabControlPanel4
             // 
@@ -1097,22 +1113,6 @@
             this.superTabItem3.GlobalItem = false;
             this.superTabItem3.Name = "superTabItem3";
             this.superTabItem3.Text = "偏好设置";
-            // 
-            // superTabControlPanel2
-            // 
-            this.superTabControlPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.superTabControlPanel2.Location = new System.Drawing.Point(65, 0);
-            this.superTabControlPanel2.Name = "superTabControlPanel2";
-            this.superTabControlPanel2.Size = new System.Drawing.Size(561, 319);
-            this.superTabControlPanel2.TabIndex = 0;
-            this.superTabControlPanel2.TabItem = this.superTabItem2;
-            // 
-            // superTabItem2
-            // 
-            this.superTabItem2.AttachedControl = this.superTabControlPanel2;
-            this.superTabItem2.GlobalItem = false;
-            this.superTabItem2.Name = "superTabItem2";
-            this.superTabItem2.Text = "关于";
             // 
             // btn_save
             // 
