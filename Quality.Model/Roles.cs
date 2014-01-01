@@ -28,20 +28,30 @@ namespace Quality.Model
             get { return roleValue; }
             set { roleValue = value; }
         }
+        private int adminFlag;
+
+        public int AdminFlag
+        {
+            get { return adminFlag; }
+            set { adminFlag = value; }
+        }
+
         public Roles()
         {
         }
-        public Roles(int id, string rolename, string roleValue)
+        public Roles(int id, string rolename, string roleValue,int adminFlag)
         {
             this.id = id;
             this.roleName = rolename;
             this.roleValue = roleValue;
+            this.adminFlag = adminFlag;
         }
-        public Roles( string rolename, string roleValue)
+        public Roles( string rolename, string roleValue,int adminFlag)
         {
         
             this.roleName = rolename;
             this.roleValue = roleValue;
+            this.adminFlag = adminFlag;
         }
         
     }

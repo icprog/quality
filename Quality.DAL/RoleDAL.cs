@@ -31,7 +31,7 @@ namespace Quality.DAL
                 while (rdr.Read())
                 {
                     //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
-                    Roles role = new Roles(rdr.GetInt32(0), rdr.GetString(1),  rdr.GetString(2));
+                    Roles role = new Roles(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetInt32(3));
                     roles.Add(role);
                 }
 
@@ -55,7 +55,7 @@ namespace Quality.DAL
                 if (rdr.Read())
                 {
                     //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
-                   ;role = new Roles(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2));
+                   ;role = new Roles(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2),rdr.GetInt32(3));
                    
                 }
 
@@ -71,7 +71,7 @@ namespace Quality.DAL
                 if (rdr.Read())
                 {
                     //u.id,u.username,u.roleId,r.rolename,r.roleValue,u.realname
-                    ; role = new Roles(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2));
+                    ; role = new Roles(rdr.GetInt32(0), rdr.GetString(1), rdr.GetString(2), rdr.GetInt32(3));
 
                 }
                 else role = null;

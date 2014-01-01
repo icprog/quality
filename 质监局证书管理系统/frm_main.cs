@@ -13,6 +13,7 @@ using DevComponents.AdvTree;
 using System.Configuration;
 using Quality;
 using Quality.Model;
+using Quality.BLL;
 namespace 质监局证书管理系统
 {
     public partial class frm_main : MetroAppForm
@@ -22,7 +23,8 @@ namespace 质监局证书管理系统
         private bool isPreviewCalled=false;
         private bool isPrintCalled = false;
         Users currentUser;
-
+        private Settings defaultSetting;
+        private SettingBLL settingBll;
         public Users CurrentUser
         {
             get { return currentUser; }
@@ -64,8 +66,16 @@ namespace 质监局证书管理系统
             }
             metroToolbar1.Location = new Point((this.Width - metroToolbar1.Width) / 2, metroToolbar1.Parent.Height - metroToolbar1.Height - 1);
             metroTilePanel1.Location = new Point((this.Width - metroTilePanel1.Width) / 2, (this.Height - metroTilePanel1.Height) / 2);
-            
-            
+
+            settingBll = new SettingBLL();
+            defaultSetting = settingBll.GetDefaultSetting();
+
+            if (defaultSetting == null)
+            {
+                if(currentUser.RoleName
+                
+               
+            }
             
         }
         /// <summary>
