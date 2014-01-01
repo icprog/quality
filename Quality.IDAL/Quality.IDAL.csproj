@@ -44,6 +44,7 @@
     <Compile Include="ICertification.cs" />
     <Compile Include="IAutoComplete.cs" />
     <Compile Include="IRole.cs" />
+    <Compile Include="ISetting.cs" />
     <Compile Include="IUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

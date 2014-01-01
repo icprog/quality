@@ -122,6 +122,10 @@
     <Compile Include="frm_splash.Designer.cs">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_sysSetting.cs" />
+    <Compile Include="frm_sysSetting.Designer.cs">
+      <DependentUpon>frm_sysSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_userinfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +171,9 @@
     <EmbeddedResource Include="frm_splash.resx">
       <DependentUpon>frm_splash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_sysSetting.resx">
+      <DependentUpon>frm_sysSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_userinfo.resx">
       <DependentUpon>frm_userinfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,15 +199,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <None Include="质监局证书管理系统_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -297,6 +295,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>license.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\PivotClearAll.png" />
     <None Include="Resources\icon_cogs_rev.png" />
     <None Include="Resources\admin.png" />
     <None Include="Resources\normal.png" />

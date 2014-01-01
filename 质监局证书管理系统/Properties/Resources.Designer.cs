@@ -242,6 +242,13 @@ namespace 质监局证书管理系统.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap PivotClearAll {
+            get {
+                object obj = ResourceManager.GetObject("PivotClearAll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap quality副本 {
             get {
                 object obj = ResourceManager.GetObject("quality副本", resourceCulture);

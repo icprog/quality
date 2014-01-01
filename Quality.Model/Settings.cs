@@ -7,6 +7,20 @@ namespace Quality.Model
 {
     public class Settings
     {
+        private int _id;
+
+        public int Id
+        {
+          get { return _id; }
+          set { _id = value; }
+        }
+        private string _settingName;
+
+            public string SettingName
+            {
+              get { return _settingName; }
+              set { _settingName = value; }
+            }
         private string _verificationNo;
 
         public string VerificationNo
@@ -83,6 +97,53 @@ namespace Quality.Model
         {
             get { return _authUnitEng; }
             set { _authUnitEng = value; }
+        }
+        private int _isUse;
+
+        public int IsUse
+        {
+          get { return _isUse; }
+          set { _isUse = value; }
+        }
+        public Settings()
+        {
+        }
+        public Settings(int id, string set_name, string addrChs, 
+                    string addrEng, string unitChs, string unitEng, 
+                    string email, string fax, string standard1,
+                    string standard2, string telephone, 
+                    string verificationNo, string zipcode, int isUse)
+        {
+            _id = id;
+            _settingName = set_name;
+            _addrChs = addrChs;
+            _addrEng = addrEng;
+            _email = email;
+            _authUnitChs = unitChs;
+            _authUnitEng = unitEng;
+            _fax = fax;
+            _standard1 = standard1;
+            _standard2 = standard2;
+            _telephone = telephone;
+            _verificationNo = verificationNo;
+            _zipcode = zipcode;
+            _isUse = isUse;
+        }
+        public Settings(string set_name, string addrChs, string addrEng, string unitChs, string unitEng, string email, string fax, string standard1, string standard2, string telephone, string verificationNo, string zipcode, int isUse)
+        {
+            _settingName = set_name;
+            _addrChs = addrChs;
+            _addrEng = addrEng;
+            _email = email;
+            _authUnitChs = unitChs;
+            _authUnitEng = unitEng;
+            _fax = fax;
+            _standard1 = standard1;
+            _standard2 = standard2;
+            _telephone = telephone;
+            _verificationNo = verificationNo;
+            _zipcode = zipcode;
+            _isUse = isUse;
         }
     }
 }

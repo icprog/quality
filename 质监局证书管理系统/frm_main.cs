@@ -304,7 +304,8 @@ namespace 质监局证书管理系统
 
         private void metroTileItem4_Click(object sender, EventArgs e)
         {
-
+            frm_sysSetting setting = new frm_sysSetting();
+            setting.ShowDialog();
         }
        
     }

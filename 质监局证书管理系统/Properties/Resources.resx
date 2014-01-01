@@ -118,23 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icon_folder_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_folder_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_printer-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_printer-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_group_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_group_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="058" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_pencil-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pencil-edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_documents_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_documents_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pencil-edit_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pencil-edit_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_plus_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_plus_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,26 +133,8 @@
   <data name="icon_printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_carrot-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_carrot-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_pencil-edit_alt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pencil-edit_alt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_trash_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_trash_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_search2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_search2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_document_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_document_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_pencil-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pencil-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_pencil-edit_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pencil-edit_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +142,23 @@
   <data name="icon_document" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_document_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_document_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_folder_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_folder_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_plus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_plus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_printer-alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_printer-alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_search_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_search_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow_carrot-down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_carrot-down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,25 +166,40 @@
   <data name="normal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\normal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_pencil-edit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_pencil-edit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_carrot-up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_carrot-up.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="quality副本" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\quality副本.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_search_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_search_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_trash_alt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_trash_alt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_pencil-edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pencil-edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_documents" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_documents.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="quality副本" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quality副本.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_cogs_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_cogs_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_group_rev" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_group_rev.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="058" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\058.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_pencil-edit_alt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_pencil-edit_alt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PivotClearAll" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PivotClearAll.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
